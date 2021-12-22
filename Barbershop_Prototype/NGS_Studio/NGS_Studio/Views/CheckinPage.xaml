@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NGS_Studio.Views.CheckinPage"
+             xmlns:vm="clr-namespace:NGS_Studio.ViewModels"
+             Title="{Binding Title}" BackgroundColor="Black">
+
+    <ContentPage.BindingContext>
+        <vm:CheckinViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Text" Value="CHECK IN" />
+            <Setter Property="FontSize" Value="Large" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="BackgroundColor" Value="DarkGoldenrod" />
+            <Setter Property="CornerRadius" Value="20" />
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+        <Image Source="{Binding LogoName}" 
+                       WidthRequest="{OnPlatform UWP='*', iOS=300, Android=400}" 
+                       HorizontalOptions="Center" />
+        <Button x:Name="CheckinBtn"
+                        VerticalOptions="Center"      
+                        Clicked="onCheckinBtn_Clicked"
+                        BackgroundColor="DarkGoldenrod"/>
+        <Label x:Name="CheckinLabel" Text="Is this your first time checking in?" 
+                       IsVisible="false"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Large"
+                       TextColor="White"/>
+        <Button x:Name="YesCheckinBtn"
+                        VerticalOptions="Center"      
+                        Command="{Binding YesCheckinCommand}"
+                        Text="Yes"
+                        BackgroundColor="DarkGoldenrod"
+                        IsVisible="false"/>
+        <Button x:Name="NoCheckinBtn"
+                        VerticalOptions="Center"      
+                        Command="{Binding NoCheckinCommand}"
+                        Text="No"
+                        BackgroundColor="DarkGoldenrod"
+                        IsVisible="false"/>
+    </StackLayout>
+
+</ContentPage>

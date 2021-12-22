@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NGS_Studio.Views.PhoneNumberCheckinPage"
+             xmlns:vm="clr-namespace:NGS_Studio.ViewModels"
+             Title="Check in"  BackgroundColor="Black">
+
+    <ContentPage.BindingContext>
+        <vm:PhoneNumberCheckinViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Text" Value="CHECK IN" />
+            <Setter Property="FontSize" Value="Large" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="BackgroundColor" Value="DarkGoldenrod" />
+            <Setter Property="CornerRadius" Value="20" />
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+        
+        <Image Source="{Binding LogoName}" 
+                       WidthRequest="{OnPlatform UWP='*', iOS=300, Android=400}" 
+                       HorizontalOptions="Center" 
+                       />
+        <Label x:Name="CheckinLabel" Text="Enter your phone number" 
+                       HorizontalTextAlignment="Center"
+                       FontSize="Large"
+                       IsVisible="{Binding IsCheckinContentVisible}"
+                       TextColor="{OnPlatform iOS=White, Android=White}"/>
+
+        <Entry Keyboard="Numeric" 
+               Text = "{Binding PhoneNumberEntry, Mode=TwoWay}" 
+               IsVisible="{Binding IsCheckinContentVisible}"
+               TextColor="{OnPlatform iOS=Black, Android=White}"
+               >
+            <Entry.Behaviors>
+                <vm:MaskedBehavior Mask="( XXX ) XXX - XXXX" />
+            </Entry.Behaviors>
+        </Entry>
+
+        <Button x:Name="CheckinBtn"
+                        VerticalOptions="Center"      
+                        BackgroundColor="DarkGoldenrod"
+                        Command="{Binding PhoneNumberCheckinCommand}"
+                        IsVisible="{Binding IsCheckinContentVisible}"/>
+
+        <Label x:Name="BarberLabel" Text="Which barber are you here to see?" 
+                       HorizontalTextAlignment="Center"
+                       FontSize="Large"
+                       IsVisible="{Binding IsBarberSelectionContentVisible}"/>
+
+        <Picker x:Name ="BarberPicker" 
+                Title="Select a Barber"
+                TitleColor="goldenrod"
+                ItemsSource="{Binding Barbers}"
+                ItemDisplayBinding="{Binding Name}" 
+                SelectedItem="{Binding SelectedItemBarberName, Mode=TwoWay}"
+                IsVisible="{Binding IsBarberSelectionContentVisible}"/>
+
+        <Button x:Name="BarberSelectSubmitBtn"
+                        VerticalOptions="Center"      
+                        BackgroundColor="DarkGoldenrod"
+                        Command="{Binding BarberSelectSubmitCommand}"
+                        IsVisible="{Binding IsBarberSelectionContentVisible}"/>
+
+    </StackLayout>
+</ContentPage>

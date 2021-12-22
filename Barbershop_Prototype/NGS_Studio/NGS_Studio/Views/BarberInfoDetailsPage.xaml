@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NGS_Studio.Views.BarberInfoDetailsPage"
+             xmlns:vm="clr-namespace:NGS_Studio.ViewModels"
+             Title="{Binding Title}" BackgroundColor="Black">
+
+    <ContentPage.BindingContext>
+        <vm:BarberInfoDetailsViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Margin="20,35,20,20">
+
+        <CollectionView x:Name="collectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label Text="{Binding Name}"
+                               FontSize="Medium" 
+                               TextColor="White"/>
+                        <Label Text="{Binding PhoneNumber}"
+                               FontSize="Small" 
+                               TextColor="White"/>
+                        <Label Text="{Binding Email}"
+                               FontSize="Small" />
+                        <Label Text="{Binding Barber}"
+                               TextColor="White"
+                               FontSize="Small" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </StackLayout>
+    
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NGS_Studio.Views.ClientInfoPage"
+             xmlns:vm="clr-namespace:NGS_Studio.ViewModels"
+             Title="{Binding Title}" BackgroundColor="Black">
+
+    <ContentPage.BindingContext>
+        <vm:ClientInfoViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Margin="20,35,20,20">
+        <Button Text="Add client"
+                Command="{Binding AddClientCommand}"
+                BackgroundColor="DarkGoldenrod"
+                />
+        <!--<Button Text="Remove client"
+                Command="{Binding RemoveClientCommand}"
+                BackgroundColor="DarkGoldenrod"
+                />-->
+        <Button Text="View client"
+                Command="{Binding ViewClientsCommand}"
+                BackgroundColor="DarkGoldenrod"
+               />
+    </StackLayout>
+    
+</ContentPage>

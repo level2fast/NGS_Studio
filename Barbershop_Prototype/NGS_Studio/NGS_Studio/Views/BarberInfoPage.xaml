@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NGS_Studio.Views.BarberInfoPage"
+             xmlns:vm="clr-namespace:NGS_Studio.ViewModels"
+             Title="{Binding Title}" BackgroundColor="Black">
+
+    <ContentPage.BindingContext>
+        <vm:BarberInfoViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Margin="20,35,20,20">
+        <Button Text="Add barber"
+                Command="{Binding AddBarberCommand}"
+                BackgroundColor="DarkGoldenrod"
+                />
+        <!--<Button Text="Remove barber"
+                Command="{Binding RemoveBarberCommand}"
+                BackgroundColor="DarkGoldenrod"
+                />-->
+        <Button Text="View Barbers"
+                Command="{Binding ViewBarbersCommand}"
+                BackgroundColor="DarkGoldenrod"
+               />
+    </StackLayout>
+    
+</ContentPage>

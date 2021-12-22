@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NGS_Studio.Views.ClientCheckinPage"
+             xmlns:vm="clr-namespace:NGS_Studio.ViewModels"
+             Title="{Binding Title}" BackgroundColor="Black">
+
+    <ContentPage.BindingContext>
+        <vm:ClientCheckinViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout Margin="20,35,20,20">
+
+        <Entry x:Name="nameEntry"
+               Placeholder="Enter name" 
+               Text = "{Binding NameEntry, Mode=TwoWay}"
+               TextColor="{OnPlatform iOS=Black, Android=White}"
+               PlaceholderColor="DarkGray" />
+        <Entry x:Name="emailEntry"
+               Placeholder="Enter email" 
+               Text = "{Binding EmailEntry, Mode=TwoWay}"
+               TextColor="{OnPlatform iOS=Black, Android=White}"
+               PlaceholderColor="DarkGray"/> 
+        <Entry x:Name="phoneNumberEntry"  
+               Keyboard="Numeric" 
+               Placeholder="Phone Number"
+               Text = "{Binding PhoneNumberEntry, Mode=TwoWay}"
+               TextColor="{OnPlatform iOS=Black, Android=White}"
+               PlaceholderColor="DarkGray">
+            <Entry.Behaviors>
+                <vm:MaskedBehavior Mask="( XXX ) XXX - XXXX" />
+            </Entry.Behaviors>
+        </Entry>
+        
+        <Picker x:Name ="barberPicker" Title="Select a Barber"
+        TitleColor="goldenrod"
+        ItemsSource="{Binding Barbers}"
+        ItemDisplayBinding="{Binding Name}" 
+        SelectedItem="{Binding SelectedBarber}"/>
+        
+        <Button Text="Submit"
+                Command="{Binding ClientSubmitCommand}"
+                BackgroundColor="DarkGoldenrod"/>
+    </StackLayout>
+    
+</ContentPage>
