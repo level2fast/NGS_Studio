@@ -1,2 +1,2 @@
-# NGS_Studios
-NGS_Studios
+# NGS_Studio
+NGS_Studio
