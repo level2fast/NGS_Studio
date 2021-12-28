@@ -1,0 +1,95 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ViewModels\UserViewModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="4.0.9" />
+    <PackageReference Include="FirebaseDatabase.net" Version="4.0.7" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="1.3.1" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\ClientInfoDetailsPage.xaml.cs">
+      <DependentUpon>ClientInfoDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ClientInfoPage.xaml.cs">
+      <DependentUpon>ClientInfoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ClientInfoAddClientPage.xaml.cs">
+      <DependentUpon>ClientInfoAddClientPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\BarberInfoRemoveBarberPage.xaml.cs">
+      <DependentUpon>BarberInfoRemoveBarberPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\BarberInfoDetailsPage.xaml.cs">
+      <DependentUpon>BarberInfoDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\BarberInfoAddBarberPage.xaml.cs">
+      <DependentUpon>BarberInfoAddBarberPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\CheckinPage.xaml.cs">
+      <DependentUpon>CheckinPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\BarberInfoPage.xaml.cs">
+      <DependentUpon>BarberInfoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ClientCheckinPage.xaml.cs">
+      <DependentUpon>ClientCheckinPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PhoneNumberCheckinPage.xaml.cs">
+      <DependentUpon>PhoneNumberCheckinPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\OwnerDetailsPage.xaml.cs">
+      <DependentUpon>OwnerDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\OwnerLoginPage.xaml.cs">
+      <DependentUpon>OwnerLoginPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\ClientInfoDetailsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ClientInfoPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ClientInfoAddClientPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\BarberInfoRemoveBarberPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\BarberInfoDetailsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\BarberInfoAddBarberPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\BarberInfoPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ClientCheckinPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\PhoneNumberCheckinPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\OwnerDetailsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\OwnerLoginPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
