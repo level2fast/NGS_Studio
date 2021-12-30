@@ -3,48 +3,40 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NGS_Studio.Views.BarberInfoRemoveBarberPage"
              xmlns:vm="clr-namespace:NGS_Studio.ViewModels"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              Title="{Binding Title}" BackgroundColor="Black">
 
     <ContentPage.BindingContext>
-        <vm:BarberInfoViewModel />
+        <vm:BarberInfoRemoveBarberViewModel />
     </ContentPage.BindingContext>
 
-    <StackLayout Margin="20,35,20,20">
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior EventName="Appearing" Command="{Binding LoadCommand}" />
+    </ContentPage.Behaviors>
 
-        <Entry x:Name="nameEntry"
-               Placeholder="Enter name" 
-               Text = "{Binding NameEntry, Mode=TwoWay}"
-               IsVisible="{Binding AddBarberContentVisible}"/>
-        <Entry x:Name="emailEntry"
-               Placeholder="Enter email" 
-               Text = "{Binding EmailEntry, Mode=TwoWay}"
-               IsVisible="{Binding AddBarberContentVisible}"/>
-        <Entry x:Name="phoneNumberEntry"  
-               Keyboard="Numeric" 
-               Placeholder="Phone Number"
-               Text = "{Binding PhoneNumberEntry, Mode=TwoWay}"
-               IsVisible="{Binding AddBarberContentVisible}">
-            <Entry.Behaviors>
-                <vm:MaskedBehavior Mask="( XXX ) XXX - XXXX" />
-            </Entry.Behaviors>
-        </Entry>
-        <Button Text="Add to NGS"
-                Command="{Binding ClientSubmitCommand}"
-                BackgroundColor="DarkGoldenrod"
-                IsVisible="{Binding AddBarberContentVisible}"/>
-        
-        <Button Text="Add barber"
-                Command="{Binding AddBarberCommand}"
-                BackgroundColor="DarkGoldenrod"
-                IsVisible="{Binding BarberInfoContentVisible}"/>
-        <Button Text="Remove barber"
-                Command="{Binding RemoveBarberCommand}"
-                BackgroundColor="DarkGoldenrod"
-                IsVisible="{Binding BarberInfoContentVisible}"/>
-        <Button Text="View Barbers"
-                Command="{Binding ViewBarbersCommand}"
-                BackgroundColor="DarkGoldenrod"
-                IsVisible="{Binding BarberInfoContentVisible}"/>
+    <StackLayout Margin="20,35,20,20">
+        <CollectionView x:Name="collectionView" 
+                        ItemsSource="{Binding Barbers, Mode=TwoWay}" 
+                        SelectionMode="Single" 
+                        SelectionChangedCommand="{Binding BarberSelectionChangedCommand}"
+                        SelectionChangedCommandParameter="{Binding SelectedItem,Source={x:Reference collectionView}}" 
+                        SelectedItem="{Binding CurrentItem, Mode=TwoWay}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label Text="{Binding Name}"
+                               FontSize="Medium" 
+                               TextColor="White"/>
+                        <Label Text="{Binding PhoneNumber}"
+                               FontSize="Small" 
+                               TextColor="White"/>
+                        <Label Text="{Binding Email}"
+                               FontSize="Small" 
+                               TextColor="White"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </StackLayout>
     
 </ContentPage>

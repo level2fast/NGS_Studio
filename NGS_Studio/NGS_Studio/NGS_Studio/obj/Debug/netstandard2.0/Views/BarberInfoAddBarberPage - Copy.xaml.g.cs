@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Barbershop_Prototype.Views.BarberInfoAddBarberPage - Copy.xaml", "Views/BarberInfoAddBarberPage - Copy.xaml", typeof(global::Barbershop_Prototype.Views.BarberInfoAddBarberPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("NGS_Studio.Views.BarberInfoAddBarberPage - Copy.xaml", "Views/BarberInfoAddBarberPage - Copy.xaml", typeof(global::NGS_Studio.Views.BarberInfoAddBarberPage))]
 
-namespace Barbershop_Prototype.Views {
+namespace NGS_Studio.Views {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\BarberInfoAddBarberPage - Copy.xaml")]

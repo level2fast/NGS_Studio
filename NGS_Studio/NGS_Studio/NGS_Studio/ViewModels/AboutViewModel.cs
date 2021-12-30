@@ -32,6 +32,7 @@ namespace NGS_Studio.ViewModels
             catch (ArgumentNullException anEx)
             {
                 // Number was null or white space
+
             }
             catch (FeatureNotSupportedException ex)
             {

@@ -10,7 +10,6 @@
     </ContentPage.BindingContext>
 
     <StackLayout Margin="20,35,20,20">
-
         <Entry x:Name="nameEntry"
                Placeholder="Enter name" 
                Text = "{Binding NameEntry, Mode=TwoWay}"
@@ -32,10 +31,8 @@
             </Entry.Behaviors>
         </Entry>
         <Button Text="Add to NGS"
-                Command="{Binding ClientSubmitCommand}"
+                Command="{Binding AddClientCommand}"
                 BackgroundColor="DarkGoldenrod"
                 />
- 
     </StackLayout>
-    
 </ContentPage>

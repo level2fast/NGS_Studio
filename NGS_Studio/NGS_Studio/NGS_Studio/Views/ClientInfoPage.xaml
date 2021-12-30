@@ -14,12 +14,12 @@
                 Command="{Binding AddClientCommand}"
                 BackgroundColor="DarkGoldenrod"
                 />
-        <!--<Button Text="Remove client"
+        <Button Text="Remove client"
                 Command="{Binding RemoveClientCommand}"
                 BackgroundColor="DarkGoldenrod"
-                />-->
-        <Button Text="View client"
-                Command="{Binding ViewClientsCommand}"
+                />
+        <Button Text="Edit client"
+                Command="{Binding EditClientsCommand}"
                 BackgroundColor="DarkGoldenrod"
                />
     </StackLayout>

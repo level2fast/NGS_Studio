@@ -146,6 +146,13 @@ C:\Github\NGS_Studio\Barbershop_Prototype\NGS_Studio\NGS_Studio.iOS\obj\iPhone\D
 C:\Github\NGS_Studio\Barbershop_Prototype\NGS_Studio\NGS_Studio.iOS\obj\iPhone\Debug\NGS_Studio.iOS.csproj.CopyComplete
 C:\Github\NGS_Studio\Barbershop_Prototype\NGS_Studio\NGS_Studio.iOS\obj\iPhone\Debug\Barbershop_Prototype.iOS.exe
 C:\Github\NGS_Studio\Barbershop_Prototype\NGS_Studio\NGS_Studio.iOS\obj\iPhone\Debug\Barbershop_Prototype.iOS.pdb
+C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
+C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\obj\iPhone\Debug\coremlc\_PartialAppManifest.items
+C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\obj\iPhone\Debug\coremlc\_BundleResourceWithLogicalName.items
+C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\obj\iPhone\Debug\optimized\
+C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\obj\iPhone\Debug\NGS_Studio.iOS.csproj.CoreCompileInputs.cache
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\bin\iPhone\Debug\Barbershop_Prototype.iOS.exe
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\bin\iPhone\Debug\Barbershop_Prototype.iOS.pdb
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\bin\iPhone\Debug\Lottie.iOS.dll
@@ -164,6 +171,7 @@ C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\bin\i
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\bin\iPhone\Debug\System.Memory.dll
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\bin\iPhone\Debug\System.Reactive.dll
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\bin\iPhone\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\bin\iPhone\Debug\Xamarin.CommunityToolkit.dll
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\bin\iPhone\Debug\Xamarin.Essentials.dll
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\bin\iPhone\Debug\Xamarin.Essentials.pdb
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\bin\iPhone\Debug\Xamarin.Forms.Core.dll
@@ -209,15 +217,7 @@ C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\bin\i
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\bin\iPhone\Debug\zh-Hant\Xamarin.Forms.Platform.iOS.resources.dll
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\bin\iPhone\Debug\NGS_Studio.dll
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\bin\iPhone\Debug\NGS_Studio.pdb
-C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
-C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
-C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
-C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\obj\iPhone\Debug\coremlc\_PartialAppManifest.items
-C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\obj\iPhone\Debug\coremlc\_BundleResourceWithLogicalName.items
-C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\obj\iPhone\Debug\optimized\
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\obj\iPhone\Debug\NGS_Studio.iOS.csprojAssemblyReference.cache
-C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\obj\iPhone\Debug\NGS_Studio.iOS.csproj.CoreCompileInputs.cache
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\obj\iPhone\Debug\NGS_Studio.iOS.csproj.CopyComplete
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\obj\iPhone\Debug\Barbershop_Prototype.iOS.exe
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\obj\iPhone\Debug\Barbershop_Prototype.iOS.pdb
-C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio.iOS\bin\iPhone\Debug\Xamarin.CommunityToolkit.dll

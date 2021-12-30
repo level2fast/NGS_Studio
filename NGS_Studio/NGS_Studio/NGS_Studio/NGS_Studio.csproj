@@ -19,6 +19,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\ClientInfoRemoveClientPage.xaml.cs">
+      <DependentUpon>ClientInfoRemoveClientPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ClientInfoEditClientPage.xaml.cs">
+      <DependentUpon>ClientInfoEditClientPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\BarberInfoEditBarberPage.xaml.cs">
+      <DependentUpon>BarberInfoEditBarberPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\ClientInfoDetailsPage.xaml.cs">
       <DependentUpon>ClientInfoDetailsPage.xaml</DependentUpon>
     </Compile>
@@ -58,6 +67,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Views\ClientInfoRemoveClientPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ClientInfoEditClientPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\BarberInfoEditBarberPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\ClientInfoDetailsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

@@ -26,6 +26,8 @@ namespace NGS_Studio.Services
                 new User
                 {
                     Name = item.Object.Name,
+                    PhoneNumber = item.Object.PhoneNumber,
+                    Email = item.Object.Email,
                     IsBarber = item.Object.IsBarber,
                     IsClient = item.Object.IsClient,
                 }).ToList();
@@ -61,11 +63,20 @@ namespace NGS_Studio.Services
             try
             {
                 var allUsers = await GetAllUser();
-                //return allUsers.FirstOrDefault();
-                //await firebase
-                //.Child("User")
-                //.OnceAsync<User>();
                 return allUsers.Where(a => a.IsBarber == true).ToList();
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine($"Error:{e}");
+                return null;
+            }
+        }
+        public static async Task<List<User>> GetAllClients()
+        {
+            try
+            {
+                var allUsers = await GetAllUser();
+                return allUsers.Where(a => a.IsClient == true).ToList();
             }
             catch (Exception e)
             {
@@ -96,17 +107,17 @@ namespace NGS_Studio.Services
         }
 
         //Update     
-        public static async Task<bool> UpdateUser(string email, string password)
+        public static async Task<bool> UpdateUser(User usr)
         {
             try
             {
                 var toUpdateUser = (await firebase
                 .Child("User")
-                .OnceAsync<User>()).Where(a => a.Object.Email == email).FirstOrDefault();
+                .OnceAsync<User>()).Where(a => a.Object.PhoneNumber == usr.PhoneNumber).FirstOrDefault();
                 await firebase
                 .Child("User")
                 .Child(toUpdateUser.Key)
-                .PutAsync(new User() { Email = email, Password = password });
+                .PutAsync(usr);
                 return true;
             }
             catch (Exception e)
@@ -117,13 +128,13 @@ namespace NGS_Studio.Services
         }
 
         //Delete User    
-        public static async Task<bool> DeleteUser(string email)
+        public static async Task<bool> DeleteUser(User usr)
         {
             try
             {
                 var toDeletePerson = (await firebase
                 .Child("User")
-                .OnceAsync<User>()).Where(a => a.Object.Email == email).FirstOrDefault();
+                .OnceAsync<User>()).Where(a => a.Object.PhoneNumber == usr.PhoneNumber).FirstOrDefault();
                 await firebase.Child("User").Child(toDeletePerson.Key).DeleteAsync();
                 return true;
             }

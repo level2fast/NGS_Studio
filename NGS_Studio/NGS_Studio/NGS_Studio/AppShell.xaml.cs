@@ -33,7 +33,9 @@ namespace NGS_Studio
             Routes.Add(nameof(ClientInfoAddClientPage), typeof(ClientInfoAddClientPage));
             Routes.Add(nameof(ClientInfoDetailsPage), typeof(ClientInfoDetailsPage));
             Routes.Add(nameof(LoginPage), typeof(LoginPage));
-            // Routes.Add(nameof(ClientInfoRemoveClientPage), typeof(ClientInfoRemoveClientPage));
+            Routes.Add(nameof(BarberInfoEditBarberPage), typeof(BarberInfoEditBarberPage));
+            Routes.Add(nameof(ClientInfoRemoveClientPage), typeof(ClientInfoRemoveClientPage));
+
 
             foreach (var item in Routes)
             {

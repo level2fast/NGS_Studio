@@ -29,17 +29,12 @@ namespace NGS_Studio.ViewModels
         {
             Title = "Client Checkin";
             ClientSubmitCommand = new Command(OnClientSumbitClicked);
-            //initBarbers();
 
             LoadCommand = new AsyncCommand(async () =>
             {
                 // load data async
                 Barbers = await UserTableService.GetAllBarbers();
             });
-        }
-        async void initBarbers()
-        {
-            Barbers = await UserTableService.GetAllBarbers();
         }
         public IList<User> Barbers
         {

@@ -49,7 +49,7 @@ namespace NGS_Studio.ViewModels
             if (!string.IsNullOrWhiteSpace(NameEntry) && !string.IsNullOrWhiteSpace(EmailEntry) &&
                 !string.IsNullOrWhiteSpace(PhoneNumberEntry))
             {
-                var usertemp = await UserTableService.GetUser(PhoneNumberEntry);
+                var usertemp = await UserTableService.GetUser(masked.reformatPhoneNumber(PhoneNumberEntry));
                 // Check to see if user is already in database
                 if (usertemp == null)
                 {

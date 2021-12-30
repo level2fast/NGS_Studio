@@ -10,12 +10,6 @@ namespace NGS_Studio.Views
 		{
 			InitializeComponent();
 		}
-		protected override async void OnAppearing()
-		{
-			base.OnAppearing();
-			//ToDo SDD: Update to populate picker with all barbers in the shop
-			//barberPicker.ItemsSource   = await App.Database.GetBarbersAsync();
-		}
 
 	}
 }

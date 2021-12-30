@@ -14,12 +14,12 @@
                 Command="{Binding AddBarberCommand}"
                 BackgroundColor="DarkGoldenrod"
                 />
-        <!--<Button Text="Remove barber"
+        <Button Text="Remove barber"
                 Command="{Binding RemoveBarberCommand}"
                 BackgroundColor="DarkGoldenrod"
-                />-->
-        <Button Text="View Barbers"
-                Command="{Binding ViewBarbersCommand}"
+                />
+        <Button Text="Edit Barbers"
+                Command="{Binding EditBarbersCommand}"
                 BackgroundColor="DarkGoldenrod"
                />
     </StackLayout>

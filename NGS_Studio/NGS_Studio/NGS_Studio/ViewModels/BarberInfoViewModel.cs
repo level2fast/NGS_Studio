@@ -15,7 +15,7 @@ namespace NGS_Studio.ViewModels
         //.Data bindings are defined between these commands and the Button.
         public Command AddBarberCommand { get; }
         public Command RemoveBarberCommand { get; }
-        public Command ViewBarbersCommand { get; }
+        public Command EditBarbersCommand { get; }
 
 
         public BarberInfoViewModel()
@@ -23,7 +23,7 @@ namespace NGS_Studio.ViewModels
             Title = "Barber Info";
             AddBarberCommand = new Command(OnAddBarberClicked);
             RemoveBarberCommand = new Command(OnRemoveBarberClicked);
-            ViewBarbersCommand = new Command(OnViewBarbersClicked);
+            EditBarbersCommand = new Command(OnEditBarbersClicked);
         }
 
 
@@ -36,7 +36,7 @@ namespace NGS_Studio.ViewModels
         {
             await Shell.Current.GoToAsync($"{nameof(BarberInfoRemoveBarberPage)}");
         }
-        private async void OnViewBarbersClicked()
+        private async void OnEditBarbersClicked()
         {
             await Shell.Current.GoToAsync($"{nameof(BarberInfoDetailsPage)}");
         }
