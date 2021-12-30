@@ -14,6 +14,12 @@ namespace NGS_Studio.ViewModels
 
         public ICommand LoadCommand { get; protected set; }
         public ICommand BarberSelectionChangedCommand { get; set; }
+        public IList<User> Barbers
+        {
+            get => barbers;
+            set => SetProperty(ref barbers, value);
+
+        }
         public BarberInfoDetailsViewModel()
         {
             Title = " Select Barber";
@@ -33,12 +39,6 @@ namespace NGS_Studio.ViewModels
             editBarberPage.BindingContext = EditBarberVM;
             await Shell.Current.Navigation.PushAsync(editBarberPage);
 
-        }
-        public IList<User> Barbers
-        {
-            get => barbers;
-            set => SetProperty(ref barbers, value);
-            
         }
 
     }

@@ -23,7 +23,7 @@
                         SelectedItem="{Binding CurrentItem, Mode=TwoWay}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout>
+                    <StackLayout Margin="10">
                         <Label Text="{Binding Name}"
                                FontSize="Medium" 
                                TextColor="White"/>

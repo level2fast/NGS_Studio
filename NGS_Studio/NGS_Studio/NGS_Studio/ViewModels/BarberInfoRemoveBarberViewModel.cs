@@ -19,6 +19,11 @@ namespace NGS_Studio.ViewModels
             set => SetProperty(ref barbers, value);
 
         }
+        public User CurrentItem
+        {
+            get => item;
+            set => SetProperty(ref item, value);
+        }
 
         public BarberInfoRemoveBarberViewModel()
         {
@@ -33,22 +38,25 @@ namespace NGS_Studio.ViewModels
 
         private async void OnBarberSelectionChanged(object userObject)
         {
-            User usr = (User)userObject;
-            bool answer = await App.Current.MainPage.DisplayAlert("Remove", "Are you sure you want to remove " + usr.Name + "?", "Yes", "No");
-            if (answer == true)
+            if (userObject != null)
             {
-                bool result = await UserTableService.DeleteUser(usr);
-                if (result)
+                User usr = (User)userObject;
+                bool answer = await App.Current.MainPage.DisplayAlert("Remove", "Are you sure you want to remove " + usr.Name + "?", "Yes", "No");
+                if (answer == true)
                 {
-                    await App.Current.MainPage.DisplayAlert("Removed", usr.Name + "from NGS", "OK");
-                    await Shell.Current.GoToAsync("..");
+                    bool result = await UserTableService.DeleteUser(usr);
+                    if (result)
+                    {
+                        await App.Current.MainPage.DisplayAlert("Removed", usr.Name + "from NGS", "OK");
+                    }
+                    else
+                    {
+                        await App.Current.MainPage.DisplayAlert("Error", "Could not remove from NGS", "OK");
+                    }
                 }
-                else 
-                {
-                    await App.Current.MainPage.DisplayAlert("Error", "Could not remove from NGS", "OK");
-                    await Shell.Current.GoToAsync("..");
-                }
+                CurrentItem = null;
             }
+
         }
 
     }

@@ -1,9 +1,5 @@
 ﻿using SQLite;
 using System.Collections.Generic;
-using System.Threading.Tasks;
-using Firebase.Database;
-using Firebase.Database.Query;
-using System.Linq;
 using System;
 
 namespace NGS_Studio.Models
@@ -37,5 +33,6 @@ namespace NGS_Studio.Models
 
 		public string ImageUrl { get; set; }
 
+		public string checkin { get; set; }
     }
 }

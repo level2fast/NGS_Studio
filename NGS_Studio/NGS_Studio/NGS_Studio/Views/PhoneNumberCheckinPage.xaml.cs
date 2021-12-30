@@ -8,10 +8,6 @@ namespace NGS_Studio.Views
         {
             InitializeComponent();
         }
-        protected override async void OnAppearing()
-        {
-            base.OnAppearing();
-           BarberPicker.ItemsSource = await App.Database.GetBarbersAsync();
-        }
+
     }
 }

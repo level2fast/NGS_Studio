@@ -3,12 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NGS_Studio.Views.PhoneNumberCheckinPage"
              xmlns:vm="clr-namespace:NGS_Studio.ViewModels"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              Title="Check in"  BackgroundColor="Black">
 
     <ContentPage.BindingContext>
         <vm:PhoneNumberCheckinViewModel />
     </ContentPage.BindingContext>
-    
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior EventName="Appearing" Command="{Binding LoadCommand}" />
+    </ContentPage.Behaviors>
     <ContentPage.Resources>
         <Style TargetType="Button">
             <Setter Property="Text" Value="CHECK IN" />
@@ -57,8 +60,9 @@
                 TitleColor="goldenrod"
                 ItemsSource="{Binding Barbers}"
                 ItemDisplayBinding="{Binding Name}" 
-                SelectedItem="{Binding SelectedItemBarberName, Mode=TwoWay}"
-                IsVisible="{Binding IsBarberSelectionContentVisible}"/>
+                SelectedItem="{Binding SelectedBarber, Mode=TwoWay}"
+                IsVisible="{Binding IsBarberSelectionContentVisible}"
+                TextColor="{OnPlatform iOS=Black, Android=White}"/>
 
         <Button x:Name="BarberSelectSubmitBtn"
                         VerticalOptions="Center"      

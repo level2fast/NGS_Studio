@@ -3,16 +3,34 @@ using NGS_Studio.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Xamarin.Forms;
+using NGS_Studio.Services;
+using System;
+using System.Windows.Input;
+using Xamarin.CommunityToolkit.ObjectModel;
 
 namespace NGS_Studio.ViewModels
 {
     public class PhoneNumberCheckinViewModel : BaseViewModel
     {
+        private IList<User> barbers;
+        private User barber;
         private MaskedBehavior masked;
 
         public Command PhoneNumberCheckinCommand { get; }
         public Command BarberSelectSubmitCommand { get; }
 
+        public ICommand LoadCommand { get; protected set; }
+        public IList<User> Barbers
+        {
+            get => barbers;
+            set => SetProperty(ref barbers, value);
+
+        }
+        public User SelectedBarber
+        {
+            get => barber;
+            set => SetProperty(ref barber, value);
+        }
         string phoneNumberEntry = string.Empty;
         string selectedBarberName = string.Empty;
         public string PhoneNumberEntry
@@ -22,14 +40,8 @@ namespace NGS_Studio.ViewModels
         }
         public string SelectedItemBarberName
         {
-            get { return selectedBarberName; }
-            set
-            {
-                if (selectedBarberName != value)
-                {
-                    selectedBarberName = value;
-                }
-            }
+            get => selectedBarberName;
+            set => SetProperty(ref selectedBarberName, value);
         }
 
 
@@ -47,8 +59,6 @@ namespace NGS_Studio.ViewModels
             set { SetProperty(ref _isBarberSelectionContentVisible, value); }
         }
 
-
-
         public PhoneNumberCheckinViewModel()
         {
             PhoneNumberCheckinCommand = new Command(OnPhoneNumberCheckinClicked);
@@ -57,13 +67,17 @@ namespace NGS_Studio.ViewModels
             //display checkin content
             IsCheckinContentVisible = true;
             IsBarberSelectionContentVisible = false;
+            LoadCommand = new AsyncCommand(async () =>
+            {
+                // load data async
+                Barbers = await UserTableService.GetAllBarbers();
+            });
         }
         private async void OnPhoneNumberCheckinClicked()
         {
-
-            //check to see if phone number is in database
-            var user = await App.Database.GetUserAsync(masked.reformatPhoneNumber(phoneNumberEntry));
-            if (user.Count == 0)
+            //check to see if client is in database
+            User user = await UserTableService.GetUser(masked.reformatPhoneNumber(phoneNumberEntry));
+            if (user == null)
             {
                 await Application.Current.MainPage.DisplayAlert("Not a registered client", "Please register with NGS", "OK");
                 // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
@@ -71,6 +85,9 @@ namespace NGS_Studio.ViewModels
             }
             else
             {
+                //DateTime curtime = System.DateTime.Now.ToString();
+                user.checkin=System.DateTime.Now.ToString();
+                await UserTableService.UpdateUser(user);
                 //hide phone number checkin content
                 IsCheckinContentVisible = false;
                 //show barber select checkin content
@@ -81,10 +98,9 @@ namespace NGS_Studio.ViewModels
 
         private async void OnBarberSelectSubmitClicked()
         {
-            var user = await App.Database.GetUserAsync(masked.reformatPhoneNumber(phoneNumberEntry));
-            User u = user.ElementAt(0);
-            u.Barber = SelectedItemBarberName;
-            await App.Database.UpdateUserAsync(u);
+            User user = await UserTableService.GetUser(masked.reformatPhoneNumber(phoneNumberEntry));
+            user.Barber = barber.Name;
+            await UserTableService.UpdateUser(user);
             //display "client preferred barber question label and buttons
             await Application.Current.MainPage.DisplayAlert("Thanks!", "Your barber will be with you shortly", "OK");
             // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
