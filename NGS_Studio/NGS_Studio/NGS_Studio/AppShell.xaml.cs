@@ -1,5 +1,4 @@
-﻿using NGS_Studio.ViewModels;
-using NGS_Studio.Views;
+﻿using NGS_Studio.Views;
 using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
@@ -24,7 +23,7 @@ namespace NGS_Studio
             Routes.Add(nameof(PhoneNumberCheckinPage), typeof(PhoneNumberCheckinPage));
             Routes.Add(nameof(ClientCheckinPage), typeof(ClientCheckinPage));
             Routes.Add(nameof(OwnerDetailsPage), typeof(OwnerDetailsPage));
-            Routes.Add(nameof(OwnerLoginPage), typeof(OwnerLoginPage));
+            Routes.Add(nameof(MainPage), typeof(MainPage));
             Routes.Add(nameof(BarberInfoPage), typeof(BarberInfoPage));
             Routes.Add(nameof(BarberInfoAddBarberPage), typeof(BarberInfoAddBarberPage));
             Routes.Add(nameof(BarberInfoDetailsPage), typeof(BarberInfoDetailsPage));
@@ -35,7 +34,10 @@ namespace NGS_Studio
             Routes.Add(nameof(LoginPage), typeof(LoginPage));
             Routes.Add(nameof(BarberInfoEditBarberPage), typeof(BarberInfoEditBarberPage));
             Routes.Add(nameof(ClientInfoRemoveClientPage), typeof(ClientInfoRemoveClientPage));
-
+            Routes.Add(nameof(OwnerInfoPage), typeof(OwnerInfoPage));
+            Routes.Add(nameof(NewEmailPage), typeof(NewEmailPage));
+           // Routes.Add(nameof(SignUpPage), typeof(SignUpPage));
+            Routes.Add(nameof(ForgotPasswordPage), typeof(ForgotPasswordPage));
 
             foreach (var item in Routes)
             {

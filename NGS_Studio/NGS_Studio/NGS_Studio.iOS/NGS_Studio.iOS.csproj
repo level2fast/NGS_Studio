@@ -67,6 +67,7 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
+    <None Include="GoogleService-Info.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <BundleResource Include="Resources\1127-success.json" />
@@ -142,8 +143,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
-    <Reference Include="System.Numerics" />
-    <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Com.Airbnb.iOS.Lottie">

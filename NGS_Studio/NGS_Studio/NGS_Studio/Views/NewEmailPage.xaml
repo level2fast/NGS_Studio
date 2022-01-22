@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NGS_Studio.Views.NewEmailPage"
+             Shell.PresentationMode="ModalAnimated"
+             Title="New Email"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true">
+    <ContentPage.Content>
+        <StackLayout Spacing="3" Padding="15">
+            <Label Text="Subject" 
+                   FontSize="Medium" 
+                   TextColor="{OnPlatform iOS=white, Android=black}"/>
+            
+            <Entry Text="{Binding Subject, Mode=TwoWay}" 
+                   FontSize="Medium" 
+                   TextColor="{OnPlatform iOS=white, Android=black}"/>
+            
+            <Label Text="Body" 
+                   FontSize="Medium" 
+                   TextColor="{OnPlatform iOS=Black, Android=black}"/>
+
+            <Editor Text="{Binding Body, Mode=TwoWay}" 
+                    AutoSize="TextChanges" 
+                    FontSize="Medium" 
+                    Margin="0" 
+                    TextColor="{OnPlatform iOS=Black, Android=black}"/>
+            
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
+                <Button Text="Send" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

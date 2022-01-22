@@ -5,6 +5,7 @@ using NGS_Studio.Services;
 using System.Collections.Generic;
 using Xamarin.CommunityToolkit.ObjectModel;
 using System.Windows.Input;
+using NGS_Studio.Data;
 
 namespace NGS_Studio.ViewModels
 {
@@ -62,15 +63,10 @@ namespace NGS_Studio.ViewModels
             set => SetProperty(ref phoneNumberEntry, value);
         }
 
-
         private async void OnClientCheckinClicked()
         {
             // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
             await Shell.Current.GoToAsync($"/{nameof(OwnerDetailsPage)}");
-        }
-        bool IsAlreadyRegistered(string phoneNumber)
-        {
-            return phoneNumber == Constants.Username;
         }
 
         async void OnClientSumbitClicked(object sender)

@@ -11,13 +11,13 @@
 
     <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
         <Image Source="NgsLogo" 
-                   WidthRequest="{OnPlatform iOS=300, Android=400}" 
+                   WidthRequest="{OnPlatform UWP='*', iOS=300, Android=400}" 
                    HorizontalOptions="Center"  />
-        <!--<Button x:Name="OwnerInfoBtn"
+        <Button x:Name="OwnerInfoBtn"
                     VerticalOptions="Center" 
                     Text="Owner"     
                     Command="{Binding OwnerInfoCommand}"
-                    BackgroundColor="DarkGoldenrod" />-->
+                    BackgroundColor="DarkGoldenrod" />
         <Button x:Name="ClientInfoBtn" 
                     VerticalOptions="Center" 
                     Text="Clients"  

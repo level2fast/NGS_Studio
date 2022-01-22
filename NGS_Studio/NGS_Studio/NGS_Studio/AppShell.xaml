@@ -81,7 +81,7 @@
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" IsVisible="False" />
     </FlyoutItem>
     <FlyoutItem Title="Promotions" Icon="icon_feed.png">
-        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" IsVisible="True"/>
+        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" IsVisible="False"/>
     </FlyoutItem>
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->

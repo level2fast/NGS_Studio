@@ -34,5 +34,10 @@
     <string>NGS_Studio</string>
     <key>XSAppIconAssets</key>
     <string>Assets.xcassets/AppIcon.appiconset</string>
+  <!-- Adding query in order to use email functionality -->
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>mailto</string>
+    </array>
 </dict>
 </plist>

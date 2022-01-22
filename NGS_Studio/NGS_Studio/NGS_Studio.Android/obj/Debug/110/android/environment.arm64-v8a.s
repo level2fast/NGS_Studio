@@ -3,8 +3,8 @@
 	.section	.rodata.env.str.1,"aMS",@progbits,1
 	.type	.L.env.str.1, @object
 .L.env.str.1:
-	.asciz	"com.companyname.NGS_Studio"
-	.size	.L.env.str.1, 27
+	.asciz	"NGS_Studio.App"
+	.size	.L.env.str.1, 15
 	.section	.data.application_config,"aw",@progbits
 	.type	application_config, @object
 	.p2align	3
@@ -73,7 +73,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.8,"aMS",@progbits,1
 	.type	.L.env.str.8, @object
 .L.env.str.8:
-	.asciz	"f65a4b30-f246-4ebe-95d0-fcf2cd8d972c"
+	.asciz	"81357c99-da26-4b01-a80e-abb0e65af934"
 	.size	.L.env.str.8, 37
 	.section	.rodata.env.str.9,"aMS",@progbits,1
 	.type	.L.env.str.9, @object

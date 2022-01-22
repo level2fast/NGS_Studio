@@ -1,39 +1,46 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NGS_Studio.Views.LoginPage"
              xmlns:vm="clr-namespace:NGS_Studio.ViewModels"
              Title="{Binding Title}" BackgroundColor="Black">
 
-  <ContentPage.BindingContext>
+    <ContentPage.BindingContext>
         <vm:LoginViewModel />
     </ContentPage.BindingContext>
-
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Color x:Key="White">#96d1ff</Color>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-
-    <ContentPage.Content >
-        <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
-            <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-                <Image Source="{Binding LogoName}" 
-                       WidthRequest="{OnPlatform UWP='*', iOS=300, Android=400}" 
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always" >
+            <StackLayout VerticalOptions="StartAndExpand">
+                <Image Source="NgsLogo"
+                       WidthRequest="{OnPlatform UWP='*', iOS=300, Android=400}"
                        HorizontalOptions="Center"  />
-                <Button x:Name="OwnerLoginBtn"
-                        VerticalOptions="Center" 
-                        Text="Owner Login"     
-                        Command="{Binding OwnerLoginCommand}"
-                        BackgroundColor="DarkGoldenrod" />
-                <Button x:Name="BeginCheckinBtn" 
-                        VerticalOptions="Center" 
-                        Text="Client Checkin"  
-                        Command="{Binding ClientCheckinCommand}" 
-                        BackgroundColor="DarkGoldenrod" />
+                <Label Text="Username" />
+                <Entry x:Name="usernameEntry" 
+                       Placeholder="Username" 
+                       TextColor="{OnPlatform iOS=Black, Android=White}" 
+                       PlaceholderColor="DarkGray" 
+                       Text="{Binding EmailEntry}"/>
+                <Label Text="Password" />
+                <Entry x:Name="passwordEntry" 
+                       IsPassword="true" 
+                       Placeholder="Password" 
+                       TextColor="{OnPlatform iOS=Black, Android=White}" 
+                       PlaceholderColor="DarkGray"
+                       Text="{Binding PasswordEntry}"/>
+                <Button Text="Login" 
+                        Command="{Binding OwnerLoginCommand}" 
+                        BackgroundColor="DarkGoldenrod"/>
+                <Label x:Name="messageLabel" />
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Forgot Password"
+                        HorizontalOptions="CenterAndExpand"
+                        Command="{Binding ForgotPasswordCommand}"
+                        Style="{StaticResource PrimaryButton}"/>
+                    <!--<Button Text="Sign Up"
+                        Command="{Binding SignUpCommand}"
+                        Style="{StaticResource PrimaryButton}"/>-->
+                </StackLayout>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
-
-
 </ContentPage>

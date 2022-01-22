@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NGS_Studio.Views.MainPage"
+             xmlns:vm="clr-namespace:NGS_Studio.ViewModels"
+             Title="{Binding Title}" BackgroundColor="Black">
+
+    <ContentPage.BindingContext>
+        <vm:MainViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content >
+        <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
+            <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+                <Image Source="{Binding LogoName}" 
+                       WidthRequest="{OnPlatform UWP='*', iOS=300, Android=400}" 
+                       HorizontalOptions="Center"  />
+                <Button x:Name="OwnerLoginBtn"
+                        VerticalOptions="Center" 
+                        Text="Owner Login"     
+                        Command="{Binding OwnerLoginCommand}"
+                        BackgroundColor="DarkGoldenrod" />
+                <Button x:Name="BeginCheckinBtn" 
+                        VerticalOptions="Center" 
+                        Text="Client Checkin"  
+                        Command="{Binding ClientCheckinCommand}" 
+                        BackgroundColor="DarkGoldenrod" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

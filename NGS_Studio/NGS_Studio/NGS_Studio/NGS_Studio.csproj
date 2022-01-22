@@ -10,15 +10,36 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="4.0.9" />
-    <PackageReference Include="FirebaseDatabase.net" Version="4.0.7" />
-    <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
-    <PackageReference Include="Xamarin.CommunityToolkit" Version="1.3.1" />
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />  
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <None Remove="app.config" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="app.config" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="FirebaseDatabase.net" Version="4.0.7" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="1.3.2" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <XamlAppDef Include="app.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\NewEmailPage.xaml.cs">
+      <DependentUpon>NewEmailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\OwnerInfoPage.xaml.cs">
+      <DependentUpon>OwnerInfoPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\ClientInfoRemoveClientPage.xaml.cs">
       <DependentUpon>ClientInfoRemoveClientPage.xaml</DependentUpon>
     </Compile>
@@ -61,12 +82,21 @@
     <Compile Update="Views\OwnerDetailsPage.xaml.cs">
       <DependentUpon>OwnerDetailsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\OwnerLoginPage.xaml.cs">
-      <DependentUpon>OwnerLoginPage.xaml</DependentUpon>
+    <Compile Update="Views\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Views\ForgotPasswordPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\OwnerInfoPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\ClientInfoRemoveClientPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
@@ -106,7 +136,7 @@
     <EmbeddedResource Update="Views\OwnerDetailsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\OwnerLoginPage.xaml">
+    <EmbeddedResource Update="Views\LoginPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>

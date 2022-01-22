@@ -1,20 +1,11 @@
-﻿using NGS_Studio.Models;
-using NGS_Studio.ViewModels;
-using NGS_Studio.Views;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using NGS_Studio.ViewModels;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace NGS_Studio.Views
 {
     public partial class ItemsPage : ContentPage
     {
-        ItemsViewModel _viewModel;
+        readonly ItemsViewModel _viewModel;
 
         public ItemsPage()
         {

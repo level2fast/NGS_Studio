@@ -84,6 +84,21 @@ namespace NGS_Studio.Services
                 return null;
             }
         }
+
+        public static async Task<User> GetOwner()
+        //public static async Task<List<User>> GetOwner()
+        {
+            try
+            {
+                var allUsers = await GetAllUser();
+                return allUsers.Where(a => a.IsOwner == true).FirstOrDefault();
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine($"Error:{e}");
+                return null;
+            }
+        }
         /// <summary>
         /// Inserts a user into the database
         /// </summary>

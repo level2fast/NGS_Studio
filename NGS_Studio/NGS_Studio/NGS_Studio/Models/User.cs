@@ -34,5 +34,10 @@ namespace NGS_Studio.Models
 		public string ImageUrl { get; set; }
 
 		public string checkin { get; set; }
+
+        public static implicit operator List<object>(User v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

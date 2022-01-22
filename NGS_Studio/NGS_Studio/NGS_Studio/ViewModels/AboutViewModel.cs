@@ -29,18 +29,15 @@ namespace NGS_Studio.ViewModels
             {
                 PhoneDialer.Open(PhoneNumberNGS);
             }
-            catch (ArgumentNullException anEx)
-            {
-                // Number was null or white space
-
-            }
             catch (FeatureNotSupportedException ex)
             {
                 // Phone Dialer is not supported on this device.
+                Console.WriteLine("{0} Exception caught.", ex);
             }
             catch (Exception ex)
             {
                 // Other error has occurred.
+                Console.WriteLine("{0} Exception caught.", ex);
             }
         }
         async void OnClientDirectionsClicked(object sender)
