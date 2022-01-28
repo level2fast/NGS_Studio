@@ -30,6 +30,7 @@ namespace NGS_Studio.Services
                     Email = item.Object.Email,
                     IsBarber = item.Object.IsBarber,
                     IsClient = item.Object.IsClient,
+                    IsOwner = item.Object.IsOwner
                 }).ToList();
                 return userlist;
             }

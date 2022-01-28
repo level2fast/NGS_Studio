@@ -17,7 +17,7 @@ namespace NGS_Studio.ViewModels
 
         public OwnerInfoViewModel()
         {
-            Title = "Barber Info";
+            Title = "Owner";
             EmailPromotionsCommand = new Command(OnEmailPromotionsClicked);
             EmailClientListCommand = new Command(OnEmailClientListClicked);
         }

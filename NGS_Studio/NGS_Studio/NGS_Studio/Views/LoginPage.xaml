@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NGS_Studio.Views.LoginPage"
              xmlns:vm="clr-namespace:NGS_Studio.ViewModels"
-             Title="{Binding Title}" BackgroundColor="Black">
+             BackgroundColor="Black"
+             Shell.BackgroundColor="Black">
 
     <ContentPage.BindingContext>
         <vm:LoginViewModel />
@@ -36,9 +37,6 @@
                         HorizontalOptions="CenterAndExpand"
                         Command="{Binding ForgotPasswordCommand}"
                         Style="{StaticResource PrimaryButton}"/>
-                    <!--<Button Text="Sign Up"
-                        Command="{Binding SignUpCommand}"
-                        Style="{StaticResource PrimaryButton}"/>-->
                 </StackLayout>
             </StackLayout>
         </ScrollView>

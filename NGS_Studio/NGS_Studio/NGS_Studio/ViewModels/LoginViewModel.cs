@@ -40,12 +40,9 @@ namespace NGS_Studio.ViewModels
         }
         public LoginViewModel()
         {
-            Title = "Owner Login";
             OwnerLoginCommand = new Command(OnOwnerLoginClicked);
             ForgotPasswordCommand = new Command(OnForgotPasswordClicked);
-
         }
-
         private async void OnOwnerLoginClicked()
         {
 
@@ -58,9 +55,9 @@ namespace NGS_Studio.ViewModels
                 try
                 {
                     var authService = DependencyService.Resolve<IFireBaseAuthentication>();
-                    var token = await authService.SignIn(EmailEntry, PasswordEntry);
+                    var token = await authService.SignIn(EmailEntry.Trim(), PasswordEntry);
 
-                    await Shell.Current.GoToAsync($"/{nameof(OwnerDetailsPage)}");
+                    await Shell.Current.GoToAsync($"//{nameof(MainPage)}");
                 }
                 catch (Exception ex)
                 {
@@ -69,25 +66,6 @@ namespace NGS_Studio.ViewModels
                     await Xamarin.Forms.Shell.Current
                         .DisplayAlert("SignIn", "Error: Can not complete login", "OK");
                 }
-
-
-            //call GetUser function which we define in Firebase helper class    
-            //var user = null;//await FirebaseHelper.GetUser(EmailEntry);
-            ////firebase return null valuse if user data not found in database    
-            //if (user != null)
-            //    if (EmailEntry == user.Email && PasswordEntry == user.Password)
-            //    {
-            //        await App.Current.MainPage.DisplayAlert("Login Success", "", "Ok");
-            //        //Navigate to Wellcom page after successfuly login    
-            //        //pass user email to welcom page    
-
-            //        // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-            //        await Shell.Current.GoToAsync($"/{nameof(OwnerDetailsPage)}");
-            //    }
-            //    else
-            //        await App.Current.MainPage.DisplayAlert("Login Fail", "Please enter correct Email and Password", "OK");
-            //else
-            //    await App.Current.MainPage.DisplayAlert("Login Fail", "User not found", "OK");
             }
         }
 

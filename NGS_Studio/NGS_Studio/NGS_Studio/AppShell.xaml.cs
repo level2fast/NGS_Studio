@@ -1,6 +1,8 @@
-﻿using NGS_Studio.Views;
+﻿using NGS_Studio.Services;
+using NGS_Studio.Views;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace NGS_Studio
@@ -43,6 +45,17 @@ namespace NGS_Studio
             {
                 Routing.RegisterRoute(item.Key, item.Value);
             }
+        }
+        private void OnMenuItemClicked(object sender, EventArgs e)
+        {
+           DependencyService.Resolve<IFireBaseAuthentication>().SignOut();
+           GoToLoginPage();
+        }
+        private async void GoToLoginPage()
+        {
+            // go to login page
+            // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
+            await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
         }
     }
 }

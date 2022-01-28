@@ -18,7 +18,7 @@ namespace NGS_Studio.ViewModels
 
         public OwnerDetailsViewModel()
         {
-            Title = "Owner Details";
+            Title = "Owner";
             OwnerInfoCommand = new Command(OnOwnerInfoClicked);
             BarberInfoCommand = new Command(OnBarberInfoClicked);
             ClientInfoCommand = new Command(OnClientInfoClicked);

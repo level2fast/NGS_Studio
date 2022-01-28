@@ -6,6 +6,8 @@ using Xamarin.Forms;
 using NGS_Studio.Data;
 using NGS_Studio.Services;
 using NGS_Studio.Models;
+using System.Timers;
+using System.Threading;
 
 namespace NGS_Studio.ViewModels
 {
@@ -17,16 +19,38 @@ namespace NGS_Studio.ViewModels
         private string description;
         private bool emailC = false;
         private bool emailS = false;
+        private bool progressBarContentVisible = false;
+        private bool emailContentVisible = false;
+        private List<string> emailAddress = new List<string>();
+        System.Timers.Timer aTimer;
+        public static List<User> users;
+        private float progressAmount;
 
         /// <summary>
         /// 
         /// </summary>
         public NewEmailViewModel()
         {
+            
             SaveCommand = new Command(OnSave, ValidateSave);
             CancelCommand = new Command(OnCancel);
             this.PropertyChanged +=
                 (_, __) => SaveCommand.ChangeCanExecute();
+            getClientList();
+            aTimer= new System.Timers.Timer();
+            aTimer.Elapsed += new ElapsedEventHandler(makeProgressEvent);
+            aTimer.Interval = 100; // milliseconds 1000 = 1 sec
+
+        }
+
+        private void getClientList()
+        {
+            // display controls for sending email
+
+            if (users == null)
+                return;
+
+
         }
 
         /// <summary>
@@ -68,6 +92,10 @@ namespace NGS_Studio.ViewModels
             }
             set
             {
+                if (value)
+                {
+                    Subject = "Promotions";
+                }
                 emailC = value;
             }
         }
@@ -83,10 +111,41 @@ namespace NGS_Studio.ViewModels
             }
             set
             {
+                if (value)
+                {
+                    Subject = "Client List";
+                }
                 emailS = value;
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool EmailContentVisibility
+        {
+            get => emailContentVisible;
+            set => SetProperty(ref emailContentVisible, value);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool ProgressBarVisibilty
+        {
+            get => progressBarContentVisible;
+            set => SetProperty(ref progressBarContentVisible, value);
+        }
+
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        public float ProgressAmount
+        {
+            get => progressAmount;
+            set => SetProperty(ref progressAmount, value);
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -112,27 +171,63 @@ namespace NGS_Studio.ViewModels
         private async void OnSave()
         {
             EmailSender email = new EmailSender();
-            List<string> emailAddress = new List<string>();
- 
             if (EmailClientList)
             {
-                User recepients = await UserTableService.GetOwner();
-                emailAddress.Add(recepients.Email);
-                await email.SendEmail(Subject, Body, emailAddress);
-                await App.Current.MainPage.DisplayAlert("Email Sent","","OK");
+                List<string> ownerEmailAddress = new List<string>();
+                var owner= await UserTableService.GetOwner();
+                ownerEmailAddress.Add(owner.Email);
+                await email.SendEmail(Subject, Body,ownerEmailAddress);
             }
             else if (EmailPromotions)
             {
-                List<User> user = await UserTableService.GetAllClients();
-                foreach (User usr in user)
-                {
-                    emailAddress.Add(usr.Email);
-                }
                 await email.SendEmail(Subject, Body, emailAddress);
-                await App.Current.MainPage.DisplayAlert("Email Sent", "", "OK");
             }
             await Shell.Current.GoToAsync("..");
         }
+
+        public async Task OnAppearing()
+        {
+            // show progress bar on screen
+            ProgressBarVisibilty = true;
+            EmailContentVisibility = false;
+            aTimer.Enabled = true;
+            // load clients
+            users = await UserTableService.GetAllClients();
+            if (users == null)
+            {
+                Console.WriteLine("user is null");
+                await App.Current.MainPage.DisplayAlert(Constants.ERROR, "could not get clients from database", "OK");
+                return;
+            }
+
+            // initialize email content
+            foreach (User usr in users)
+            {
+                emailAddress.Add(usr.Email);
+            }
+
+            if (EmailClientList)
+            {
+                foreach (User usr in users)
+                {
+                    Body += usr.Email + "\n";
+                }
+            }
+
+
+        }
+        private void makeProgressEvent(object source, ElapsedEventArgs e)
+        {
+            ProgressAmount += .2f;
+            if (ProgressAmount >= 1)
+            {
+                aTimer.Enabled = false;
+                // make email controls visible
+                ProgressBarVisibilty = false;
+                EmailContentVisibility = true;
+            }
+        }
+
     }
 
     /// <summary>

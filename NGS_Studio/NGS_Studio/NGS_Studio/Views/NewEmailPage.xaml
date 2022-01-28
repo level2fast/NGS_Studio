@@ -5,31 +5,46 @@
              Shell.PresentationMode="ModalAnimated"
              Title="New Email"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-             ios:Page.UseSafeArea="true">
+             ios:Page.UseSafeArea="true"
+             xmlns:vm="clr-namespace:NGS_Studio.ViewModels"
+             BackgroundColor="Black">
+    <ContentPage.BindingContext>
+        <vm:NewEmailViewModel />
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout Spacing="3" Padding="15">
             <Label Text="Subject" 
                    FontSize="Medium" 
-                   TextColor="{OnPlatform iOS=white, Android=black}"/>
+                   TextColor="{OnPlatform iOS=white, Android=white}"
+                   IsVisible="{Binding EmailContentVisibility}"/>
             
             <Entry Text="{Binding Subject, Mode=TwoWay}" 
                    FontSize="Medium" 
-                   TextColor="{OnPlatform iOS=white, Android=black}"/>
+                   TextColor="{OnPlatform iOS=white, Android=white}"
+                   IsVisible="{Binding EmailContentVisibility}"/>
             
             <Label Text="Body" 
                    FontSize="Medium" 
-                   TextColor="{OnPlatform iOS=Black, Android=black}"/>
+                   TextColor="{OnPlatform iOS=Black, Android=white}"
+                   IsVisible="{Binding EmailContentVisibility}"/>
 
             <Editor Text="{Binding Body, Mode=TwoWay}" 
                     AutoSize="TextChanges" 
                     FontSize="Medium" 
                     Margin="0" 
-                    TextColor="{OnPlatform iOS=Black, Android=black}"/>
+                    TextColor="{OnPlatform iOS=Black, Android=white}"
+                    IsVisible="{Binding EmailContentVisibility}"/>
             
             <StackLayout Orientation="Horizontal">
-                <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
-                <Button Text="Send" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>
+                <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand" IsVisible="{Binding EmailContentVisibility}" Style="{StaticResource PrimaryButton}"></Button>
+                <Button Text="Send" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand" IsVisible="{Binding EmailContentVisibility}" Style="{StaticResource PrimaryButton}"></Button>
             </StackLayout>
+            
+            <Label Text="Gathering Client data" 
+                   FontSize="Medium" 
+                   TextColor="{OnPlatform iOS=white, Android=white}"
+                   IsVisible="{Binding ProgressBarVisibilty}" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
+            <ProgressBar ProgressColor="DarkGoldenrod" Progress="{Binding ProgressAmount}" IsVisible="{Binding ProgressBarVisibilty}" VerticalOptions="CenterAndExpand" HorizontalOptions="Fill" />
         </StackLayout>
     </ContentPage.Content>
     

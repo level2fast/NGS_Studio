@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using NGS_Studio.Models;
 using System.Collections.ObjectModel;
+using NGS_Studio.Services;
 
 namespace NGS_Studio.ViewModels
 {
@@ -25,7 +26,7 @@ namespace NGS_Studio.ViewModels
 
         public MainViewModel()
         {
-            Title = "Login";
+            Title = "NGS";
             LogoName = "NgsLogo";
             OwnerLoginCommand = new Command(OnOwnerLoginClicked);
             ClientCheckinCommand = new Command(OnClientCheckinClicked);
@@ -43,6 +44,15 @@ namespace NGS_Studio.ViewModels
             // downwards from the current position. The matching page will be
             // pushed to the navigation stack
             await Shell.Current.GoToAsync($"/{nameof(OwnerDetailsPage)}");
+        }
+
+        public async void OnAppearing()
+        {
+            if (!DependencyService.Resolve<IFireBaseAuthentication>().IsSignIn())
+            {
+                // go to login page
+                await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+            }
         }
     }
 }

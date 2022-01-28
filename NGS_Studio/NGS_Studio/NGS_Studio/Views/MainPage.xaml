@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NGS_Studio.Views.MainPage"
              xmlns:vm="clr-namespace:NGS_Studio.ViewModels"
-             Title="{Binding Title}" BackgroundColor="Black">
+             BackgroundColor="Black"
+             Title="{Binding Title}">
 
     <ContentPage.BindingContext>
         <vm:MainViewModel />
@@ -16,7 +17,7 @@
                        HorizontalOptions="Center"  />
                 <Button x:Name="OwnerLoginBtn"
                         VerticalOptions="Center" 
-                        Text="Owner Login"     
+                        Text="Owner"     
                         Command="{Binding OwnerLoginCommand}"
                         BackgroundColor="DarkGoldenrod" />
                 <Button x:Name="BeginCheckinBtn" 

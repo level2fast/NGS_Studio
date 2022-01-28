@@ -8,6 +8,11 @@ namespace NGS_Studio.ViewModels
     public class AboutViewModel : BaseViewModel
     {
         private const string phoneNumber = "6195825889";
+
+        public ICommand OpenWebCommandDirections { get; }
+        public ICommand CallUsCommand { get; }
+
+        public ICommand LearnMoreCommand { get; }
         public string PhoneNumberNGS
         {
             get { return phoneNumber; }
@@ -18,12 +23,28 @@ namespace NGS_Studio.ViewModels
             Title = "About";
             OpenWebCommandDirections = new Command(OnClientDirectionsClicked);
             CallUsCommand = new Command(OnCallUsBtnClicked);
+            LearnMoreCommand = new Command(OnLearnMoreBtnClicked);
         }
 
-        public ICommand OpenWebCommandDirections { get; }
-        public ICommand CallUsCommand { get; }
 
-         void OnCallUsBtnClicked(object sender)
+        async void OnLearnMoreBtnClicked(object sender)
+        {
+            try
+            {
+                await Launcher.OpenAsync("https://ngstudio.net/");
+            }
+            catch (FeatureNotSupportedException ex)
+            {
+                // Phone Dialer is not supported on this device.
+                Console.WriteLine("{0} Exception caught.", ex);
+            }
+            catch (Exception ex)
+            {
+                // Other error has occurred.
+                Console.WriteLine("{0} Exception caught.", ex);
+            }
+        }
+        void OnCallUsBtnClicked(object sender)
         {
             try
             {

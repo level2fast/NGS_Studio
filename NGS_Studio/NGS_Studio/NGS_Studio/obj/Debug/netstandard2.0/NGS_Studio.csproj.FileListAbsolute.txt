@@ -1,7 +1,3 @@
-C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio\bin\Debug\netstandard2.0\NGS_Studio.deps.json
-C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio\bin\Debug\netstandard2.0\NGS_Studio.dll
-C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio\bin\Debug\netstandard2.0\ref\NGS_Studio.dll
-C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio\bin\Debug\netstandard2.0\NGS_Studio.pdb
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio\obj\Debug\netstandard2.0\NGS_Studio.GeneratedMSBuildEditorConfig.editorconfig
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
@@ -33,8 +29,12 @@ C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio\obj\Debug
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio\obj\Debug\netstandard2.0\NGS_Studio.AssemblyInfoInputs.cache
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio\obj\Debug\netstandard2.0\NGS_Studio.AssemblyInfo.cs
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio\obj\Debug\netstandard2.0\NGS_Studio.csproj.CoreCompileInputs.cache
-C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio\obj\Debug\netstandard2.0\NGS_Studio.dll
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio\obj\Debug\netstandard2.0\ref\NGS_Studio.dll
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio\obj\Debug\netstandard2.0\NGS_Studio.pdb
+C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio\bin\Debug\netstandard2.0\NGS_Studio.deps.json
+C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio\bin\Debug\netstandard2.0\NGS_Studio.dll
+C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio\bin\Debug\netstandard2.0\ref\NGS_Studio.dll
+C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio\bin\Debug\netstandard2.0\NGS_Studio.pdb
+C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Github\NGS_Studio_Firebase_Changes\NGS_Studio\NGS_Studio\NGS_Studio\obj\Debug\netstandard2.0\NGS_Studio.csproj.AssemblyReference.cache

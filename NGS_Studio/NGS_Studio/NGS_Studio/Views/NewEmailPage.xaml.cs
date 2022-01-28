@@ -6,12 +6,16 @@ namespace NGS_Studio.Views
 {
     public partial class NewEmailPage : ContentPage
     {
-        public Item Item { get; set; }
-
+        readonly NewEmailViewModel _viewModel;
         public NewEmailPage()
         {
             InitializeComponent();
-            BindingContext = new NewEmailViewModel();
+            BindingContext = _viewModel = new NewEmailViewModel();
+        }
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+            await _viewModel.OnAppearing();
         }
     }
 }
