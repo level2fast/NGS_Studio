@@ -4,30 +4,29 @@
              x:Class="NGS_Studio.Views.OwnerDetailsPage"
              xmlns:vm="clr-namespace:NGS_Studio.ViewModels"
              Title="{Binding Title}" BackgroundColor="Black">
-
     <ContentPage.BindingContext>
         <vm:OwnerDetailsViewModel />
     </ContentPage.BindingContext>
-
-    <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-        <Image Source="NgsLogo" 
+    <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always" >
+        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+            <Image Source="NgsLogo" 
                    WidthRequest="{OnPlatform UWP='*', iOS=300, Android=400}" 
                    HorizontalOptions="Center"  />
-        <Button x:Name="OwnerInfoBtn"
+            <Button x:Name="OwnerInfoBtn"
                     VerticalOptions="Center" 
                     Text="Owner"     
                     Command="{Binding OwnerInfoCommand}"
                     BackgroundColor="DarkGoldenrod" />
-        <Button x:Name="ClientInfoBtn" 
+            <Button x:Name="ClientInfoBtn" 
                     VerticalOptions="Center" 
                     Text="Clients"  
                     Command="{Binding ClientInfoCommand}"
                     BackgroundColor="DarkGoldenrod" />
-        <Button x:Name="BarberInfoBtn" 
+            <Button x:Name="BarberInfoBtn" 
                     VerticalOptions="Center" 
                     Text="Barbers"  
                     Command="{Binding BarberInfoCommand}"
                     BackgroundColor="DarkGoldenrod" />
-    </StackLayout>
-
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

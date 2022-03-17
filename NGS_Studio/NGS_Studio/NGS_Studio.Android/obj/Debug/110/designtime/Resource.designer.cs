@@ -24271,9 +24271,6 @@ namespace NGS_Studio.Droid
 			// aapt resource value: 0x7F0700AA
 			public const int tooltip_frame_light = 2131165354;
 			
-			// aapt resource value: 0x7F0700AB
-			public const int xamarin_logo = 2131165355;
-			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -26422,13 +26419,19 @@ namespace NGS_Studio.Droid
 			public const int icon = 2131492864;
 			
 			// aapt resource value: 0x7F0C0001
-			public const int icon_round = 2131492865;
+			public const int launcher_foreground = 2131492865;
 			
 			// aapt resource value: 0x7F0C0002
-			public const int launcher_foreground = 2131492866;
+			public const int ngs_ic_launcher = 2131492866;
 			
 			// aapt resource value: 0x7F0C0003
-			public const int outline_logout_black_20 = 2131492867;
+			public const int ngs_ic_launcher_adaptive_back = 2131492867;
+			
+			// aapt resource value: 0x7F0C0004
+			public const int ngs_ic_launcher_adaptive_fore = 2131492868;
+			
+			// aapt resource value: 0x7F0C0005
+			public const int outline_logout_black_20 = 2131492869;
 			
 			static Mipmap()
 			{

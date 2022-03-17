@@ -1972,7 +1972,6 @@ int drawable preference_list_divider_material 0x7f0700a7
 int drawable test_custom_background 0x7f0700a8
 int drawable tooltip_frame_dark 0x7f0700a9
 int drawable tooltip_frame_light 0x7f0700aa
-int drawable xamarin_logo 0x7f0700ab
 int id ALT 0x7f080000
 int id BOTTOM_END 0x7f080001
 int id BOTTOM_START 0x7f080002
@@ -2667,9 +2666,11 @@ int layout text_view_with_theme_line_height 0x7f0b0093
 int layout text_view_without_line_height 0x7f0b0094
 int layout toolbar 0x7f0b0095
 int mipmap icon 0x7f0c0000
-int mipmap icon_round 0x7f0c0001
-int mipmap launcher_foreground 0x7f0c0002
-int mipmap outline_logout_black_20 0x7f0c0003
+int mipmap launcher_foreground 0x7f0c0001
+int mipmap ngs_ic_launcher 0x7f0c0002
+int mipmap ngs_ic_launcher_adaptive_back 0x7f0c0003
+int mipmap ngs_ic_launcher_adaptive_fore 0x7f0c0004
+int mipmap outline_logout_black_20 0x7f0c0005
 int plurals mtrl_badge_content_description 0x7f0d0000
 int string ApplicationName 0x7f0e0000
 int string Hello 0x7f0e0001

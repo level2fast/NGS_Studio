@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KYexcdRUdu4DU+4jPcjwaVkE61V40XLpZNXg4yt/PQSQsZTYBusq+b5Ir6126sRD2eI7AxqqIYU45a04kgvXcQ==",
+  "dgSpecHash": "LdlzWt8ThNa6T5hev9/qEatPnLAp6pDEnoU5/jUc3llMCU29IEmgBNEIcvP1hVvBBYUgq8mlPPLFVLN6wIzmnQ==",
   "success": true,
   "projectFilePath": "C:\\Github\\NGS_Studio_Firebase_Changes\\NGS_Studio\\NGS_Studio\\NGS_Studio.Android\\NGS_Studio.Android.csproj",
   "expectedPackageFiles": [
@@ -9,13 +9,7 @@
     "C:\\Users\\level\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\level\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\level\\.nuget\\packages\\pclappconfig\\1.0.1\\pclappconfig.1.0.1.nupkg.sha512",
-    "C:\\Users\\level\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
-    "C:\\Users\\level\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
-    "C:\\Users\\level\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
-    "C:\\Users\\level\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3.android\\2.0.4\\sqlitepclraw.lib.e_sqlite3.android.2.0.4.nupkg.sha512",
-    "C:\\Users\\level\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.0.4\\sqlitepclraw.provider.e_sqlite3.2.0.4.nupkg.sha512",
     "C:\\Users\\level\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
-    "C:\\Users\\level\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\level\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\level\\.nuget\\packages\\system.reactive\\4.0.0\\system.reactive.4.0.0.nupkg.sha512",
     "C:\\Users\\level\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",

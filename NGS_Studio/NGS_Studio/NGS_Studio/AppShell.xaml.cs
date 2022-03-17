@@ -15,6 +15,9 @@ namespace NGS_Studio
             InitializeComponent();
             RegisterRoutes();
         }
+        /// <summary>
+        /// RegisterRoutes function adds all routes to a contentPage dictionary 
+        /// </summary>
         void RegisterRoutes()
         {
             Routes.Add(nameof(AboutPage), typeof(AboutPage));
@@ -46,16 +49,26 @@ namespace NGS_Studio
                 Routing.RegisterRoute(item.Key, item.Value);
             }
         }
+
+        /// <summary>
+        /// onMenuTimeClicked function signs out the current user
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnMenuItemClicked(object sender, EventArgs e)
         {
            DependencyService.Resolve<IFireBaseAuthentication>().SignOut();
            GoToLoginPage();
         }
+
+        /// <summary>
+        /// GoToLoginPage function naviages to the LoginPage using shell
+        /// </summary>
         private async void GoToLoginPage()
         {
             // go to login page
             // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-            await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+            await Current.GoToAsync($"//{nameof(LoginPage)}");
         }
     }
 }

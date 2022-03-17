@@ -12,11 +12,16 @@ namespace NGS_Studio.Views
 		{
 			InitializeComponent();
 			BindingContext = _viewModel = new MainViewModel();
+			//BindingContext = new MainViewModel();
+			_viewModel.OnAppearing(); 
+
 		}
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            _viewModel.OnAppearing();
+			
+            //_viewModel.OnAppearing();
         }
     }
 }
+

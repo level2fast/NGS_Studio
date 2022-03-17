@@ -1,1 +1,1 @@
-<Devices><Device id="R5CN20WTS0P"><ResultingAbi>arm64-v8a</ResultingAbi><SdkVersion>30</SdkVersion></Device><Device id="emulator-5554"><ResultingAbi>x86</ResultingAbi><SdkVersion>28</SdkVersion></Device></Devices>
+<Devices><Device id="R5CN20WTS0P"><ResultingAbi>arm64-v8a</ResultingAbi><SdkVersion>31</SdkVersion></Device><Device id="emulator-5554"><ResultingAbi>x86</ResultingAbi><SdkVersion>28</SdkVersion></Device></Devices>

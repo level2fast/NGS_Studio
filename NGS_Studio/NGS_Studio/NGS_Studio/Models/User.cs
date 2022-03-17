@@ -1,12 +1,10 @@
-﻿using SQLite;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System;
 
 namespace NGS_Studio.Models
 {
 	public class User
 	{
-		[PrimaryKey]
 		public string PhoneNumber { get; set; }
 
 		public int Age { get; set; }
