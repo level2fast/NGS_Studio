@@ -85,4 +85,5 @@ lint/tmp/
 # lint/reports/
 
 #temporary folders
-obj/
+NGS_Studio/NGS_Studio/NGS_Studio/obj/
+NGS_Studio/NGS_Studio/NGS_Studio.Android/obj/

@@ -1834,11 +1834,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Github\\NGS_Studio_Firebase_Changes\\NGS_Studio\\NGS_Studio\\NGS_Studio.iOS\\NGS_Studio.iOS.csproj",
+      "projectUniqueName": "C:\\Github\\NGS_Studio\\NGS_Studio\\NGS_Studio\\NGS_Studio.iOS\\NGS_Studio.iOS.csproj",
       "projectName": "NGS_Studio.iOS",
-      "projectPath": "C:\\Github\\NGS_Studio_Firebase_Changes\\NGS_Studio\\NGS_Studio\\NGS_Studio.iOS\\NGS_Studio.iOS.csproj",
+      "projectPath": "C:\\Github\\NGS_Studio\\NGS_Studio\\NGS_Studio\\NGS_Studio.iOS\\NGS_Studio.iOS.csproj",
       "packagesPath": "C:\\Users\\level\\.nuget\\packages\\",
-      "outputPath": "C:\\Github\\NGS_Studio_Firebase_Changes\\NGS_Studio\\NGS_Studio\\NGS_Studio.iOS\\obj\\",
+      "outputPath": "C:\\Github\\NGS_Studio\\NGS_Studio\\NGS_Studio\\NGS_Studio.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1861,8 +1861,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Github\\NGS_Studio_Firebase_Changes\\NGS_Studio\\NGS_Studio\\NGS_Studio\\NGS_Studio.csproj": {
-              "projectPath": "C:\\Github\\NGS_Studio_Firebase_Changes\\NGS_Studio\\NGS_Studio\\NGS_Studio\\NGS_Studio.csproj"
+            "C:\\Github\\NGS_Studio\\NGS_Studio\\NGS_Studio\\NGS_Studio\\NGS_Studio.csproj": {
+              "projectPath": "C:\\Github\\NGS_Studio\\NGS_Studio\\NGS_Studio\\NGS_Studio\\NGS_Studio.csproj"
             }
           }
         }

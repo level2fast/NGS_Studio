@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R/puGKtmzqMSI4fY0UxzdCPPayltIRz5klHwFMhDfdujq24ApPcSXNOZkQML32fXaYSA0mgd43pMRQpwPXcQyg==",
+  "dgSpecHash": "XrbivH4VAxxk/IFSE3iL1zvAho5u1CqFBbNaSQ5wRzUnADa2coPUcKSQ12iDlonpp+8aJ/+wt9HyO5MaZDvVTA==",
   "success": true,
-  "projectFilePath": "C:\\Github\\NGS_Studio_Firebase_Changes\\NGS_Studio\\NGS_Studio\\NGS_Studio.iOS\\NGS_Studio.iOS.csproj",
+  "projectFilePath": "C:\\Github\\NGS_Studio\\NGS_Studio\\NGS_Studio\\NGS_Studio.iOS\\NGS_Studio.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\level\\.nuget\\packages\\com.airbnb.ios.lottie\\2.5.13\\com.airbnb.ios.lottie.2.5.13.nupkg.sha512",
     "C:\\Users\\level\\.nuget\\packages\\com.airbnb.xamarin.forms.lottie\\4.0.9\\com.airbnb.xamarin.forms.lottie.4.0.9.nupkg.sha512",
