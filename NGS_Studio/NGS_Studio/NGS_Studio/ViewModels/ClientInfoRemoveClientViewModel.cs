@@ -4,16 +4,17 @@ using NGS_Studio.Services;
 using System.Collections.Generic;
 using System.Windows.Input;
 using Xamarin.CommunityToolkit.ObjectModel;
+using System.Collections.ObjectModel;
 
 namespace NGS_Studio.ViewModels
 {
     public class ClientInfoRemoveClientViewModel : BaseViewModel
     {
-        private IList<User> clients;
+        private ObservableCollection<User> clients;
         private User item = null;
         public ICommand LoadCommand { get; protected set; }
         public ICommand ClientSelectionChangedCommand { get; set; }
-        public IList<User> Clients
+        public ObservableCollection<User> Clients
         {
             get => clients;
             set => SetProperty(ref clients, value);
@@ -32,7 +33,8 @@ namespace NGS_Studio.ViewModels
             LoadCommand = new AsyncCommand(async () =>
             {
                 // load data async
-                Clients = await UserTableService.GetAllClients();
+                var temp = await UserTableService.GetAllClients();
+                Clients = new ObservableCollection<User>(temp);
             });
         }
 

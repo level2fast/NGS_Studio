@@ -4,16 +4,17 @@ using NGS_Studio.Services;
 using System.Collections.Generic;
 using System.Windows.Input;
 using Xamarin.CommunityToolkit.ObjectModel;
+using System.Collections.ObjectModel;
 
 namespace NGS_Studio.ViewModels
 {
     public class BarberInfoRemoveBarberViewModel : BaseViewModel
     {
-        private IList<User> barbers;
+        private ObservableCollection<User> barbers;
         private User item = null;
         public ICommand LoadCommand { get; protected set; }
         public ICommand BarberSelectionChangedCommand { get; set; }
-        public IList<User> Barbers
+        public ObservableCollection<User> Barbers
         {
             get => barbers;
             set => SetProperty(ref barbers, value);
@@ -32,7 +33,8 @@ namespace NGS_Studio.ViewModels
             LoadCommand = new AsyncCommand(async () =>
             {
                 // load data async
-                Barbers = await UserTableService.GetAllBarbers();
+                var temp = await UserTableService.GetAllBarbers();
+                Barbers = new ObservableCollection<User>(temp);
             });
         }
 
@@ -44,9 +46,11 @@ namespace NGS_Studio.ViewModels
                 bool answer = await App.Current.MainPage.DisplayAlert("Remove", "Are you sure you want to remove " + usr.Name + "?", "Yes", "No");
                 if (answer == true)
                 {
+
                     bool result = await UserTableService.DeleteUser(usr);
                     if (result)
                     {
+                        Barbers.Remove(usr);
                         await App.Current.MainPage.DisplayAlert("Removed", usr.Name + "from NGS", "OK");
                     }
                     else
