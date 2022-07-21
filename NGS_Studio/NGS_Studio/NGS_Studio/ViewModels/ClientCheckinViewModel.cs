@@ -88,7 +88,7 @@ namespace NGS_Studio.ViewModels
                         await App.Current.MainPage.DisplayAlert("Thanks!", " Your barber will be with shortly", "Ok");
                         // Navigate to Wellcom page after successfuly SignUp    
                         // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-                        await Shell.Current.GoToAsync($"/{nameof(CheckinPage)}");
+                        await Shell.Current.GoToAsync($"{nameof(CheckinPage)}");
                     }
                     else
                     {
@@ -99,7 +99,7 @@ namespace NGS_Studio.ViewModels
                 {
                     // Notify user that they are already signed up
                     await App.Current.MainPage.DisplayAlert("You are already signed up", "Please check in", "OK");
-                    await Shell.Current.GoToAsync($"/{nameof(CheckinPage)}");
+                    await Shell.Current.GoToAsync($"{nameof(CheckinPage)}");
                 }
             }
             else 

@@ -28,7 +28,7 @@ namespace NGS_Studio.ViewModels
         }
         private async void OnEmailClientListClicked()
         {
-            await Shell.Current.GoToAsync($"{nameof(NewEmailPage)}?{nameof(NewEmailViewModel.EmailPromotions)}={false}&{nameof(NewEmailViewModel.EmailClientList)}={true}");
+            await Shell.Current.GoToAsync($"/{nameof(NewEmailPage)}?{nameof(NewEmailViewModel.EmailPromotions)}={false}&{nameof(NewEmailViewModel.EmailClientList)}={true}");
         }
     }
 }

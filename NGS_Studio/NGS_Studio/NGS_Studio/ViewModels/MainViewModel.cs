@@ -35,7 +35,7 @@ namespace NGS_Studio.ViewModels
         private async void OnClientCheckinClicked()
         {
             // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-            await Shell.Current.GoToAsync($"/{nameof(CheckinPage)}");
+            await Shell.Current.GoToAsync($"{nameof(CheckinPage)}");
         }
         private async void OnOwnerLoginClicked()
         {

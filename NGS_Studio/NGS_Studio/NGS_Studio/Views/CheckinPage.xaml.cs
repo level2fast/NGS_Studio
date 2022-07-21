@@ -17,5 +17,13 @@ namespace NGS_Studio.Views
             CheckinLabel.IsVisible = true;
             
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            CheckinBtn.IsVisible = true;
+            YesCheckinBtn.IsVisible = false;
+            NoCheckinBtn.IsVisible = false;
+            CheckinLabel.IsVisible = false;
+        }
     }
 }

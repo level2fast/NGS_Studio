@@ -22,6 +22,38 @@ namespace NGS_Studio
             get => showOwnerFlyoutItem;
             set => SetProperty(ref showOwnerFlyoutItem, value);
         }
+        string iconCheckin = "icon_checkin";
+        public string IconCheckin
+        {
+            get { return iconCheckin; }
+            set { SetProperty(ref iconCheckin, value); }
+        }
+        string iconOwner = "icon_owner";
+        public string IconOwner
+        {
+            get { return iconOwner; }
+            set { SetProperty(ref iconOwner, value); }
+        }
+        string iconLogin = "icon_login";
+        public string IconLogin
+        {
+            get { return iconLogin; }
+            set { SetProperty(ref iconLogin, value); }
+        }
+        string iconAbout = "icon_about";
+        public string IconAbout
+        {
+            get { return iconAbout; }
+            set { SetProperty(ref iconAbout, value); }
+        }
+        string iconLogout = "outline_logout_black_20";
+        public string IconLogout
+        {
+            get { return iconLogout; }
+            set { SetProperty(ref iconLogout, value); }
+        }
+
+
         public AppShell()
         {
             InitializeComponent();
@@ -51,7 +83,7 @@ namespace NGS_Studio
             Routes.Add(nameof(ClientInfoAddClientPage), typeof(ClientInfoAddClientPage));
             Routes.Add(nameof(ClientInfoDetailsPage), typeof(ClientInfoDetailsPage));
             Routes.Add(nameof(LoginPage), typeof(LoginPage));
-            Routes.Add(nameof(LogoutPage), typeof(LogoutPage));
+            Routes.Add(nameof(LoginPage)+"/"+nameof(LogoutPage), typeof(LogoutPage));
             Routes.Add(nameof(BarberInfoEditBarberPage), typeof(BarberInfoEditBarberPage));
             Routes.Add(nameof(ClientInfoRemoveClientPage), typeof(ClientInfoRemoveClientPage));
             Routes.Add(nameof(OwnerInfoPage), typeof(OwnerInfoPage));

@@ -3,8 +3,8 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:NGS_Studio.Views" 
        xmlns:xct="http://xamarin.com/schemas/2020/toolkit" 
+       xmlns:sys="clr-namespace:System;assembly=netstandard"
        xmlns:ngs_studio="clr-namespace:NGS_Studio" 
-       xmlns:vm="clr-namespace:NGS_Studio.ViewModels" 
        x:DataType="ngs_studio:AppShell"
        Title="PrimeCutz"
        x:Class="NGS_Studio.AppShell">
@@ -73,43 +73,66 @@
         </ResourceDictionary>
     </Shell.Resources>
 
+
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="Black"
+                  HeightRequest="200">
+                <Image Aspect="AspectFill"
+                       Source="app_logo.jpg"
+                       Opacity="0.6" />
+
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
     <!-- 
         When the Flyout is visible this defines the content to display in the flyout.
         FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
-    <FlyoutItem Title="Login" Icon="icon_login.png" x:Name="LoginFlyoutItem" >
+    <FlyoutItem Title="Login" Icon="{Binding IconLogin}" x:Name="LoginFlyoutItem" >
         <ShellContent 
-            Route="LoginPage" 
             ContentTemplate="{DataTemplate local:LoginPage}"  
             IsVisible="{Binding IsUserAuthenticated,
                        Converter={StaticResource InvertedBoolConverter}}" 
             Disappearing="ShellContent_Disappearing"/>
     </FlyoutItem>
-    <FlyoutItem Title="Owner" Icon="icon_login.png" x:Name="OwnerDetails" >
+    <FlyoutItem Title="Owner" Icon="{Binding IconOwner}" x:Name="OwnerDetails" >
         <ShellContent 
-            Route="OwnerDetailsPage" 
             ContentTemplate="{DataTemplate local:OwnerDetailsPage}" 
             IsVisible="{Binding ShowOwnerFlyoutItem}" />
     </FlyoutItem>
-    <FlyoutItem Title="Client Check In" Icon="icon_login.png"  StyleClass="MenuItemLayoutStyle" >
-        <ShellContent 
-            Route="CheckinPage" 
+    <FlyoutItem Title="Client Check In" Icon="{Binding IconCheckin}"  StyleClass="MenuItemLayoutStyle" >
+        <ShellContent  
             ContentTemplate="{DataTemplate local:CheckinPage}" 
             IsVisible="True" />
     </FlyoutItem>
-    <FlyoutItem Title="About" Icon="icon_about.png" x:Name="aboutItem" >
+    <FlyoutItem Title="About" Icon="{Binding IconAbout}" x:Name="aboutItem" >
         <ShellContent 
-            Route="AboutPage" 
             ContentTemplate="{DataTemplate local:AboutPage}"
             IsVisible="True" />
     </FlyoutItem>
-    <FlyoutItem Title="Logout" Icon="outline_logout_black_20.png" x:Name="LogoutFlyoutItem" >
+    <FlyoutItem Title="Logout" Icon="{Binding IconLogout}" x:Name="LogoutFlyoutItem" >
         <ShellContent 
             ContentTemplate="{DataTemplate local:LogoutPage}" 
             IsVisible="{Binding IsUserAuthenticated}" 
             />
     </FlyoutItem>
+
+
+    <Shell.FlyoutFooterTemplate>
+        <DataTemplate>
+            <StackLayout>
+                <Label Text="PrimeCutz"
+                       TextColor="DarkGoldenrod"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center" />
+                <Label Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MMMM dd, yyyy}'}"
+                       TextColor="GhostWhite"
+                       HorizontalOptions="Center" />
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutFooterTemplate>
     <!--<FlyoutItem Title="Promotions" Icon="icon_feed.png">
         <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" IsVisible="True"/>
     </FlyoutItem>-->

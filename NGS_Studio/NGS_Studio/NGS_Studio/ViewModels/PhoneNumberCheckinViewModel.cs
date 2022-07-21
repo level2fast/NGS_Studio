@@ -81,7 +81,7 @@ namespace NGS_Studio.ViewModels
             {
                 await Application.Current.MainPage.DisplayAlert("Not a registered client", "Please register with PrimeCutz", "OK");
                 // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-                await Shell.Current.GoToAsync($"/{nameof(CheckinPage)}");
+                await Shell.Current.GoToAsync($"{nameof(CheckinPage)}");
             }
             else
             {
@@ -99,12 +99,20 @@ namespace NGS_Studio.ViewModels
         private async void OnBarberSelectSubmitClicked()
         {
             User user = await UserTableService.GetUser(masked.reformatPhoneNumber(phoneNumberEntry));
-            user.Barber = barber.Name;
-            await UserTableService.UpdateUser(user);
-            //display "client preferred barber question label and buttons
-            await Application.Current.MainPage.DisplayAlert("Thanks!", "Your barber will be with you shortly", "OK");
-            // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-            await Shell.Current.GoToAsync($"/{nameof(CheckinPage)}");
+            if (user != null && barber != null)
+            {
+                user.Barber = barber.Name;
+                await UserTableService.UpdateUser(user);
+                //display "client preferred barber question label and buttons
+                await Application.Current.MainPage.DisplayAlert("Thanks!", "Your barber will be with you shortly", "OK");
+                // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
+                await Shell.Current.GoToAsync($"{nameof(CheckinPage)}");
+            }
+            else 
+            {
+                await Application.Current.MainPage.DisplayAlert("No barber selected", "Please select a barber", "OK");
+            }
+
         }
 
     }

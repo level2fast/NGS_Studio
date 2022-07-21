@@ -43,7 +43,7 @@ namespace NGS_Studio.ViewModels
             {
                 (Shell.Current as AppShell).setStuff();
                 var fly = Shell.Current.FlyoutItems.GetEnumerator();
-                await Shell.Current.GoToAsync($"///{nameof(LoginPage)}");
+                await Shell.Current.GoToAsync($"..");
                 
             }
 
