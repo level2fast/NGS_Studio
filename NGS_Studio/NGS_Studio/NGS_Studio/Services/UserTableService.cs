@@ -12,10 +12,15 @@ namespace NGS_Studio.Services
     class UserTableService
     {
 
-        //Connect app with firebase using API Url  
+        /// <summary>
+        /// Connect app with firebase using API Url  
+        /// </summary>
         public static FirebaseClient firebase = new FirebaseClient("https://ngs-studios-bd357-default-rtdb.firebaseio.com/");
 
-        //Read All    
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>        
         public static async Task<List<User>> GetAllUser()
         {
             try
@@ -41,7 +46,11 @@ namespace NGS_Studio.Services
             }
         }
 
-        //Read     
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="phoneNumber"></param>
+        /// <returns></returns>        
         public static async Task<User> GetUser(string phoneNumber)
         {
             try
@@ -58,7 +67,11 @@ namespace NGS_Studio.Services
                 return null;
             }
         }
-        //Read     
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static async Task<List<User>> GetAllBarbers()
         {
             try
@@ -72,6 +85,11 @@ namespace NGS_Studio.Services
                 return null;
             }
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static async Task<List<User>> GetAllClients()
         {
             try
@@ -86,9 +104,11 @@ namespace NGS_Studio.Services
             }
         }
 
-        public static async Task<User> GetOwner()
-        //public static async Task<List<User>> GetOwner()
-        {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public static async Task<User> GetOwner()        {
             try
             {
                 var allUsers = await GetAllUser();
@@ -103,8 +123,7 @@ namespace NGS_Studio.Services
         /// <summary>
         /// Inserts a user into the database
         /// </summary>
-        /// <param name="email"></param>
-        /// <param name="password"></param>
+        /// <param name="usr"></param>
         /// <returns></returns>
         public static async Task<bool> AddUser(User usr)
         {
@@ -122,7 +141,11 @@ namespace NGS_Studio.Services
             }
         }
 
-        //Update     
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="usr"></param>
+        /// <returns></returns>        
         public static async Task<bool> UpdateUser(User usr)
         {
             try
@@ -143,7 +166,11 @@ namespace NGS_Studio.Services
             }
         }
 
-        //Delete User    
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="usr"></param>
+        /// <returns></returns>        
         public static async Task<bool> DeleteUser(User usr)
         {
             try

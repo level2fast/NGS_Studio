@@ -5,7 +5,6 @@ namespace NGS_Studio.ViewModels
 {
     public class OwnerInfoViewModel : BaseViewModel
     {
-
         //The commanding interface provides an alternative approach 
         //to implementing commands that is much better suited to
         //the MVVM architecture.The ViewModel itself can contain

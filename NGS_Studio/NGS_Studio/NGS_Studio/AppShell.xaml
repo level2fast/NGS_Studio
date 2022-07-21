@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local="clr-namespace:NGS_Studio.Views"
-       Title="NGS_Studio"
+       xmlns:local="clr-namespace:NGS_Studio.Views" 
+       xmlns:xct="http://xamarin.com/schemas/2020/toolkit" 
+       xmlns:ngs_studio="clr-namespace:NGS_Studio" 
+       xmlns:vm="clr-namespace:NGS_Studio.ViewModels" 
+       x:DataType="ngs_studio:AppShell"
+       Title="PrimeCutz"
        x:Class="NGS_Studio.AppShell">
 
     <!--
@@ -10,7 +14,6 @@
     
         https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
     -->
-
     <Shell.Resources>
         <ResourceDictionary>
             <Style x:Key="BaseStyle" TargetType="Element">
@@ -66,6 +69,7 @@
                     </VisualStateGroupList>
                 </Setter>
             </Style>
+            <xct:InvertedBoolConverter x:Key="InvertedBoolConverter" />
         </ResourceDictionary>
     </Shell.Resources>
 
@@ -74,26 +78,47 @@
         FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
-    <!--<FlyoutItem Title="Login" Icon="icon_login.png">
-        <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
-    </FlyoutItem>-->
-    <FlyoutItem Title="NGS Studio" Icon="icon_login.png">
-        <ShellContent Route="MainPage" ContentTemplate="{DataTemplate local:MainPage}" IsVisible="True" />
+    <FlyoutItem Title="Login" Icon="icon_login.png" x:Name="LoginFlyoutItem" >
+        <ShellContent 
+            Route="LoginPage" 
+            ContentTemplate="{DataTemplate local:LoginPage}"  
+            IsVisible="{Binding IsUserAuthenticated,
+                       Converter={StaticResource InvertedBoolConverter}}" 
+            Disappearing="ShellContent_Disappearing"/>
     </FlyoutItem>
-    <FlyoutItem Title="About" Icon="icon_about.png">
-        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" IsVisible="True" />
+    <FlyoutItem Title="Owner" Icon="icon_login.png" x:Name="OwnerDetails" >
+        <ShellContent 
+            Route="OwnerDetailsPage" 
+            ContentTemplate="{DataTemplate local:OwnerDetailsPage}" 
+            IsVisible="{Binding ShowOwnerFlyoutItem}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Client Check In" Icon="icon_login.png"  StyleClass="MenuItemLayoutStyle" >
+        <ShellContent 
+            Route="CheckinPage" 
+            ContentTemplate="{DataTemplate local:CheckinPage}" 
+            IsVisible="True" />
+    </FlyoutItem>
+    <FlyoutItem Title="About" Icon="icon_about.png" x:Name="aboutItem" >
+        <ShellContent 
+            Route="AboutPage" 
+            ContentTemplate="{DataTemplate local:AboutPage}"
+            IsVisible="True" />
+    </FlyoutItem>
+    <FlyoutItem Title="Logout" Icon="outline_logout_black_20.png" x:Name="LogoutFlyoutItem" >
+        <ShellContent 
+            ContentTemplate="{DataTemplate local:LogoutPage}" 
+            IsVisible="{Binding IsUserAuthenticated}" 
+            />
     </FlyoutItem>
     <!--<FlyoutItem Title="Promotions" Icon="icon_feed.png">
         <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" IsVisible="True"/>
     </FlyoutItem>-->
-    <!--<FlyoutItem Title="Logout" Icon="outline_logout_black_20.png">
-        <ShellContent Route="LogoutPage" ContentTemplate="{DataTemplate local:LogoutPage}" IsVisible="True"/>
-    </FlyoutItem>-->
-
-
+    <!--<MenuItem Text="Logout"
+          Command="{Binding ExecuteLogout}"  />-->
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
-    <MenuItem Text="Logout"  Icon="outline_logout_black_20.png" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
-    </MenuItem>
+    <!--<MenuItem Text="Owner"  Icon="outline_logout_black_20.png" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
+    </MenuItem>-->
+
 
     <!--
         TabBar lets you define content that won't show up in a flyout menu. When this content is active
@@ -102,9 +127,9 @@
         content you can do so by calling 
         await Shell.Current.GoToAsync("//LoginPage");
     -->
-    <TabBar>
+    <!--<TabBar>
         <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}"  />
-    </TabBar>
+    </TabBar>-->
 
     <!-- Optional Templates 
     // These may be provided inline as below or as separate classes.

@@ -26,8 +26,8 @@ namespace NGS_Studio.ViewModels
 
         public MainViewModel()
         {
-            Title = "NGS";
-            LogoName = "NgsLogo";
+            Title = "PrimeCutz";
+            LogoName = "AppLogo";
             OwnerLoginCommand = new Command(OnOwnerLoginClicked);
             ClientCheckinCommand = new Command(OnClientCheckinClicked);
         }
@@ -51,7 +51,7 @@ namespace NGS_Studio.ViewModels
             if (!DependencyService.Resolve<IFireBaseAuthentication>().IsSignIn())
             {
                 // go to login page
-                await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+                await Shell.Current.GoToAsync($"/{nameof(LoginPage)}");
             }
         }
     }

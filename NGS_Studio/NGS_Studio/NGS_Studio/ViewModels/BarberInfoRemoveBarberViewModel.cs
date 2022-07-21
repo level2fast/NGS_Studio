@@ -51,11 +51,11 @@ namespace NGS_Studio.ViewModels
                     if (result)
                     {
                         Barbers.Remove(usr);
-                        await App.Current.MainPage.DisplayAlert("Removed", usr.Name + "from NGS", "OK");
+                        await App.Current.MainPage.DisplayAlert("Removed", usr.Name + "from PrimeCutz", "OK");
                     }
                     else
                     {
-                        await App.Current.MainPage.DisplayAlert("Error", "Could not remove from NGS", "OK");
+                        await App.Current.MainPage.DisplayAlert("Error", "Could not remove from PrimeCutz", "OK");
                     }
                 }
                 CurrentItem = null;

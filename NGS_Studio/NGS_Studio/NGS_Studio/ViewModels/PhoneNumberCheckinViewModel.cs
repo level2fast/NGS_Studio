@@ -79,7 +79,7 @@ namespace NGS_Studio.ViewModels
             User user = await UserTableService.GetUser(masked.reformatPhoneNumber(phoneNumberEntry));
             if (user == null)
             {
-                await Application.Current.MainPage.DisplayAlert("Not a registered client", "Please register with NGS", "OK");
+                await Application.Current.MainPage.DisplayAlert("Not a registered client", "Please register with PrimeCutz", "OK");
                 // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
                 await Shell.Current.GoToAsync($"/{nameof(CheckinPage)}");
             }

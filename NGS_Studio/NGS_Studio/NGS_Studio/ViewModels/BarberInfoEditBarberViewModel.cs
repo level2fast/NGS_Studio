@@ -39,7 +39,7 @@ namespace NGS_Studio.ViewModels
                 if (usertemp == null)
                 {
                     // Notify owner that this User does not exist in the database
-                    await App.Current.MainPage.DisplayAlert(Barber.Name + " Does not exist in NGS", "Try adding them", "OK");
+                    await App.Current.MainPage.DisplayAlert(Barber.Name + " Does not exist in PrimeCutz", "Try adding them", "OK");
                     await Shell.Current.GoToAsync("..");
                 }
                 else

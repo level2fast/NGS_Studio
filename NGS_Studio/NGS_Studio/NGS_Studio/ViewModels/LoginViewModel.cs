@@ -1,9 +1,8 @@
 ﻿using NGS_Studio.Views;
-using NGS_Studio.Models;
-using NGS_Studio.Data;
 using Xamarin.Forms;
 using System;
 using NGS_Studio.Services;
+using System.Windows.Input;
 
 namespace NGS_Studio.ViewModels
 {
@@ -19,6 +18,7 @@ namespace NGS_Studio.ViewModels
         //.Data bindings are defined between these commands and the Button.
         public Command OwnerLoginCommand { get; }
         public Command ForgotPasswordCommand { get; }
+        public ICommand LoadCommand { get; protected set; }
 
 
         /// <summary>
@@ -38,15 +38,18 @@ namespace NGS_Studio.ViewModels
             get => passwordEntry;
             set => SetProperty(ref passwordEntry, value);
         }
+
         public LoginViewModel()
         {
             OwnerLoginCommand = new Command(OnOwnerLoginClicked);
             ForgotPasswordCommand = new Command(OnForgotPasswordClicked);
+            LoadCommand = new Command(OnPageAppearing);
+            emailEntry = string.Empty;
+            PasswordEntry = string.Empty;
+
         }
         private async void OnOwnerLoginClicked()
         {
-
-            //null or empty field validation, check weather email and password is null or empty    
 
             if (string.IsNullOrEmpty(EmailEntry) || string.IsNullOrEmpty(PasswordEntry))
                 await App.Current.MainPage.DisplayAlert("Empty Values", "Please enter Email and Password", "OK");
@@ -54,16 +57,16 @@ namespace NGS_Studio.ViewModels
             {
                 try
                 {
+                    
                     var authService = DependencyService.Resolve<IFireBaseAuthentication>();
                     var token = await authService.SignIn(EmailEntry.Trim(), PasswordEntry);
-
-                    await Shell.Current.GoToAsync($"//{nameof(MainPage)}");
+                    await Shell.Current.GoToAsync($"/{nameof(OwnerDetailsPage)}");
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
 
-                    await Xamarin.Forms.Shell.Current
+                    await Shell.Current
                         .DisplayAlert("SignIn", "Error: Can not complete login", "OK");
                 }
             }
@@ -75,25 +78,14 @@ namespace NGS_Studio.ViewModels
             await Shell.Current.GoToAsync($"/{nameof(ForgotPasswordPage)}");
         }
 
-        bool AreCredentialsCorrect(User user)
+        private async void OnPageAppearing()
         {
-            //var user = new User {
-            //	Username = usernameEntry.Text,
-            //	Password = passwordEntry.Text
-            //};
-
-            //var isValid = AreCredentialsCorrect (user);
-            //if (isValid) {
-            //	App.IsUserLoggedIn = true;
-            //	Navigation.InsertPageBefore (new MainPage (), this);
-            //	await Navigation.PopAsync ();
-            //} else {
-            //	messageLabel.Text = "Login failed";
-            //	passwordEntry.Text = string.Empty;
-            //}
-            return user.Username == Constants.Username && user.Password == Constants.Password;
+            var dp = DependencyService.Resolve<IFireBaseAuthentication>();
+            if (dp.IsSignIn())
+            {
+                await Shell.Current.GoToAsync($"/{nameof(OwnerDetailsPage)}");
+            }
         }
-
     }
 }
 

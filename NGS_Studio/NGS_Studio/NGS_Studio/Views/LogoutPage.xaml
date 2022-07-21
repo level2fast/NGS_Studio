@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NGS_Studio.Views.LogoutPage"
+             xmlns:vm="clr-namespace:NGS_Studio.ViewModels"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             BackgroundColor="Black"
+             Shell.BackgroundColor="Black"
+             Title="Logout">
+
+    <ContentPage.BindingContext>
+        <vm:LogoutViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior EventName="Appearing" Command="{Binding LoadCommand}" />
+    </ContentPage.Behaviors>
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always" >
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Logout"
+                        HorizontalOptions="CenterAndExpand"
+                        Command="{Binding OwnerLogoutCommand}" 
+                        BackgroundColor="DarkGoldenrod"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

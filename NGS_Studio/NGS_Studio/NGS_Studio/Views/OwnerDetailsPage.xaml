@@ -3,13 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NGS_Studio.Views.OwnerDetailsPage"
              xmlns:vm="clr-namespace:NGS_Studio.ViewModels"
-             Title="{Binding Title}" BackgroundColor="Black">
+             Title="{Binding Title}" 
+             Shell.BackgroundColor="Black"
+             BackgroundColor="Black"
+             NavigationPage.HasNavigationBar="True">
     <ContentPage.BindingContext>
         <vm:OwnerDetailsViewModel />
     </ContentPage.BindingContext>
     <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always" >
         <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-            <Image Source="NgsLogo" 
+            <Image Source="{Binding LogoName}"
                    WidthRequest="{OnPlatform UWP='*', iOS=300, Android=400}" 
                    HorizontalOptions="Center"  />
             <Button x:Name="OwnerInfoBtn"

@@ -31,7 +31,7 @@
                 <vm:MaskedBehavior Mask="( XXX ) XXX - XXXX" />
             </Entry.Behaviors>
         </Entry>
-        <Button Text="Add to NGS"
+        <Button Text="Add to PrimeCutz"
                 Command="{Binding AddBarberCommand}"
                 BackgroundColor="DarkGoldenrod"
                 />

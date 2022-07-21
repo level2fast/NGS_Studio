@@ -3,16 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NGS_Studio.Views.LoginPage"
              xmlns:vm="clr-namespace:NGS_Studio.ViewModels"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              BackgroundColor="Black"
              Shell.BackgroundColor="Black">
-
     <ContentPage.BindingContext>
         <vm:LoginViewModel />
     </ContentPage.BindingContext>
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior EventName="Appearing" Command="{Binding LoadCommand}" />
+    </ContentPage.Behaviors>
     <ContentPage.Content>
         <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always" >
             <StackLayout VerticalOptions="StartAndExpand">
-                <Image Source="NgsLogo"
+                <Image Source="{Binding LogoName}"
                        WidthRequest="{OnPlatform UWP='*', iOS=300, Android=400}"
                        HorizontalOptions="Center"  />
                 <Label Text="Username" />

@@ -25,11 +25,17 @@ namespace NGS_Studio.ViewModels
             get { return title; }
             set { SetProperty(ref title, value); }
         }
-        string logoName = string.Empty;
+        string logoName = "app_logo";
         public string LogoName
         {
             get { return logoName; }
             set { SetProperty(ref logoName, value); }
+        }
+        string bannerName = "app_logo";
+        public string BannerName
+        {
+            get { return bannerName; }
+            set { SetProperty(ref bannerName, value); }
         }
         protected bool SetProperty<T>(ref T backingStore, T value,
             [CallerMemberName] string propertyName = "",

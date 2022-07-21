@@ -20,7 +20,6 @@ namespace NGS_Studio.ViewModels
         public CheckinViewModel()
         {
             Title = "Checkin";
-            LogoName = "NgsLogo";
             YesCheckinCommand = new Command(OnYesCheckinClicked);
             NoCheckinCommand = new Command(OnNoCheckinClicked);
         }

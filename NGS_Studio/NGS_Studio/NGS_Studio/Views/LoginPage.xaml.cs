@@ -9,6 +9,13 @@ namespace NGS_Studio.Views
 		public LoginPage()
 		{
 			InitializeComponent();
+
+		}
+
+        protected override void OnAppearing()
+        {
+			passwordEntry.Text = string.Empty;
+			usernameEntry.Text = string.Empty;
 		}
 	}
 }
