@@ -5,7 +5,6 @@ using NGS_Studio.Services;
 using System.Collections.Generic;
 using Xamarin.CommunityToolkit.ObjectModel;
 using System.Windows.Input;
-using NGS_Studio.Data;
 
 namespace NGS_Studio.ViewModels
 {
@@ -79,13 +78,13 @@ namespace NGS_Studio.ViewModels
                 // Check to see if user is already signed up
                 if (usertemp == null)
                 {
-                    // call AddUser function which we define in Firebase helper class    
                     User usr = new User { Name = NameEntry, Email = emailEntry, PhoneNumber = masked.reformatPhoneNumber(PhoneNumberEntry), IsClient = true, Barber = SelectedBarber.Name };
                     var user = await UserTableService.AddUser(usr);
-                    //AddUser return true if data insert successfuly     
+
                     if (user)
                     {
                         await App.Current.MainPage.DisplayAlert("Thanks!", " Your barber will be with shortly", "Ok");
+
                         // Navigate to Wellcom page after successfuly SignUp    
                         // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
                         await Shell.Current.GoToAsync($"{nameof(CheckinPage)}");

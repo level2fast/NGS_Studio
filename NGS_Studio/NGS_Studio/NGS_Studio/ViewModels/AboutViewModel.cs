@@ -31,7 +31,7 @@ namespace NGS_Studio.ViewModels
         {
             try
             {
-                await Launcher.OpenAsync("https://ngstudio.net/");
+                await Launcher.OpenAsync("https://www.facebook.com/PRIMECUTZSD/");
             }
             catch (FeatureNotSupportedException ex)
             {

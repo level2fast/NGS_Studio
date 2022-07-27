@@ -46,7 +46,7 @@ namespace NGS_Studio
             get { return iconAbout; }
             set { SetProperty(ref iconAbout, value); }
         }
-        string iconLogout = "outline_logout_black_20";
+        string iconLogout = "icon_logout";
         public string IconLogout
         {
             get { return iconLogout; }

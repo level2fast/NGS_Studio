@@ -1,16 +1,24 @@
 ﻿namespace NGS_Studio.Data
 {
-	public static class Constants
+	public class Constants
 	{
-		public static string Username = "Xamarin";
-		public static string Password = "password";
-		public static string ERROR = "ERROR";
+		public const string Username = "Xamarin";
+		public const string Password = "password";
+		public const string TWILIO_ACCOUNT_SID = "";
+		public const string TWILIO_AUTH_TOKEN  = "";
+		public const string ERROR = "ERROR";
 		enum UserType
 		{
 			Owner,
 			Barber,
 			Client
 		}
+	}
+	public class TwilioAccountDetails
+	{
+		public string AccountSid { get; }
+
+		public string AuthToken { get; }
 	}
 
 }
