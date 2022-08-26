@@ -65,16 +65,12 @@ namespace NGS_Studio.ViewModels
         {
             if (Device.RuntimePlatform == Device.iOS)
             {
-                await Launcher.OpenAsync("http://maps.apple.com/?q=6461+University+Ave+San+Diego+CA");
+                await Launcher.OpenAsync("http://maps.apple.com/?address=4456+Vander+Ave+Suite+8+San+Diego+CA+92120&t=m");
             }
             else if (Device.RuntimePlatform == Device.Android)
             {
                 // open the maps app directly
-                await Launcher.OpenAsync("geo:0,0?q=6461+University+Ave+San+Diego+CA");
-            }
-            else if (Device.RuntimePlatform == Device.UWP)
-            {
-                await Launcher.OpenAsync("bingmaps:?where=6461 University Ave San Diego CA");
+                await Launcher.OpenAsync("geo:0,0?q=4456+Vander+Ave+Suite+8+San+Diego+CA+92120");
             }
         }
     }

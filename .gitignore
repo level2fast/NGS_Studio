@@ -87,3 +87,5 @@ lint/tmp/
 #temporary folders
 NGS_Studio/NGS_Studio/NGS_Studio/obj/
 NGS_Studio/NGS_Studio/NGS_Studio.Android/obj/
+NGS_Studio/NGS_Studio/NGS_Studio/twilio.xml
+NGS_Studio/NGS_Studio/NGS_Studio/appsettings.json

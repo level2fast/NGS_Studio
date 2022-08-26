@@ -79,8 +79,8 @@
             <Grid BackgroundColor="Black"
                   HeightRequest="200">
                 <Image Aspect="AspectFill"
-                       Source="app_logo.jpg"
-                       Opacity="0.6" />
+                       Source="app_logo.png"
+                       />
 
             </Grid>
         </DataTemplate>
@@ -126,9 +126,6 @@
                 <Label Text="PrimeCutz"
                        TextColor="DarkGoldenrod"
                        FontAttributes="Bold"
-                       HorizontalOptions="Center" />
-                <Label Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MMMM dd, yyyy}'}"
-                       TextColor="GhostWhite"
                        HorizontalOptions="Center" />
             </StackLayout>
         </DataTemplate>

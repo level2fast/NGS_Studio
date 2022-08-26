@@ -6,10 +6,9 @@ using NGS_Studio.Services;
 using System;
 using System.Windows.Input;
 using Xamarin.CommunityToolkit.ObjectModel;
-using Microsoft.Extensions.Configuration;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
-using NGS_Studio.Data;
+
 namespace NGS_Studio.ViewModels
 {
     public class PhoneNumberCheckinViewModel : BaseViewModel
@@ -108,12 +107,9 @@ namespace NGS_Studio.ViewModels
                 //display "client preferred barber question label and buttons
                 await Application.Current.MainPage.DisplayAlert("Thanks!", "Your barber will be with you shortly", "OK");
                 // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-                await Shell.Current.GoToAsync($"{nameof(CheckinPage)}");
 
-                string accountSid = Environment.GetEnvironmentVariable("TWILIO_ACCOUNT_SID");
-                string authToken = Environment.GetEnvironmentVariable("TWILIO_AUTH_TOKEN");
-                TwilioClient.Init(accountSid, authToken);
-
+                TwilioClient.Init(Configuration.Configuration.ApiTokens.TWILIO_ACCOUNT_SID,
+                                  Configuration.Configuration.ApiTokens.TWILIO_AUTH_TOKEN);
                 var message = MessageResource.Create(
                     body: "Your client " + user.Name + " has arrived.",
                     from: new Twilio.Types.PhoneNumber("+17438003018"),
@@ -121,6 +117,7 @@ namespace NGS_Studio.ViewModels
                 );
 
                 Console.WriteLine(message.Sid);
+                await Shell.Current.GoToAsync($"{nameof(CheckinPage)}");
             }
             else 
             {
