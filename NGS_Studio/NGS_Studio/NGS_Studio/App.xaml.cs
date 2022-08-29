@@ -7,6 +7,7 @@ using System;
 using static NGS_Studio.Configuration.Configuration;
 using NGS_Studio.Views;
 using NGS_Studio.Configuration;
+using NGS_Studio.Data;
 
 namespace NGS_Studio
 {
@@ -15,8 +16,7 @@ namespace NGS_Studio
         public App()
         {
             InitializeComponent();
-
-            DependencyService.Register<MockDataStore>();
+            _ = Globals.Instance.Firebase;
             MainPage = new AppShell();
             LoadConfigData();
         }

@@ -3,6 +3,10 @@ using Xamarin.Forms;
 using System;
 using NGS_Studio.Services;
 using System.Windows.Input;
+using NGS_Studio.Data;
+using NGS_Studio.Models;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace NGS_Studio.ViewModels
 {
@@ -10,6 +14,7 @@ namespace NGS_Studio.ViewModels
     {
         private string emailEntry;
         private string passwordEntry;
+
         //The commanding interface provides an alternative approach 
         //to implementing commands that is much better suited to
         //the MVVM architecture.The ViewModel itself can contain
@@ -19,7 +24,6 @@ namespace NGS_Studio.ViewModels
         public Command OwnerLoginCommand { get; }
         public Command ForgotPasswordCommand { get; }
         public ICommand LoadCommand { get; protected set; }
-
 
         /// <summary>
         /// 
@@ -39,6 +43,9 @@ namespace NGS_Studio.ViewModels
             set => SetProperty(ref passwordEntry, value);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public LoginViewModel()
         {
             OwnerLoginCommand = new Command(OnOwnerLoginClicked);
@@ -48,6 +55,10 @@ namespace NGS_Studio.ViewModels
             PasswordEntry = string.Empty;
 
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
         private async void OnOwnerLoginClicked()
         {
 
@@ -57,9 +68,8 @@ namespace NGS_Studio.ViewModels
             {
                 try
                 {
-                    
                     var authService = DependencyService.Resolve<IFireBaseAuthentication>();
-                    var token = await authService.SignIn(EmailEntry.Trim(), PasswordEntry);
+                    Globals.Instance.AuthToken = await authService.SignIn(EmailEntry.Trim(), PasswordEntry);
                     await Shell.Current.GoToAsync($"/{nameof(OwnerDetailsPage)}");
                 }
                 catch (Exception ex)
@@ -72,18 +82,28 @@ namespace NGS_Studio.ViewModels
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private async void OnForgotPasswordClicked()
         {
             // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
             await Shell.Current.GoToAsync($"/{nameof(ForgotPasswordPage)}");
         }
 
+
+        public static List<Task> TaskList = new List<Task>();
+
+        /// <summary>
+        /// 
+        /// </summary>
         private async void OnPageAppearing()
         {
             var dp = DependencyService.Resolve<IFireBaseAuthentication>();
             if (dp.IsSignIn())
             {
                 await Shell.Current.GoToAsync($"/{nameof(OwnerDetailsPage)}");
+                Globals.Instance.AuthToken = await dp.GetToken();
             }
         }
     }

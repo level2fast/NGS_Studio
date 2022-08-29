@@ -9,6 +9,7 @@ namespace NGS_Studio.Droid
 {
     public class FirebaseAuthentication : IFireBaseAuthentication
     {
+
         public async Task<bool> CreateUser(string username, string email, string password)
         {
             var authResult = await FirebaseAuth.Instance
@@ -19,7 +20,6 @@ namespace NGS_Studio.Droid
 
             var userProfileChangeRequest = userProfileChangeRequestBuilder.Build();
             await authResult.User.UpdateProfileAsync(userProfileChangeRequest);
-
             return await Task.FromResult(true);
         }
 
@@ -38,5 +38,11 @@ namespace NGS_Studio.Droid
 
         public void SignOut()
             => FirebaseAuth.Instance.SignOut();
+
+        public async Task<string> GetToken()
+        {
+            var token = await FirebaseAuth.Instance.CurrentUser.GetIdToken(false).AsAsync<GetTokenResult>();
+            return token.Token;
+        }
     }
 }

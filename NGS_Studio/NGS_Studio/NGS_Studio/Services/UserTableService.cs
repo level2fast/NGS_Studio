@@ -1,21 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using Firebase.Database;
 using Firebase.Database.Query;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using NGS_Studio.Models;
-
+using NGS_Studio.Data;
 namespace NGS_Studio.Services
 {
     class UserTableService
     {
-
-        /// <summary>
-        /// Connect app with firebase using API Url  
-        /// </summary>
-        public static FirebaseClient firebase = new FirebaseClient("https://ngs-studios-bd357-default-rtdb.firebaseio.com/");
 
         /// <summary>
         /// 
@@ -25,7 +19,7 @@ namespace NGS_Studio.Services
         {
             try
             {
-                var userlist = (await firebase
+                var userlist = (await Globals.Instance.Firebase
                 .Child("User")
                 .OnceAsync<User>()).Select(item =>
                 new User
@@ -56,7 +50,7 @@ namespace NGS_Studio.Services
             try
             {
                 var allUsers = await GetAllUser();
-                await firebase
+                await Globals.Instance.Firebase
                 .Child("User")
                 .OnceAsync<User>();
                 return allUsers.Where(a => a.PhoneNumber == phoneNumber).FirstOrDefault();
@@ -129,7 +123,7 @@ namespace NGS_Studio.Services
         {
             try
             {
-                await firebase
+                await Globals.Instance.Firebase
                 .Child("User")
                 .PostAsync(usr);
                 return true;
@@ -150,10 +144,10 @@ namespace NGS_Studio.Services
         {
             try
             {
-                var toUpdateUser = (await firebase
+                var toUpdateUser = (await Globals.Instance.Firebase
                 .Child("User")
                 .OnceAsync<User>()).Where(a => a.Object.PhoneNumber == usr.PhoneNumber).FirstOrDefault();
-                await firebase
+                await Globals.Instance.Firebase
                 .Child("User")
                 .Child(toUpdateUser.Key)
                 .PutAsync(usr);
@@ -175,10 +169,10 @@ namespace NGS_Studio.Services
         {
             try
             {
-                var toDeletePerson = (await firebase
+                var toDeletePerson = (await Globals.Instance.Firebase
                 .Child("User")
                 .OnceAsync<User>()).Where(a => a.Object.PhoneNumber == usr.PhoneNumber).FirstOrDefault();
-                await firebase.Child("User").Child(toDeletePerson.Key).DeleteAsync();
+                await Globals.Instance.Firebase.Child("User").Child(toDeletePerson.Key).DeleteAsync();
                 return true;
             }
             catch (Exception e)

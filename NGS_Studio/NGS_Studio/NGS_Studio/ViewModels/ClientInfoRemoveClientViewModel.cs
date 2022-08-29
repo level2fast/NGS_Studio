@@ -49,6 +49,7 @@ namespace NGS_Studio.ViewModels
                     bool result = await UserTableService.DeleteUser(usr);
                     if (result)
                     {
+                        Clients.Remove(usr);
                         await App.Current.MainPage.DisplayAlert("Removed", usr.Name + "from PrimeCutz", "OK");
                     }
                     else
