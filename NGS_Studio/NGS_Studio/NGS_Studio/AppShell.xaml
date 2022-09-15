@@ -6,7 +6,7 @@
        xmlns:sys="clr-namespace:System;assembly=netstandard"
        xmlns:ngs_studio="clr-namespace:NGS_Studio" 
        x:DataType="ngs_studio:AppShell"
-       Title="PrimeCutz"
+       Title="NGS"
        x:Class="NGS_Studio.AppShell">
 
     <!--
@@ -91,45 +91,59 @@
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
     <FlyoutItem Title="Login" Icon="{Binding IconLogin}" x:Name="LoginFlyoutItem" >
-        <ShellContent 
+        <ShellSection x:Name="LoginShellSection">
+            <ShellContent 
             ContentTemplate="{DataTemplate local:LoginPage}"  
             IsVisible="{Binding IsUserAuthenticated,
                        Converter={StaticResource InvertedBoolConverter}}" 
             Disappearing="ShellContent_Disappearing"/>
+        </ShellSection>
+
     </FlyoutItem>
-    <FlyoutItem Title="Owner" Icon="{Binding IconOwner}" x:Name="OwnerDetails" >
-        <ShellContent 
+    <FlyoutItem Title="Owner" Icon="{Binding IconOwner}" x:Name="OwnerDetailsFlyoutItem" >
+        <ShellSection x:Name="OwnerShellSection">
+            <ShellContent 
             ContentTemplate="{DataTemplate local:OwnerDetailsPage}" 
             IsVisible="{Binding ShowOwnerFlyoutItem}" />
+        </ShellSection>
     </FlyoutItem>
-    <FlyoutItem Title="Client Check In" Icon="{Binding IconCheckin}"  StyleClass="MenuItemLayoutStyle" >
-        <ShellContent  
+    <FlyoutItem Title="Client Check In" Icon="{Binding IconCheckin}" x:Name="CheckinFlyoutItem"  StyleClass="MenuItemLayoutStyle" >
+        <ShellSection x:Name="CheckinShellSection">
+            <ShellContent  
             ContentTemplate="{DataTemplate local:CheckinPage}" 
-            IsVisible="True" />
+            IsVisible="False" 
+            x:Name="CheckinContent"/>
+        </ShellSection>
     </FlyoutItem>
-    <FlyoutItem Title="About" Icon="{Binding IconAbout}" x:Name="aboutItem" >
-        <ShellContent 
+    <FlyoutItem Title="About" Icon="{Binding IconAbout}" x:Name="AboutFlyoutItem" >
+        <ShellSection x:Name="AboutShellSection">
+            <ShellContent 
             ContentTemplate="{DataTemplate local:AboutPage}"
             IsVisible="True" />
+        </ShellSection>
     </FlyoutItem>
     <FlyoutItem Title="Logout" Icon="{Binding IconLogout}" x:Name="LogoutFlyoutItem" >
-        <ShellContent 
+        <ShellSection x:Name="LogoutShellSection">
+            <ShellContent 
             ContentTemplate="{DataTemplate local:LogoutPage}" 
             IsVisible="{Binding IsUserAuthenticated}" 
             />
+        </ShellSection>
     </FlyoutItem>
 
 
     <Shell.FlyoutFooterTemplate>
         <DataTemplate>
             <StackLayout>
-                <Label Text="PrimeCutz"
+                <Label Text="NGS"
                        TextColor="DarkGoldenrod"
                        FontAttributes="Bold"
                        HorizontalOptions="Center" />
+
             </StackLayout>
         </DataTemplate>
     </Shell.FlyoutFooterTemplate>
+    
     <!--<FlyoutItem Title="Promotions" Icon="icon_feed.png">
         <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" IsVisible="True"/>
     </FlyoutItem>-->

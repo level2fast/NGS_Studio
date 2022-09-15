@@ -66,7 +66,7 @@ namespace NGS_Studio.ViewModels
                     //AddUser return true if data insert successfuly     
                     if (user)
                     {
-                        await App.Current.MainPage.DisplayAlert("Success", NameEntry + " Added to PrimeCutz ", "Ok");
+                        await App.Current.MainPage.DisplayAlert("Success", NameEntry + " Added to NGS ", "Ok");
                         NameEntry = null;
                         EmailEntry = null;
                         PhoneNumberEntry = null;
@@ -80,7 +80,7 @@ namespace NGS_Studio.ViewModels
                 else
                 {
                     // Notify user that they are already signed up
-                    await App.Current.MainPage.DisplayAlert(NameEntry + " Already added to PrimeCutz", "Try again", "OK");
+                    await App.Current.MainPage.DisplayAlert(NameEntry + " Already added to NGS", "Try again", "OK");
                     await Shell.Current.GoToAsync($"///{nameof(LoginPage)}");
                 }
             }

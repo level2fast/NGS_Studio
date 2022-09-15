@@ -1,12 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:themes = "clr-namespace:NGS_Studio.Themes;assembly=NGS_Studio"
              x:Class="NGS_Studio.App">
     <!--
         Define global resources and styles here, that apply to all pages in your app.
     -->
     <Application.Resources>
         <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <themes:LightTheme />
+            </ResourceDictionary.MergedDictionaries >
             <Color x:Key="Primary">black</Color>
             <Color x:Key="Orange">#ff5722</Color>
             <Color x:Key="Blue">#00bcd4</Color>

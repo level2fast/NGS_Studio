@@ -30,6 +30,9 @@
                     Text="Barbers"  
                     Command="{Binding BarberInfoCommand}"
                     BackgroundColor="DarkGoldenrod" />
+            <Switch x:Name="ClientCheckinSwitch" IsToggled="{Binding ClientCheckSwitchState }">
+                
+            </Switch>
         </StackLayout>
     </ScrollView>
 </ContentPage>

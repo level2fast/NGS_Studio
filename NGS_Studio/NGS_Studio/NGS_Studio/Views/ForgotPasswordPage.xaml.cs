@@ -15,7 +15,7 @@ namespace NGS_Studio.Views
         public ForgotPasswordPage()
         {
             InitializeComponent();
-            this.BindingContext = new ForgotPasswordViewModel();
+            this.BindingContext = new ForgotPasswordViewModel_orig();
         }
     }
 }

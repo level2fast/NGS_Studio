@@ -132,6 +132,112 @@
           "lib/Xamarin.iOS/PCLAppConfig.dll": {}
         }
       },
+      "Syncfusion.Licensing/20.2.0.45": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Buttons/20.2.0.45": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "20.2.0.45",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/20.2.0.45": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "20.2.0.45",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DataSource/20.2.0.45": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.GridCommon/20.2.0.45": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfComboBox/20.2.0.45": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "20.2.0.45",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfListView/20.2.0.45": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "20.2.0.45",
+          "Syncfusion.Xamarin.DataSource": "20.2.0.45",
+          "Syncfusion.Xamarin.GridCommon": "20.2.0.45",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRating/20.2.0.45": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "20.2.0.45",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.XForms.iOS.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.XForms.iOS.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.iOS.dll": {}
+        }
+      },
       "System.Collections.Specialized/4.3.0": {
         "type": "package",
         "compile": {
@@ -406,6 +512,11 @@
           "FirebaseDatabase.net": "4.0.7",
           "Newtonsoft.Json": "13.0.1",
           "PCLAppConfig": "1.0.1",
+          "Syncfusion.Xamarin.Buttons": "20.2.0.45",
+          "Syncfusion.Xamarin.Core": "20.2.0.45",
+          "Syncfusion.Xamarin.SfComboBox": "20.2.0.45",
+          "Syncfusion.Xamarin.SfListView": "20.2.0.45",
+          "Syncfusion.Xamarin.SfRating": "20.2.0.45",
           "Twilio": "5.78.0",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.CommunityToolkit": "1.3.2",
@@ -549,6 +660,112 @@
           "lib/Xamarin.iOS/PCLAppConfig.FileSystemStream.Abstractions.dll": {},
           "lib/Xamarin.iOS/PCLAppConfig.FileSystemStream.dll": {},
           "lib/Xamarin.iOS/PCLAppConfig.dll": {}
+        }
+      },
+      "Syncfusion.Licensing/20.2.0.45": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Buttons/20.2.0.45": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "20.2.0.45",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/20.2.0.45": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "20.2.0.45",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DataSource/20.2.0.45": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.GridCommon/20.2.0.45": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfComboBox/20.2.0.45": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "20.2.0.45",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfListView/20.2.0.45": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "20.2.0.45",
+          "Syncfusion.Xamarin.DataSource": "20.2.0.45",
+          "Syncfusion.Xamarin.GridCommon": "20.2.0.45",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRating/20.2.0.45": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "20.2.0.45",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.XForms.iOS.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.XForms.iOS.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.iOS.dll": {}
         }
       },
       "System.Collections.Specialized/4.3.0": {
@@ -819,6 +1036,11 @@
           "FirebaseDatabase.net": "4.0.7",
           "Newtonsoft.Json": "13.0.1",
           "PCLAppConfig": "1.0.1",
+          "Syncfusion.Xamarin.Buttons": "20.2.0.45",
+          "Syncfusion.Xamarin.Core": "20.2.0.45",
+          "Syncfusion.Xamarin.SfComboBox": "20.2.0.45",
+          "Syncfusion.Xamarin.SfListView": "20.2.0.45",
+          "Syncfusion.Xamarin.SfRating": "20.2.0.45",
           "Twilio": "5.78.0",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.CommunityToolkit": "1.3.2",
@@ -964,6 +1186,112 @@
           "lib/Xamarin.iOS/PCLAppConfig.dll": {}
         }
       },
+      "Syncfusion.Licensing/20.2.0.45": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Buttons/20.2.0.45": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "20.2.0.45",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/20.2.0.45": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "20.2.0.45",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DataSource/20.2.0.45": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.GridCommon/20.2.0.45": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfComboBox/20.2.0.45": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "20.2.0.45",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfListView/20.2.0.45": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "20.2.0.45",
+          "Syncfusion.Xamarin.DataSource": "20.2.0.45",
+          "Syncfusion.Xamarin.GridCommon": "20.2.0.45",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRating/20.2.0.45": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "20.2.0.45",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.XForms.iOS.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.XForms.iOS.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.iOS.dll": {}
+        }
+      },
       "System.Collections.Specialized/4.3.0": {
         "type": "package",
         "compile": {
@@ -1232,6 +1560,11 @@
           "FirebaseDatabase.net": "4.0.7",
           "Newtonsoft.Json": "13.0.1",
           "PCLAppConfig": "1.0.1",
+          "Syncfusion.Xamarin.Buttons": "20.2.0.45",
+          "Syncfusion.Xamarin.Core": "20.2.0.45",
+          "Syncfusion.Xamarin.SfComboBox": "20.2.0.45",
+          "Syncfusion.Xamarin.SfListView": "20.2.0.45",
+          "Syncfusion.Xamarin.SfRating": "20.2.0.45",
           "Twilio": "5.78.0",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.CommunityToolkit": "1.3.2",
@@ -1377,6 +1710,112 @@
           "lib/Xamarin.iOS/PCLAppConfig.dll": {}
         }
       },
+      "Syncfusion.Licensing/20.2.0.45": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Buttons/20.2.0.45": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "20.2.0.45",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/20.2.0.45": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "20.2.0.45",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.DataSource/20.2.0.45": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.GridCommon/20.2.0.45": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfComboBox/20.2.0.45": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "20.2.0.45",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfListView/20.2.0.45": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "20.2.0.45",
+          "Syncfusion.Xamarin.DataSource": "20.2.0.45",
+          "Syncfusion.Xamarin.GridCommon": "20.2.0.45",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.iOS.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfRating/20.2.0.45": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "20.2.0.45",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.XForms.iOS.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.XForms.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.XForms.iOS.dll": {},
+          "lib/Xamarin.iOS10/Syncfusion.SfRating.iOS.dll": {}
+        }
+      },
       "System.Collections.Specialized/4.3.0": {
         "type": "package",
         "compile": {
@@ -1645,6 +2084,11 @@
           "FirebaseDatabase.net": "4.0.7",
           "Newtonsoft.Json": "13.0.1",
           "PCLAppConfig": "1.0.1",
+          "Syncfusion.Xamarin.Buttons": "20.2.0.45",
+          "Syncfusion.Xamarin.Core": "20.2.0.45",
+          "Syncfusion.Xamarin.SfComboBox": "20.2.0.45",
+          "Syncfusion.Xamarin.SfListView": "20.2.0.45",
+          "Syncfusion.Xamarin.SfRating": "20.2.0.45",
           "Twilio": "5.78.0",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.CommunityToolkit": "1.3.2",
@@ -1950,6 +2394,252 @@
         "lib/netstandard2.0/PCLAppConfig.dll",
         "pclappconfig.1.0.1.nupkg.sha512",
         "pclappconfig.nuspec"
+      ]
+    },
+    "Syncfusion.Licensing/20.2.0.45": {
+      "sha512": "+hzymsIcFXH5tilaAhjqctWrKYP8deZ06vzce+98FMYXdwekUZA7YfPohWG8ZnpWUOrnWxnmCTpOBol3bdTmmA==",
+      "type": "package",
+      "path": "syncfusion.licensing/20.2.0.45",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/MonoAndroid10.0/Syncfusion.Licensing.dll",
+        "lib/MonoAndroid90/Syncfusion.Licensing.dll",
+        "lib/Xamarin.Mac/Syncfusion.Licensing.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Licensing.dll",
+        "lib/net20/Syncfusion.Licensing.dll",
+        "lib/net35/Syncfusion.Licensing.dll",
+        "lib/net40/Syncfusion.Licensing.dll",
+        "lib/net45/Syncfusion.Licensing.dll",
+        "lib/net451/Syncfusion.Licensing.dll",
+        "lib/net46/Syncfusion.Licensing.dll",
+        "lib/net5.0/Syncfusion.Licensing.dll",
+        "lib/net6.0/Syncfusion.Licensing.dll",
+        "lib/netcoreapp3.1/Syncfusion.Licensing.dll",
+        "lib/netstandard1.0/Syncfusion.Licensing.dll",
+        "lib/netstandard1.2/Syncfusion.Licensing.dll",
+        "lib/netstandard1.4/Syncfusion.Licensing.dll",
+        "lib/netstandard2.0/Syncfusion.Licensing.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
+        "lib/uap10.0/Syncfusion.Licensing.dll",
+        "syncfusion.licensing.20.2.0.45.nupkg.sha512",
+        "syncfusion.licensing.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.Buttons/20.2.0.45": {
+      "sha512": "1smyaCtTJQe+Pfq78Xfsp3rkLLSOMGFlG4qoqRPj/l3cKVfZLf0N7jvVUfAJypOWAFmGTVI2S9yLe4HGAQa+GQ==",
+      "type": "package",
+      "path": "syncfusion.xamarin.buttons/20.2.0.45",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/MonoAndroid10.0/Syncfusion.Buttons.XForms.Android.dll",
+        "lib/MonoAndroid10.0/Syncfusion.Buttons.XForms.dll",
+        "lib/MonoAndroid10.0/Syncfusion.Buttons.XForms.xml",
+        "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Buttons.XForms.xml",
+        "lib/netstandard2.0/Syncfusion.Buttons.XForms.dll",
+        "lib/netstandard2.0/Syncfusion.Buttons.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Buttons.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Buttons.XForms.xml",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP.XML",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP.pri",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Assets/SfButton.ttf",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Assets/sfbutton_Segoe MDL2 Assets.ttf",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Properties/Syncfusion.Buttons.XForms.UWP.rd.xml",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Syncfusion.Buttons.XForms.UWP.xr.xml",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.UWP/Themes/Generic.xaml",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.dll",
+        "lib/uap10.0/Syncfusion.Buttons.XForms.xml",
+        "syncfusion.xamarin.buttons.20.2.0.45.nupkg.sha512",
+        "syncfusion.xamarin.buttons.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.Core/20.2.0.45": {
+      "sha512": "Aw3Q4elNH/01Nava9PV1F+J5gTYdBoYOJ2ylR71YAFLQVStMVrdgR9sg9lV+yIpmi8qI6P9O69HoDCDSPpkRMA==",
+      "type": "package",
+      "path": "syncfusion.xamarin.core/20.2.0.45",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/MonoAndroid10.0/Syncfusion.Core.XForms.Android.dll",
+        "lib/MonoAndroid10.0/Syncfusion.Core.XForms.dll",
+        "lib/MonoAndroid10.0/Syncfusion.Core.XForms.xml",
+        "lib/Xamarin.Mac/Syncfusion.Core.XForms.dll",
+        "lib/Xamarin.Mac/Syncfusion.Core.XForms.macOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.xml",
+        "lib/netstandard2.0/Syncfusion.Core.XForms.dll",
+        "lib/netstandard2.0/Syncfusion.Core.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Core.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Core.XForms.xml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP.pri",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/Syncfusion.Core.XForms.UWP.xr.xml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/ClearButtonViewVisibleIcon.xaml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/DropDownIcon.xaml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/ToggleCollapsedIcon.xaml",
+        "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/ToggleVisibleIcon.xaml",
+        "lib/uap10.0/Syncfusion.Core.XForms.dll",
+        "lib/uap10.0/Syncfusion.Core.XForms.xml",
+        "syncfusion.xamarin.core.20.2.0.45.nupkg.sha512",
+        "syncfusion.xamarin.core.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.DataSource/20.2.0.45": {
+      "sha512": "Zpn0RgVJDtmUFfSsB8/FB0ID7cIQ2EcjkHGwyGxNoQy7OG6tJXXSiGIysKV12V7GxpHJkBoUbQuCO8s/rofD/w==",
+      "type": "package",
+      "path": "syncfusion.xamarin.datasource/20.2.0.45",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/MonoAndroid10.0/Syncfusion.DataSource.Portable.XML",
+        "lib/MonoAndroid10.0/Syncfusion.DataSource.Portable.dll",
+        "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.XML",
+        "lib/Xamarin.iOS10/Syncfusion.DataSource.Portable.dll",
+        "lib/netstandard2.0/Syncfusion.DataSource.Portable.XML",
+        "lib/netstandard2.0/Syncfusion.DataSource.Portable.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.DataSource.Portable.XML",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.DataSource.Portable.dll",
+        "lib/uap10.0/Syncfusion.DataSource.Portable.XML",
+        "lib/uap10.0/Syncfusion.DataSource.Portable.dll",
+        "syncfusion.xamarin.datasource.20.2.0.45.nupkg.sha512",
+        "syncfusion.xamarin.datasource.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.GridCommon/20.2.0.45": {
+      "sha512": "9igSnrX6nFKP/aY1Bcq/uI9cKOO4xst4cDcfs2YK8bmnK5c0eceFpDbeRMBAhIFvG1VkAPMaMs2wsjH6HlFgYg==",
+      "type": "package",
+      "path": "syncfusion.xamarin.gridcommon/20.2.0.45",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/MonoAndroid10.0/Syncfusion.GridCommon.Portable.XML",
+        "lib/MonoAndroid10.0/Syncfusion.GridCommon.Portable.dll",
+        "lib/Xamarin.Mac/Syncfusion.GridCommon.Portable.XML",
+        "lib/Xamarin.Mac/Syncfusion.GridCommon.Portable.dll",
+        "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.XML",
+        "lib/Xamarin.iOS10/Syncfusion.GridCommon.Portable.dll",
+        "lib/netstandard2.0/Syncfusion.GridCommon.Portable.XML",
+        "lib/netstandard2.0/Syncfusion.GridCommon.Portable.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.GridCommon.Portable.XML",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.GridCommon.Portable.dll",
+        "lib/uap10.0/Syncfusion.GridCommon.Portable.XML",
+        "lib/uap10.0/Syncfusion.GridCommon.Portable.dll",
+        "syncfusion.xamarin.gridcommon.20.2.0.45.nupkg.sha512",
+        "syncfusion.xamarin.gridcommon.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfComboBox/20.2.0.45": {
+      "sha512": "1xMypWC+ipqMP7kqzhTMQEv7/mrHuIt9ybsTyqz00wnwh6yVYfknxE0tpAyMqSOLZ4Mmc9c9JdS70LNEO+w0Nw==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfcombobox/20.2.0.45",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/MonoAndroid10.0/Syncfusion.SfComboBox.XForms.Android.dll",
+        "lib/MonoAndroid10.0/Syncfusion.SfComboBox.XForms.XML",
+        "lib/MonoAndroid10.0/Syncfusion.SfComboBox.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfComboBox.XForms.iOS.dll",
+        "lib/netstandard2.0/Syncfusion.SfComboBox.XForms.XML",
+        "lib/netstandard2.0/Syncfusion.SfComboBox.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfComboBox.XForms.XML",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfComboBox.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.XML",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP.pri",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Properties/Syncfusion.SfComboBox.XForms.UWP.rd.xml",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Syncfusion.SfComboBox.XForms.UWP.xr.xml",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/Themes/Generic.xaml",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/darkthemeimage.png",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.UWP/dropdownbuttonimage.png",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.XML",
+        "lib/uap10.0/Syncfusion.SfComboBox.XForms.dll",
+        "syncfusion.xamarin.sfcombobox.20.2.0.45.nupkg.sha512",
+        "syncfusion.xamarin.sfcombobox.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfListView/20.2.0.45": {
+      "sha512": "yTmMq3yDpncUbgR0iefG5l600dPwg7PXgnJGiytJIuhOiRmY1znUt1Yj1ZDZnpfVE/6W9TTc46pAEG7OT8INZg==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sflistview/20.2.0.45",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/MonoAndroid10.0/Syncfusion.SfListView.XForms.Android.dll",
+        "lib/MonoAndroid10.0/Syncfusion.SfListView.XForms.dll",
+        "lib/MonoAndroid10.0/Syncfusion.SfListView.XForms.xml",
+        "lib/Xamarin.Mac/Syncfusion.SfListView.XForms.dll",
+        "lib/Xamarin.Mac/Syncfusion.SfListView.XForms.macOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfListView.XForms.xml",
+        "lib/netstandard2.0/Syncfusion.SfListView.XForms.dll",
+        "lib/netstandard2.0/Syncfusion.SfListView.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfListView.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfListView.XForms.xml",
+        "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.XML",
+        "lib/uap10.0/Syncfusion.SfListView.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfListView.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfListView.XForms.xml",
+        "syncfusion.xamarin.sflistview.20.2.0.45.nupkg.sha512",
+        "syncfusion.xamarin.sflistview.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Xamarin.SfRating/20.2.0.45": {
+      "sha512": "Ph2yXIiEIzqT+npx1Z43gpReBM1rK414w6wibiuqSCerksOMIA9WtcCX/xL36p2dX5boFDRK3iqTt5tQnMTrKQ==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfrating/20.2.0.45",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/MonoAndroid10.0/Syncfusion.SfRating.Android.dll",
+        "lib/MonoAndroid10.0/Syncfusion.SfRating.Android.xml",
+        "lib/MonoAndroid10.0/Syncfusion.SfRating.XForms.Android.dll",
+        "lib/MonoAndroid10.0/Syncfusion.SfRating.XForms.XML",
+        "lib/MonoAndroid10.0/Syncfusion.SfRating.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfRating.XForms.XML",
+        "lib/Xamarin.iOS10/Syncfusion.SfRating.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfRating.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfRating.iOS.dll",
+        "lib/netstandard2.0/Syncfusion.SfRating.XForms.XML",
+        "lib/netstandard2.0/Syncfusion.SfRating.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfRating.XForms.XML",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfRating.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfRating.XForms.UWP.XML",
+        "lib/uap10.0/Syncfusion.SfRating.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfRating.XForms.XML",
+        "lib/uap10.0/Syncfusion.SfRating.XForms.dll",
+        "syncfusion.xamarin.sfrating.20.2.0.45.nupkg.sha512",
+        "syncfusion.xamarin.sfrating.nuspec",
+        "syncfusion_logo.png"
       ]
     },
     "System.Collections.Specialized/4.3.0": {
@@ -2736,6 +3426,11 @@
       "FirebaseDatabase.net >= 4.0.7",
       "NGS_Studio >= 1.0.0",
       "Newtonsoft.Json >= 13.0.1",
+      "Syncfusion.Xamarin.Buttons >= 20.2.0.45",
+      "Syncfusion.Xamarin.Core >= 20.2.0.45",
+      "Syncfusion.Xamarin.SfComboBox >= 20.2.0.45",
+      "Syncfusion.Xamarin.SfListView >= 20.2.0.45",
+      "Syncfusion.Xamarin.SfRating >= 20.2.0.45",
       "Xamarin.Essentials >= 1.7.0",
       "Xamarin.Forms >= 5.0.0.2291"
     ]
@@ -2800,6 +3495,26 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.1, )"
+          },
+          "Syncfusion.Xamarin.Buttons": {
+            "target": "Package",
+            "version": "[20.2.0.45, )"
+          },
+          "Syncfusion.Xamarin.Core": {
+            "target": "Package",
+            "version": "[20.2.0.45, )"
+          },
+          "Syncfusion.Xamarin.SfComboBox": {
+            "target": "Package",
+            "version": "[20.2.0.45, )"
+          },
+          "Syncfusion.Xamarin.SfListView": {
+            "target": "Package",
+            "version": "[20.2.0.45, )"
+          },
+          "Syncfusion.Xamarin.SfRating": {
+            "target": "Package",
+            "version": "[20.2.0.45, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",

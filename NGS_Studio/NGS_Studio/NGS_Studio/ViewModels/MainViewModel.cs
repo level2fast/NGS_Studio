@@ -26,7 +26,7 @@ namespace NGS_Studio.ViewModels
 
         public MainViewModel()
         {
-            Title = "PrimeCutz";
+            Title = "NGS";
             LogoName = "AppLogo";
             OwnerLoginCommand = new Command(OnOwnerLoginClicked);
             ClientCheckinCommand = new Command(OnClientCheckinClicked);

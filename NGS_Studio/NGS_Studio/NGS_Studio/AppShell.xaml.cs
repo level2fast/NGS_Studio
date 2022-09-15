@@ -3,6 +3,7 @@ using NGS_Studio.Views;
 using System;
 using System.Collections.Generic;
 using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace NGS_Studio
@@ -60,7 +61,20 @@ namespace NGS_Studio
             RegisterRoutes();
             BindingContext = this;
             ShowOwnerFlyoutItem = false;
+            MessagingCenter.Subscribe<object, (bool,string)>(this, "ChangeCheckinSection", SetFlyoutItemVisibility);
+
         }
+
+        private void SetFlyoutItemVisibility(object arg1, (bool, string) arg2)
+        {
+            var visibility = arg2.Item1;
+            var shellContentName = arg2.Item2;
+            ShellContent con = (ShellContent)this.FindByName(shellContentName);
+            con.IsVisible = visibility;
+
+        }
+
+
         /// <summary>
         /// RegisterRoutes function adds all routes to a contentPage dictionary 
         /// </summary>
@@ -88,8 +102,9 @@ namespace NGS_Studio
             Routes.Add(nameof(ClientInfoRemoveClientPage), typeof(ClientInfoRemoveClientPage));
             Routes.Add(nameof(OwnerInfoPage), typeof(OwnerInfoPage));
             Routes.Add(nameof(NewEmailPage), typeof(NewEmailPage));
-           // Routes.Add(nameof(SignUpPage), typeof(SignUpPage));
+            // Routes.Add(nameof(SignUpPage), typeof(SignUpPage));
             Routes.Add(nameof(ForgotPasswordPage), typeof(ForgotPasswordPage));
+            Routes.Add(nameof(SimpleForgotPasswordPage), typeof(SimpleForgotPasswordPage));
 
             foreach (var item in Routes)
             {

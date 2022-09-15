@@ -43,7 +43,13 @@
                         Command="{Binding LearnMoreCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
+                <Label x:Name="AppVersionText" 
+                       Text="{Binding AppVersion}"
+                       TextColor="DarkGoldenrod"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center" />
             </StackLayout>
+
         </ScrollView>
     </Grid>
 

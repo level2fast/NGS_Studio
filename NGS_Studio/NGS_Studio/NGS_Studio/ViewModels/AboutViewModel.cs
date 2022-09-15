@@ -18,12 +18,20 @@ namespace NGS_Studio.ViewModels
             get { return phoneNumber; }
         }
 
+        public string appVersion;
+        public string AppVersion
+        {
+            get => appVersion;
+            set => SetProperty(ref appVersion, value);
+        }
+
         public AboutViewModel()
         {
             Title = "About";
             OpenWebCommandDirections = new Command(OnClientDirectionsClicked);
             CallUsCommand = new Command(OnCallUsBtnClicked);
             LearnMoreCommand = new Command(OnLearnMoreBtnClicked);
+            AppVersion = "App v" + VersionTracking.CurrentVersion;
         }
 
 
@@ -31,7 +39,8 @@ namespace NGS_Studio.ViewModels
         {
             try
             {
-                await Launcher.OpenAsync("https://www.facebook.com/PRIMECUTZSD/");
+                //  await Launcher.OpenAsync("https://www.facebook.com/PRIMECUTZSD/");
+                return;
             }
             catch (FeatureNotSupportedException ex)
             {

@@ -60,6 +60,26 @@
               "target": "Package",
               "version": "[13.0.1, )"
             },
+            "Syncfusion.Xamarin.Buttons": {
+              "target": "Package",
+              "version": "[20.2.0.45, )"
+            },
+            "Syncfusion.Xamarin.Core": {
+              "target": "Package",
+              "version": "[20.2.0.45, )"
+            },
+            "Syncfusion.Xamarin.SfComboBox": {
+              "target": "Package",
+              "version": "[20.2.0.45, )"
+            },
+            "Syncfusion.Xamarin.SfListView": {
+              "target": "Package",
+              "version": "[20.2.0.45, )"
+            },
+            "Syncfusion.Xamarin.SfRating": {
+              "target": "Package",
+              "version": "[20.2.0.45, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.7.0, )"
@@ -144,6 +164,26 @@
             "PCLAppConfig": {
               "target": "Package",
               "version": "[1.0.1, )"
+            },
+            "Syncfusion.Xamarin.Buttons": {
+              "target": "Package",
+              "version": "[20.2.0.45, )"
+            },
+            "Syncfusion.Xamarin.Core": {
+              "target": "Package",
+              "version": "[20.2.0.45, )"
+            },
+            "Syncfusion.Xamarin.SfComboBox": {
+              "target": "Package",
+              "version": "[20.2.0.45, )"
+            },
+            "Syncfusion.Xamarin.SfListView": {
+              "target": "Package",
+              "version": "[20.2.0.45, )"
+            },
+            "Syncfusion.Xamarin.SfRating": {
+              "target": "Package",
+              "version": "[20.2.0.45, )"
             },
             "Twilio": {
               "target": "Package",

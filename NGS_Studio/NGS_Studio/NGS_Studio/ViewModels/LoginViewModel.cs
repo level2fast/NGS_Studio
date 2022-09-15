@@ -1,111 +1,87 @@
-﻿using NGS_Studio.Views;
-using Xamarin.Forms;
-using System;
-using NGS_Studio.Services;
-using System.Windows.Input;
-using NGS_Studio.Data;
-using NGS_Studio.Models;
-using System.Threading.Tasks;
-using System.Collections.Generic;
+﻿using NGS_Studio.Validators;
+using NGS_Studio.Validators.Rules;
+using Xamarin.Forms.Internals;
 
 namespace NGS_Studio.ViewModels
 {
+    /// <summary>
+    /// ViewModel for login page.
+    /// </summary>
+    [Preserve(AllMembers = true)]
     public class LoginViewModel : BaseViewModel
     {
-        private string emailEntry;
-        private string passwordEntry;
+        #region Fields
 
-        //The commanding interface provides an alternative approach 
-        //to implementing commands that is much better suited to
-        //the MVVM architecture.The ViewModel itself can contain
-        //commands, which are methods that are executed in reaction
-        //to a specific activity in the View such as a Button click
-        //.Data bindings are defined between these commands and the Button.
-        public Command OwnerLoginCommand { get; }
-        public Command ForgotPasswordCommand { get; }
-        public ICommand LoadCommand { get; protected set; }
+        private ValidatableObject<string> email;
+
+        #endregion
+
+        #region Constructor
 
         /// <summary>
-        /// 
-        /// </summary>
-        public string EmailEntry
-        {
-            get => emailEntry;
-            set => SetProperty(ref emailEntry, value);
-        }
-        
-        /// <summary>
-        /// 
-        /// </summary>
-        public string PasswordEntry
-        {
-            get => passwordEntry;
-            set => SetProperty(ref passwordEntry, value);
-        }
-
-        /// <summary>
-        /// 
+        /// Initializes a new instance for the <see cref="LoginViewModel" /> class.
         /// </summary>
         public LoginViewModel()
         {
-            OwnerLoginCommand = new Command(OnOwnerLoginClicked);
-            ForgotPasswordCommand = new Command(OnForgotPasswordClicked);
-            LoadCommand = new Command(OnPageAppearing);
-            emailEntry = string.Empty;
-            PasswordEntry = string.Empty;
-
+            this.InitializeProperties();
+            this.AddValidationRules();
         }
 
+        #endregion
+
+        #region Property
+
         /// <summary>
-        /// 
+        /// Gets or sets the property that bounds with an entry that gets the email ID from user in the login page.
         /// </summary>
-        private async void OnOwnerLoginClicked()
+        public ValidatableObject<string> Email
         {
-
-            if (string.IsNullOrEmpty(EmailEntry) || string.IsNullOrEmpty(PasswordEntry))
-                await App.Current.MainPage.DisplayAlert("Empty Values", "Please enter Email and Password", "OK");
-            else
+            get
             {
-                try
-                {
-                    var authService = DependencyService.Resolve<IFireBaseAuthentication>();
-                    Globals.Instance.AuthToken = await authService.SignIn(EmailEntry.Trim(), PasswordEntry);
-                    await Shell.Current.GoToAsync($"/{nameof(OwnerDetailsPage)}");
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
+                return this.email;
+            }
 
-                    await Shell.Current
-                        .DisplayAlert("SignIn", "Error: Can not complete login", "OK");
+            set
+            {
+                if (this.email == value)
+                {
+                    return;
                 }
+
+                this.SetProperty(ref this.email, value);
             }
         }
+        #endregion
+
+        #region Methods
 
         /// <summary>
-        /// 
+        /// This method to validate the email
         /// </summary>
-        private async void OnForgotPasswordClicked()
+        /// <returns>returns bool value</returns>
+        public bool IsEmailFieldValid()
         {
-            // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-            await Shell.Current.GoToAsync($"/{nameof(ForgotPasswordPage)}");
+            bool isEmailValid = this.Email.Validate();
+            return isEmailValid;
         }
-
-
-        public static List<Task> TaskList = new List<Task>();
 
         /// <summary>
-        /// 
+        /// Initializing the properties.
         /// </summary>
-        private async void OnPageAppearing()
+        private void InitializeProperties()
         {
-            var dp = DependencyService.Resolve<IFireBaseAuthentication>();
-            if (dp.IsSignIn())
-            {
-                await Shell.Current.GoToAsync($"/{nameof(OwnerDetailsPage)}");
-                Globals.Instance.AuthToken = await dp.GetToken();
-            }
+            this.Email = new ValidatableObject<string>();
         }
+
+        /// <summary>
+        /// This method contains the validation rules
+        /// </summary>
+        private void AddValidationRules()
+        {
+            this.Email.Validations.Add(new IsNotNullOrEmptyRule<string> { ValidationMessage = "Email Required" });
+            this.Email.Validations.Add(new IsValidEmailRule<string> { ValidationMessage = "Invalid Email" });
+        }
+
+        #endregion
     }
 }
-

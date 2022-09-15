@@ -17,11 +17,21 @@
   <ItemGroup>
     <None Remove="app.config" />
     <None Remove="appsettings.json" />
+    <None Remove="Resources\Fonts\Montserrat-Bold.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-Medium.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-Regular.ttf" />
+    <None Remove="Resources\Fonts\Montserrat-SemiBold.ttf" />
+    <None Remove="Resources\Fonts\UIFontIcons.ttf" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="app.config" />
     <EmbeddedResource Include="appsettings.json" />
+    <EmbeddedResource Include="Resources\Fonts\Montserrat-Bold.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Montserrat-Medium.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Montserrat-Regular.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\Montserrat-SemiBold.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\UIFontIcons.ttf" />
   </ItemGroup>
 
 
@@ -29,6 +39,11 @@
     <PackageReference Include="FirebaseDatabase.net" Version="4.0.7" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="PCLAppConfig" Version="1.0.1" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="20.2.0.45" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="20.2.0.45" />
+    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="20.2.0.45" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="20.2.0.45" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRating" Version="20.2.0.45" />
     <PackageReference Include="Twilio" Version="5.78.0" />
     <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
     <PackageReference Include="Xamarin.CommunityToolkit" Version="1.3.2" />
@@ -95,13 +110,79 @@
     <Compile Update="Views\OwnerDetailsPage.xaml.cs">
       <DependentUpon>OwnerDetailsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\LoginPage.xaml.cs">
-      <DependentUpon>LoginPage.xaml</DependentUpon>
+    <Compile Update="Views\SimpleForgotPasswordPage.xaml.cs">
+      <DependentUpon>SimpleForgotPasswordPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Styles\AvatarViewStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Styles\BorderStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Styles\BoxViewStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Styles\ButtonStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Styles\CheckBoxStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Styles\Colors.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Styles\ComboBoxStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Styles\EditorStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Styles\EntryStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Styles\FontIcons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Styles\FrameStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Styles\GradientViewStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Styles\LabelStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Styles\ListViewStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Styles\RadioButtonStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Styles\RatingStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Styles\SegmentedControlStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Styles\TextInputLayoutStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\DarkTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Themes\LightTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\EmailEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\ForgotPasswordPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\LoginPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\LogoutPage.xaml">
@@ -152,7 +233,13 @@
     <EmbeddedResource Update="Views\OwnerDetailsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\LoginPage.xaml">
+    <EmbeddedResource Update="Views\SimpleEmailEntry.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SimpleForgotPasswordPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SimpleResetPasswordPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
