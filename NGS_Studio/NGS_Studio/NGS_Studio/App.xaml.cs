@@ -30,8 +30,6 @@ namespace NGS_Studio
         }
         private void LoadConfigData()
         {
-            ApiTokens.TWILIO_ACCOUNT_SID = AppSettingsManager.Settings["TWILIO_ACCOUNT_SID"];
-            ApiTokens.TWILIO_AUTH_TOKEN = AppSettingsManager.Settings["TWILIO_AUTH_TOKEN"];
         }
     }
 }

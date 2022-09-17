@@ -32,7 +32,7 @@ namespace NGS_Studio.ViewModels
         {
             try
             {
-                //  await Launcher.OpenAsync("https://www.facebook.com/PRIMECUTZSD/");
+                await Launcher.OpenAsync("https://www.facebook.com/PRIMECUTZSD/");
                 return;
             }
             catch (FeatureNotSupportedException ex)

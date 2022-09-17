@@ -6,8 +6,6 @@ using NGS_Studio.Services;
 using System;
 using System.Windows.Input;
 using Xamarin.CommunityToolkit.ObjectModel;
-using Twilio;
-using Twilio.Rest.Api.V2010.Account;
 
 namespace NGS_Studio.ViewModels
 {
@@ -104,19 +102,7 @@ namespace NGS_Studio.ViewModels
             {
                 user.Barber = barber.Name;
                 await UserTableService.UpdateUser(user);
-                //display "client preferred barber question label and buttons
                 await Application.Current.MainPage.DisplayAlert("Thanks!", "Your barber will be with you shortly", "OK");
-                // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-
-                TwilioClient.Init(Configuration.Configuration.ApiTokens.TWILIO_ACCOUNT_SID,
-                                  Configuration.Configuration.ApiTokens.TWILIO_AUTH_TOKEN);
-                var message = MessageResource.Create(
-                    body: "Your client " + user.Name + " has arrived.",
-                    from: new Twilio.Types.PhoneNumber("+17438003018"),
-                    to: new Twilio.Types.PhoneNumber("+1" + barber.PhoneNumber)
-                );
-
-                Console.WriteLine(message.Sid);
                 await Shell.Current.GoToAsync($"{nameof(CheckinPage)}");
             }
             else 

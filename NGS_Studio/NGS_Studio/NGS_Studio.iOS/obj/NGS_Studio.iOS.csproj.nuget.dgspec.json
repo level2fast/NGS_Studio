@@ -185,10 +185,6 @@
               "target": "Package",
               "version": "[20.2.0.45, )"
             },
-            "Twilio": {
-              "target": "Package",
-              "version": "[5.78.0, )"
-            },
             "Xam.Plugins.Settings": {
               "target": "Package",
               "version": "[3.1.1, )"
