@@ -54,7 +54,12 @@ namespace NGS_Studio
             set { SetProperty(ref iconLogout, value); }
         }
 
-
+        private string appVersion;
+        public string AppVersion
+        {
+            get { return appVersion; }
+            set { SetProperty(ref appVersion, value); }
+        }
         public AppShell()
         {
             InitializeComponent();
@@ -62,7 +67,7 @@ namespace NGS_Studio
             BindingContext = this;
             ShowOwnerFlyoutItem = false;
             MessagingCenter.Subscribe<object, (bool,string)>(this, "ChangeCheckinSection", SetFlyoutItemVisibility);
-
+            AppVersion = "App Version: v" + VersionTracking.CurrentVersion;
         }
 
         private void SetFlyoutItemVisibility(object arg1, (bool, string) arg2)
@@ -120,6 +125,14 @@ namespace NGS_Studio
                 ShowOwnerFlyoutItem = true;
             }
         }
+        private void ShellContent_Appearing(object sender, EventArgs e)
+        {
+            if (DependencyService.Resolve<IFireBaseAuthentication>().IsSignIn())
+            {
+                IsUserAuthenticated = true;
+                ShowOwnerFlyoutItem = true;
+            }
+        }
         public void setStuff()
         {
             ShowOwnerFlyoutItem = false;
@@ -138,5 +151,6 @@ namespace NGS_Studio
             return true;
         }
         #endregion
+        
     }
 }

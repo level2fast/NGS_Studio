@@ -129,12 +129,21 @@ namespace NGS_Studio.ViewModels
                 {
                     var authService = DependencyService.Resolve<IFireBaseAuthentication>();
                     Globals.Instance.AuthToken = await authService.SignIn(Email.Value, Password.Value);
-                    await Shell.Current.GoToAsync($"/{nameof(OwnerDetailsPage)}");
+                    var usertemp = await UserTableService.GetUserByEmail(Email.Value);
+                    if (usertemp.IsOwner)
+                    {
+                        await Shell.Current.GoToAsync($"/{nameof(OwnerDetailsPage)}");
+                    }
+                    else
+                    { 
+                        await Shell.Current.GoToAsync($"/{nameof(ClientCheckinPage)}");
+                        MessagingCenter.Send<object, (bool, string)>(this, "ChangeCheckinSection",
+                            (false, Constants.CheckinContent));
+                    }
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
-
                     await Shell.Current
                         .DisplayAlert("SignIn", "Error: Can not complete login", "OK");
                 }

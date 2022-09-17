@@ -96,7 +96,8 @@
             ContentTemplate="{DataTemplate local:LoginPage}"  
             IsVisible="{Binding IsUserAuthenticated,
                        Converter={StaticResource InvertedBoolConverter}}" 
-            Disappearing="ShellContent_Disappearing"/>
+            Disappearing="ShellContent_Disappearing"
+            Appearing="ShellContent_Appearing"/>
         </ShellSection>
 
     </FlyoutItem>
@@ -135,11 +136,16 @@
     <Shell.FlyoutFooterTemplate>
         <DataTemplate>
             <StackLayout>
-                <Label Text="NGS"
+                <Label Text="Notriously Gifted Studios"
+                       TextColor="DarkGoldenrod"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center" 
+                       />
+                <Label x:Name="AppVersionText" 
+                       Text="{Binding AppVersion}"
                        TextColor="DarkGoldenrod"
                        FontAttributes="Bold"
                        HorizontalOptions="Center" />
-
             </StackLayout>
         </DataTemplate>
     </Shell.FlyoutFooterTemplate>

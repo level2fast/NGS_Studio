@@ -65,6 +65,29 @@ namespace NGS_Studio.Services
         /// <summary>
         /// 
         /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>        
+        public static async Task<User> GetUserByEmail(string email)
+        {
+            try
+            {
+                var allUsers = await GetAllUser();
+                await Globals.Instance.Firebase
+                .Child("User")
+                .OnceAsync<User>();
+                return allUsers.Where(a => a.Email == email).FirstOrDefault();
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine($"Error:{e}");
+                return null;
+            }
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
         /// <returns></returns>
         public static async Task<List<User>> GetAllBarbers()
         {

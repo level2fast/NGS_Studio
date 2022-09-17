@@ -37,17 +37,12 @@ namespace NGS_Studio.ViewModels
             OwnerInfoCommand = new Command(OnOwnerInfoClicked);
             BarberInfoCommand = new Command(OnBarberInfoClicked);
             ClientInfoCommand = new Command(OnClientInfoClicked);
+            MessagingCenter.Send<object, (bool, string)>(this, "ChangeCheckinSection",
+                (true, Constants.CheckinContent));
         }
 
         private async void OnOwnerInfoClicked(object sender)
         {
-            var t1 = Shell.Current.FlyoutItems;
-            var t2 = Shell.Current.FlyoutItems.GetEnumerator();
-            foreach(ShellItem sh in Shell.Current.Items)
-            {
-                // works can use sh.(whatever here to get to flyout)
-            }
-
             // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
             await Shell.Current.GoToAsync($"/{nameof(OwnerInfoPage)}");
         }

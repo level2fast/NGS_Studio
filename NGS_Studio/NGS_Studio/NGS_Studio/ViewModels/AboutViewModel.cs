@@ -18,12 +18,6 @@ namespace NGS_Studio.ViewModels
             get { return phoneNumber; }
         }
 
-        public string appVersion;
-        public string AppVersion
-        {
-            get => appVersion;
-            set => SetProperty(ref appVersion, value);
-        }
 
         public AboutViewModel()
         {
@@ -31,7 +25,6 @@ namespace NGS_Studio.ViewModels
             OpenWebCommandDirections = new Command(OnClientDirectionsClicked);
             CallUsCommand = new Command(OnCallUsBtnClicked);
             LearnMoreCommand = new Command(OnLearnMoreBtnClicked);
-            AppVersion = "App v" + VersionTracking.CurrentVersion;
         }
 
 

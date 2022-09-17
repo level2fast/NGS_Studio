@@ -76,7 +76,6 @@ namespace NGS_Studio.ViewModels
                 }
                 else
                 {
-                    // Notify user that they are already signed up
                     await App.Current.MainPage.DisplayAlert(NameEntry + " Already added to NGS", "Try again", "OK");
                     await Shell.Current.GoToAsync($"///{nameof(LoginPage)}");
                 }

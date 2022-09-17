@@ -42,9 +42,7 @@ namespace NGS_Studio.ViewModels
             if (ret == true)
             {
                 (Shell.Current as AppShell).setStuff();
-                var fly = Shell.Current.FlyoutItems.GetEnumerator();
                 await Shell.Current.GoToAsync($"..");
-                
             }
 
 
