@@ -10,14 +10,14 @@ namespace NGS_Studio.ViewModels
 {
     public class BarberInfoDetailsViewModel : BaseViewModel
     {
-        private IList<User> barbers;
+        private IList<User> _barbers;
 
         public ICommand LoadCommand { get; protected set; }
         public ICommand BarberSelectionChangedCommand { get; set; }
         public IList<User> Barbers
         {
-            get => barbers;
-            set => SetProperty(ref barbers, value);
+            get => _barbers;
+            set => SetProperty(ref _barbers, value);
 
         }
         public BarberInfoDetailsViewModel()

@@ -8,9 +8,9 @@ namespace NGS_Studio.ViewModels
     public class ClientInfoAddClientViewModel : BaseViewModel
     {
 
-        private string name;
-        private string email;
-        private string phoneNumber;
+        private string _name;
+        private string _email;
+        private string _phoneNumber;
 
         //The commanding interface provides an alternative approach 
         //to implementing commands that is much better suited to
@@ -29,18 +29,18 @@ namespace NGS_Studio.ViewModels
 
         public string NameEntry
         {
-            get => name;
-            set => SetProperty(ref name, value);
+            get => _name;
+            set => SetProperty(ref _name, value);
         }
         public string EmailEntry
         {
-            get => email;
-            set => SetProperty(ref email, value);
+            get => _email;
+            set => SetProperty(ref _email, value);
         }
         public string PhoneNumberEntry
         {
-            get => phoneNumber;
-            set => SetProperty(ref phoneNumber, value);
+            get => _phoneNumber;
+            set => SetProperty(ref _phoneNumber, value);
         }
 
         async void OnAddClientClicked(object sender)
@@ -50,10 +50,9 @@ namespace NGS_Studio.ViewModels
                 !string.IsNullOrWhiteSpace(PhoneNumberEntry))
             {
                 var usertemp = await UserTableService.GetUser(masked.reformatPhoneNumber(PhoneNumberEntry));
-                // Check to see if user is already in database
+
                 if (usertemp == null)
                 {
-                    // call AddUser function which we define in Firebase helper class    
                     User usr = new User
                     {
                         Name = NameEntry,
@@ -62,11 +61,12 @@ namespace NGS_Studio.ViewModels
                         IsClient = true,
                         Barber = NameEntry
                     };
+
                     var user = await UserTableService.AddUser(usr);
-                    //AddUser return true if data insert successfuly     
+ 
                     if (user)
                     {
-                        await App.Current.MainPage.DisplayAlert("Success", NameEntry + " Added to NGS ", "Ok");
+                        await Application.Current.MainPage.DisplayAlert("Success", NameEntry + " Added to NGS ", "Ok");
                         NameEntry = null;
                         EmailEntry = null;
                         PhoneNumberEntry = null;
@@ -74,12 +74,11 @@ namespace NGS_Studio.ViewModels
                     }
                     else
                     {
-                        await App.Current.MainPage.DisplayAlert("Error", "Failed to Add ", "OK");
+                        await Application.Current.MainPage.DisplayAlert("Error", "Failed to Add ", "OK");
                     }
                 }
                 else
                 {
-                    // Notify user that they are already signed up
                     await App.Current.MainPage.DisplayAlert(NameEntry + " Already added to NGS", "Try again", "OK");
                     await Shell.Current.GoToAsync($"///{nameof(LoginPage)}");
                 }

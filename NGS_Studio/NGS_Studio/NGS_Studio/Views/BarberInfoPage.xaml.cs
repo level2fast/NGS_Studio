@@ -9,7 +9,5 @@ namespace NGS_Studio.Views
 		{
 			InitializeComponent();
 		}
-
-
     }
 }

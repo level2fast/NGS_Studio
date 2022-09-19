@@ -2,8 +2,6 @@
 using System.Windows.Input;
 using NGS_Studio.Services;
 using System.Threading.Tasks;
-using NGS_Studio.Views;
-using System.Collections.Generic;
 
 namespace NGS_Studio.ViewModels
 {
@@ -15,12 +13,7 @@ namespace NGS_Studio.ViewModels
         {
             OwnerLogoutCommand = new Command(LogoutAsync);
         }
-        //private async void OnPageAppearing()
-        //{
-        //    DependencyService.Resolve<IFireBaseAuthentication>().SignOut();
-        //    // go to login page
-        //    // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-        //}
+
         private async Task LogOutOfFirebase()
         {
             var dp = DependencyService.Resolve<IFireBaseAuthentication>();
@@ -41,7 +34,7 @@ namespace NGS_Studio.ViewModels
             var ret = t.Wait(100);
             if (ret == true)
             {
-                (Shell.Current as AppShell).setStuff();
+                (Shell.Current as AppShell).SetOwnerFlyoutItemVisibility();
                 await Shell.Current.GoToAsync($"..");
             }
 

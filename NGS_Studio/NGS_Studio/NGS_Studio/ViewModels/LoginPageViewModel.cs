@@ -18,7 +18,7 @@ namespace NGS_Studio.ViewModels
     {
         #region Fields
 
-        private ValidatableObject<string> password;
+        private ValidatableObject<string> _password;
 
         #endregion
 
@@ -42,23 +42,23 @@ namespace NGS_Studio.ViewModels
         #region property
 
         /// <summary>
-        /// Gets or sets the property that is bound with an entry that gets the password from user in the login page.
+        /// Gets or sets the property that is bound with an entry that gets the _password from user in the login page.
         /// </summary>
         public ValidatableObject<string> Password
         {
             get
             {
-                return this.password;
+                return this._password;
             }
 
             set
             {
-                if (this.password == value)
+                if (this._password == value)
                 {
                     return;
                 }
 
-                this.SetProperty(ref this.password, value);
+                this.SetProperty(ref this._password, value);
             }
         }
 
@@ -91,7 +91,7 @@ namespace NGS_Studio.ViewModels
         #region methods
 
         /// <summary>
-        /// Check the password is null or empty
+        /// Check the _password is null or empty
         /// </summary>
         /// <returns>Returns the fields are valid or not</returns>
         public bool AreFieldsValid()
@@ -110,7 +110,7 @@ namespace NGS_Studio.ViewModels
         }
 
         /// <summary>
-        /// Validation rule for password
+        /// Validation rule for _password
         /// </summary>
         private void AddValidationRules()
         {

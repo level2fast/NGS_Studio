@@ -3,7 +3,6 @@ using NGS_Studio.Models;
 using System.Collections.Generic;
 using Xamarin.Forms;
 using NGS_Studio.Services;
-using System;
 using System.Windows.Input;
 using Xamarin.CommunityToolkit.ObjectModel;
 
@@ -11,9 +10,9 @@ namespace NGS_Studio.ViewModels
 {
     public class PhoneNumberCheckinViewModel : BaseViewModel
     {
-        private IList<User> barbers;
-        private User barber;
-        private MaskedBehavior masked;
+        private IList<User> _barbers;
+        private User _barber;
+        private MaskedBehavior _masked;
 
         public Command PhoneNumberCheckinCommand { get; }
         public Command BarberSelectSubmitCommand { get; }
@@ -21,14 +20,14 @@ namespace NGS_Studio.ViewModels
         public ICommand LoadCommand { get; protected set; }
         public IList<User> Barbers
         {
-            get => barbers;
-            set => SetProperty(ref barbers, value);
+            get => _barbers;
+            set => SetProperty(ref _barbers, value);
 
         }
         public User SelectedBarber
         {
-            get => barber;
-            set => SetProperty(ref barber, value);
+            get => _barber;
+            set => SetProperty(ref _barber, value);
         }
         string phoneNumberEntry = string.Empty;
         string selectedBarberName = string.Empty;
@@ -62,20 +61,18 @@ namespace NGS_Studio.ViewModels
         {
             PhoneNumberCheckinCommand = new Command(OnPhoneNumberCheckinClicked);
             BarberSelectSubmitCommand = new Command(OnBarberSelectSubmitClicked);
-            masked = new MaskedBehavior();
-            //display checkin content
+            _masked = new MaskedBehavior();
             IsCheckinContentVisible = true;
             IsBarberSelectionContentVisible = false;
             LoadCommand = new AsyncCommand(async () =>
             {
-                // load data async
                 Barbers = await UserTableService.GetAllBarbers();
             });
         }
         private async void OnPhoneNumberCheckinClicked()
         {
-            //check to see if client is in database
-            User user = await UserTableService.GetUser(masked.reformatPhoneNumber(phoneNumberEntry));
+            // check to see if client is in database
+            User user = await UserTableService.GetUser(_masked.reformatPhoneNumber(phoneNumberEntry));
             if (user == null)
             {
                 await Application.Current.MainPage.DisplayAlert("Not a registered client", "Please register with NGS", "OK");
@@ -84,12 +81,11 @@ namespace NGS_Studio.ViewModels
             }
             else
             {
-                //DateTime curtime = System.DateTime.Now.ToString();
                 user.checkin=System.DateTime.Now.ToString();
                 await UserTableService.UpdateUser(user);
-                //hide phone number checkin content
+                // hide phone number checkin content
                 IsCheckinContentVisible = false;
-                //show barber select checkin content
+                // show barber select checkin content
                 IsBarberSelectionContentVisible = true;
 
             }
@@ -97,17 +93,17 @@ namespace NGS_Studio.ViewModels
 
         private async void OnBarberSelectSubmitClicked()
         {
-            User user = await UserTableService.GetUser(masked.reformatPhoneNumber(phoneNumberEntry));
-            if (user != null && barber != null)
+            User user = await UserTableService.GetUser(_masked.reformatPhoneNumber(phoneNumberEntry));
+            if (user != null && _barber != null)
             {
-                user.Barber = barber.Name;
+                user.Barber = _barber.Name;
                 await UserTableService.UpdateUser(user);
-                await Application.Current.MainPage.DisplayAlert("Thanks!", "Your barber will be with you shortly", "OK");
+                await Application.Current.MainPage.DisplayAlert("Thanks!", "Your _barber will be with you shortly", "OK");
                 await Shell.Current.GoToAsync($"{nameof(CheckinPage)}");
             }
             else 
             {
-                await Application.Current.MainPage.DisplayAlert("No barber selected", "Please select a barber", "OK");
+                await Application.Current.MainPage.DisplayAlert("No _barber selected", "Please select a _barber", "OK");
             }
 
         }

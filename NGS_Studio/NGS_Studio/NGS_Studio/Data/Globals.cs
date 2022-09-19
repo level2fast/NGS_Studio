@@ -1,7 +1,6 @@
 ﻿using Firebase.Database;
 using NGS_Studio.ViewModels;
 using System;
-using System.IO;
 using System.Threading.Tasks;
 namespace NGS_Studio.Data
 {
@@ -9,9 +8,7 @@ namespace NGS_Studio.Data
     {
 
         private string _token;
-        /// <summary>
-        /// 
-        /// </summary>
+
         public string AuthToken
         {
             get => _token;
@@ -28,9 +25,7 @@ namespace NGS_Studio.Data
         });
 
         private FirebaseClient _fireabaseInstane;
-        /// <summary>
-        /// 
-        /// </summary>
+
         public FirebaseClient Firebase
         {
             get => _fireabaseInstane;

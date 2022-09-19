@@ -7,7 +7,6 @@ using NGS_Studio.Data;
 using NGS_Studio.Services;
 using NGS_Studio.Models;
 using System.Timers;
-using System.Threading;
 
 namespace NGS_Studio.ViewModels
 {
@@ -15,20 +14,17 @@ namespace NGS_Studio.ViewModels
     [QueryProperty(nameof(EmailClientList), nameof(EmailClientList))]
     public class NewEmailViewModel : BaseViewModel
     {
-        private string text;
-        private string description;
-        private bool emailC = false;
-        private bool emailS = false;
-        private bool progressBarContentVisible = false;
-        private bool emailContentVisible = false;
-        private List<string> emailAddress = new List<string>();
+        private string _text;
+        private string _description;
+        private bool _emailC = false;
+        private bool _emailS = false;
+        private bool _progressBarContentVisible = false;
+        private bool _emailContentVisible = false;
+        private List<string> _emailAddress = new List<string>();
         System.Timers.Timer aTimer;
         public static List<User> users;
-        private float progressAmount;
+        private float _progressAmount;
 
-        /// <summary>
-        /// 
-        /// </summary>
         public NewEmailViewModel()
         {
             
@@ -36,59 +32,36 @@ namespace NGS_Studio.ViewModels
             CancelCommand = new Command(OnCancel);
             this.PropertyChanged +=
                 (_, __) => SaveCommand.ChangeCanExecute();
-            getClientList();
             aTimer= new System.Timers.Timer();
             aTimer.Elapsed += new ElapsedEventHandler(makeProgressEvent);
             aTimer.Interval = 100; // milliseconds 1000 = 1 sec
 
         }
 
-        private void getClientList()
-        {
-            // display controls for sending email
 
-            if (users == null)
-                return;
-
-
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
         private bool ValidateSave()
         {
-            return !String.IsNullOrWhiteSpace(text)
-                && !String.IsNullOrWhiteSpace(description);
+            return !String.IsNullOrWhiteSpace(_text)
+                && !String.IsNullOrWhiteSpace(_description);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public string Subject
         {
-            get => text;
-            set => SetProperty(ref text, value);
+            get => _text;
+            set => SetProperty(ref _text, value);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public string Body
         {
-            get => description;
-            set => SetProperty(ref description, value);
+            get => _description;
+            set => SetProperty(ref _description, value);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public bool EmailPromotions
         {
             get
             {
-                return emailC;
+                return _emailC;
             }
             set
             {
@@ -96,18 +69,15 @@ namespace NGS_Studio.ViewModels
                 {
                     Subject = "Promotions";
                 }
-                emailC = value;
+                _emailC = value;
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public bool EmailClientList
         {
             get
             {
-                return emailS;
+                return _emailS;
             }
             set
             {
@@ -115,59 +85,42 @@ namespace NGS_Studio.ViewModels
                 {
                     Subject = "Client List";
                 }
-                emailS = value;
+                _emailS = value;
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public bool EmailContentVisibility
         {
-            get => emailContentVisible;
-            set => SetProperty(ref emailContentVisible, value);
+            get => _emailContentVisible;
+            set => SetProperty(ref _emailContentVisible, value);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public bool ProgressBarVisibilty
         {
-            get => progressBarContentVisible;
-            set => SetProperty(ref progressBarContentVisible, value);
+            get => _progressBarContentVisible;
+            set => SetProperty(ref _progressBarContentVisible, value);
         }
 
         
-        /// <summary>
-        /// 
-        /// </summary>
         public float ProgressAmount
         {
-            get => progressAmount;
-            set => SetProperty(ref progressAmount, value);
+            get => _progressAmount;
+            set => SetProperty(ref _progressAmount, value);
         }
-        /// <summary>
-        /// 
-        /// </summary>
+
         public Command SaveCommand { get; }
 
-        /// <summary>
-        /// 
-        /// </summary>
+
         public Command CancelCommand { get; }
 
-        /// <summary>
-        /// 
-        /// </summary>
+
         private async void OnCancel()
         {
             // This will pop the current page off the navigation stack
             await Shell.Current.GoToAsync("..");
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
+
         private async void OnSave()
         {
             EmailSender email = new EmailSender();
@@ -180,11 +133,10 @@ namespace NGS_Studio.ViewModels
             }
             else if (EmailPromotions)
             {
-                await email.SendEmail(Subject, Body, emailAddress);
+                await email.SendEmail(Subject, Body, _emailAddress);
             }
             await Shell.Current.GoToAsync("..");
         }
-
         public async Task OnAppearing()
         {
             // show progress bar on screen
@@ -203,7 +155,7 @@ namespace NGS_Studio.ViewModels
             // initialize email content
             foreach (User usr in users)
             {
-                emailAddress.Add(usr.Email);
+                _emailAddress.Add(usr.Email);
             }
 
             if (EmailClientList)
@@ -256,8 +208,8 @@ namespace NGS_Studio.ViewModels
             }
             catch (FeatureNotSupportedException fbsEx)
             {
-                await App.Current.MainPage.DisplayAlert(Constants.ERROR, fbsEx.ToString(), "OK");
                 // Email is not supported on this device
+                await App.Current.MainPage.DisplayAlert(Constants.ERROR, fbsEx.ToString(), "OK");
             }
             catch (Exception ex)
             {

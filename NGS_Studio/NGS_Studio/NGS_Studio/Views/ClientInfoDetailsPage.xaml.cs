@@ -13,7 +13,6 @@ namespace NGS_Studio.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-           // collectionView.ItemsSource = await App.Database.GetClientsAsync();
         }
 
     }

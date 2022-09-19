@@ -10,14 +10,14 @@ namespace NGS_Studio.ViewModels
 {
     public class ClientInfoDetailsViewModel : BaseViewModel
     {
-        private IList<User> clients;
+        private IList<User> _clients;
 
         public ICommand LoadCommand { get; protected set; }
         public ICommand ClientSelectionChangedCommand { get; set; }
         public IList<User> Clients
         {
-            get => clients;
-            set => SetProperty(ref clients, value);
+            get => _clients;
+            set => SetProperty(ref _clients, value);
 
         }
         public ClientInfoDetailsViewModel()
@@ -26,7 +26,6 @@ namespace NGS_Studio.ViewModels
             ClientSelectionChangedCommand = new Command(OnClientSelectionChanged);
             LoadCommand = new AsyncCommand(async () =>
             {
-                // load data async
                 Clients = await UserTableService.GetAllClients();
             });
         }

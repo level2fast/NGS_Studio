@@ -1,7 +1,6 @@
 ﻿using NGS_Studio.Models;
 using Xamarin.Forms;
 using NGS_Studio.Services;
-using System.Collections.Generic;
 using System.Windows.Input;
 using Xamarin.CommunityToolkit.ObjectModel;
 using System.Collections.ObjectModel;
@@ -10,20 +9,20 @@ namespace NGS_Studio.ViewModels
 {
     public class BarberInfoRemoveBarberViewModel : BaseViewModel
     {
-        private ObservableCollection<User> barbers;
-        private User item = null;
+        private ObservableCollection<User> _barbers;
+        private User _item = null;
         public ICommand LoadCommand { get; protected set; }
         public ICommand BarberSelectionChangedCommand { get; set; }
         public ObservableCollection<User> Barbers
         {
-            get => barbers;
-            set => SetProperty(ref barbers, value);
+            get => _barbers;
+            set => SetProperty(ref _barbers, value);
 
         }
         public User CurrentItem
         {
-            get => item;
-            set => SetProperty(ref item, value);
+            get => _item;
+            set => SetProperty(ref _item, value);
         }
 
         public BarberInfoRemoveBarberViewModel()

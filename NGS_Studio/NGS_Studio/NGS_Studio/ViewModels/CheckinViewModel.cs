@@ -5,14 +5,6 @@ namespace NGS_Studio.ViewModels
 {
     public class CheckinViewModel : BaseViewModel
     {
-
-        //The commanding interface provides an alternative approach 
-        //to implementing commands that is much better suited to
-        //the MVVM architecture.The ViewModel itself can contain
-        //commands, which are methods that are executed in reaction
-        //to a specific activity in the View such as a Button click
-        //.Data bindings are defined between these commands and the Button.
-        //public Command UserLoginCommand { get; }
         public Command CheckinCommand { get; }
         public Command YesCheckinCommand { get; }
         public Command NoCheckinCommand { get; }

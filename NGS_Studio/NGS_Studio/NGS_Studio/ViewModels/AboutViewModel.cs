@@ -7,7 +7,7 @@ namespace NGS_Studio.ViewModels
 {
     public class AboutViewModel : BaseViewModel
     {
-        private const string phoneNumber = "6195825889";
+        private const string _phoneNumber = "6195825889";
 
         public ICommand OpenWebCommandDirections { get; }
         public ICommand CallUsCommand { get; }
@@ -15,7 +15,7 @@ namespace NGS_Studio.ViewModels
         public ICommand LearnMoreCommand { get; }
         public string PhoneNumberNGS
         {
-            get { return phoneNumber; }
+            get { return _phoneNumber; }
         }
 
 

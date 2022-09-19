@@ -10,19 +10,12 @@ namespace NGS_Studio.ViewModels
 {
     public class ClientCheckinViewModel : BaseViewModel
     {
-        private string nameEntry;
-        private string emailEntry;
-        private string phoneNumberEntry;
-        private User barber;
-        private IList<User> barbers;
+        private string _nameEntry;
+        private string _emailEntry;
+        private string _phoneNumberEntry;
+        private User _barber;
+        private IList<User> _barbers;
 
-
-        // The commanding interface provides an alternative approach 
-        // to implementing commands that is much better suited to
-        // the MVVM architecture.The ViewModel itself can contain
-        // commands, which are methods that are executed in reaction
-        // to a specific activity in the View such as a Button click
-        // Data bindings are defined between these commands and the Button.
         public Command ClientSubmitCommand { get; }
         public ICommand LoadCommand { get; protected set; }
         public ClientCheckinViewModel()
@@ -38,28 +31,28 @@ namespace NGS_Studio.ViewModels
         }
         public IList<User> Barbers
         {
-            get => barbers;
-            set => SetProperty(ref barbers, value);
+            get => _barbers;
+            set => SetProperty(ref _barbers, value);
         }
         public User SelectedBarber
         {
-            get => barber;
-            set => SetProperty(ref barber, value);
+            get => _barber;
+            set => SetProperty(ref _barber, value);
         }
         public string NameEntry
         {
-            get => nameEntry;
-            set => SetProperty(ref nameEntry, value);
+            get => _nameEntry;
+            set => SetProperty(ref _nameEntry, value);
         }
         public string EmailEntry
         {
-            get => emailEntry;
-            set => SetProperty(ref emailEntry, value);
+            get => _emailEntry;
+            set => SetProperty(ref _emailEntry, value);
         }
         public string PhoneNumberEntry
         {
-            get => phoneNumberEntry;
-            set => SetProperty(ref phoneNumberEntry, value);
+            get => _phoneNumberEntry;
+            set => SetProperty(ref _phoneNumberEntry, value);
         }
 
         private async void OnClientCheckinClicked()
@@ -78,12 +71,12 @@ namespace NGS_Studio.ViewModels
                 // Check to see if user is already signed up
                 if (usertemp == null)
                 {
-                    User usr = new User { Name = NameEntry, Email = emailEntry, PhoneNumber = masked.reformatPhoneNumber(PhoneNumberEntry), IsClient = true, Barber = SelectedBarber.Name };
+                    User usr = new User { Name = NameEntry, Email = _emailEntry, PhoneNumber = masked.reformatPhoneNumber(PhoneNumberEntry), IsClient = true, Barber = SelectedBarber.Name };
                     var user = await UserTableService.AddUser(usr);
 
                     if (user)
                     {
-                        await App.Current.MainPage.DisplayAlert("Thanks!", " Your barber will be with shortly", "Ok");
+                        await App.Current.MainPage.DisplayAlert("Thanks!", " Your _barber will be with shortly", "Ok");
 
                         // Navigate to Wellcom page after successfuly SignUp    
                         // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one

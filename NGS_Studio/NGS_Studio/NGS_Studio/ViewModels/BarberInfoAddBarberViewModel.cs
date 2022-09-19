@@ -8,16 +8,10 @@ namespace NGS_Studio.ViewModels
     public class BarberInfoAddBarberViewModel : BaseViewModel
     {
 
-        private string name;
-        private string email;
-        private string phoneNumber;
+        private string _name;
+        private string _email;
+        private string _phoneNumber;
 
-        //The commanding interface provides an alternative approach 
-        //to implementing commands that is much better suited to
-        //the MVVM architecture.The ViewModel itself can contain
-        //commands, which are methods that are executed in reaction
-        //to a specific activity in the View such as a Button click
-        //.Data bindings are defined between these commands and the Button.
         public Command AddBarberCommand { get; }
 
         public BarberInfoAddBarberViewModel()
@@ -29,18 +23,18 @@ namespace NGS_Studio.ViewModels
 
         public string NameEntry
         {
-            get => name;
-            set => SetProperty(ref name, value);
+            get => _name;
+            set => SetProperty(ref _name, value);
         }
         public string EmailEntry
         {
-            get => email;
-            set => SetProperty(ref email, value);
+            get => _email;
+            set => SetProperty(ref _email, value);
         }
         public string PhoneNumberEntry
         {
-            get => phoneNumber;
-            set => SetProperty(ref phoneNumber, value);
+            get => _phoneNumber;
+            set => SetProperty(ref _phoneNumber, value);
         }
 
         async void OnAddBarberCommand(object sender)
@@ -59,8 +53,9 @@ namespace NGS_Studio.ViewModels
                                           PhoneNumber = masked.reformatPhoneNumber(PhoneNumberEntry), 
                                           IsBarber = true, 
                                           Barber = NameEntry };
-                    var user = await UserTableService.AddUser(usr);
-                    //AddUser return true if data insert successfuly     
+
+                    var user = await UserTableService.AddUser(usr); 
+
                     if (user)
                     {
                         await App.Current.MainPage.DisplayAlert("Success", NameEntry + " Added to NGS ", "Ok");

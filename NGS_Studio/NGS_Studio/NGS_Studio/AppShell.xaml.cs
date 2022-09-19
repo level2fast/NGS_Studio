@@ -2,7 +2,6 @@
 using NGS_Studio.Views;
 using System;
 using System.Collections.Generic;
-using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -11,54 +10,55 @@ namespace NGS_Studio
     public partial class AppShell : Xamarin.Forms.Shell
     {
         public Dictionary<string, Type> Routes { get; private set; } = new Dictionary<string, Type>();
-        private bool isUserAuth;
+
+        private bool _isUserAuth;
         public bool IsUserAuthenticated
         {
-            get => isUserAuth;
-            set => SetProperty(ref isUserAuth, value);
+            get => _isUserAuth;
+            set => SetProperty(ref _isUserAuth, value);
         }
-        private bool showOwnerFlyoutItem;
+        private bool _showOwnerFlyoutItem;
         public bool ShowOwnerFlyoutItem
         {
-            get => showOwnerFlyoutItem;
-            set => SetProperty(ref showOwnerFlyoutItem, value);
+            get => _showOwnerFlyoutItem;
+            set => SetProperty(ref _showOwnerFlyoutItem, value);
         }
-        string iconCheckin = "icon_checkin";
+        string _iconCheckin = "icon_checkin";
         public string IconCheckin
         {
-            get { return iconCheckin; }
-            set { SetProperty(ref iconCheckin, value); }
+            get { return _iconCheckin; }
+            set { SetProperty(ref _iconCheckin, value); }
         }
-        string iconOwner = "icon_owner";
+        string _iconOwner = "icon_owner";
         public string IconOwner
         {
-            get { return iconOwner; }
-            set { SetProperty(ref iconOwner, value); }
+            get { return _iconOwner; }
+            set { SetProperty(ref _iconOwner, value); }
         }
-        string iconLogin = "icon_login";
+        string _iconLogin = "icon_login";
         public string IconLogin
         {
-            get { return iconLogin; }
-            set { SetProperty(ref iconLogin, value); }
+            get { return _iconLogin; }
+            set { SetProperty(ref _iconLogin, value); }
         }
-        string iconAbout = "icon_about";
+        string _iconAbout = "icon_about";
         public string IconAbout
         {
-            get { return iconAbout; }
-            set { SetProperty(ref iconAbout, value); }
+            get { return _iconAbout; }
+            set { SetProperty(ref _iconAbout, value); }
         }
-        string iconLogout = "icon_logout";
+        string _iconLogout = "icon_logout";
         public string IconLogout
         {
-            get { return iconLogout; }
-            set { SetProperty(ref iconLogout, value); }
+            get { return _iconLogout; }
+            set { SetProperty(ref _iconLogout, value); }
         }
 
-        private string appVersion;
+        private string _appVersion;
         public string AppVersion
         {
-            get { return appVersion; }
-            set { SetProperty(ref appVersion, value); }
+            get { return _appVersion; }
+            set { SetProperty(ref _appVersion, value); }
         }
         public AppShell()
         {
@@ -81,7 +81,7 @@ namespace NGS_Studio
 
 
         /// <summary>
-        /// RegisterRoutes function adds all routes to a contentPage dictionary 
+        /// RegisterRoutes adds all routes to a contentPage dictionary 
         /// </summary>
         void RegisterRoutes()
         {
@@ -93,7 +93,6 @@ namespace NGS_Studio
             Routes.Add(nameof(PhoneNumberCheckinPage), typeof(PhoneNumberCheckinPage));
             Routes.Add(nameof(ClientCheckinPage), typeof(ClientCheckinPage));
             Routes.Add(nameof(OwnerDetailsPage), typeof(OwnerDetailsPage));
-            Routes.Add(nameof(MainPage), typeof(MainPage));
             Routes.Add(nameof(BarberInfoPage), typeof(BarberInfoPage));
             Routes.Add(nameof(BarberInfoAddBarberPage), typeof(BarberInfoAddBarberPage));
             Routes.Add(nameof(BarberInfoDetailsPage), typeof(BarberInfoDetailsPage));
@@ -133,7 +132,7 @@ namespace NGS_Studio
                 ShowOwnerFlyoutItem = true;
             }
         }
-        public void setStuff()
+        public void SetOwnerFlyoutItemVisibility()
         {
             ShowOwnerFlyoutItem = false;
             IsUserAuthenticated = false;

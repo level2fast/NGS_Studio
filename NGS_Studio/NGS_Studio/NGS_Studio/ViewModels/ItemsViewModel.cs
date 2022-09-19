@@ -19,12 +19,9 @@ namespace NGS_Studio.ViewModels
 
         public ItemsViewModel()
         {
-            Title = "Promotions";
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
-
             ItemTapped = new Command<Item>(OnItemSelected);
-
             AddItemCommand = new Command(OnAddItem);
         }
 

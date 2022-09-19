@@ -12,7 +12,7 @@ namespace NGS_Studio.ViewModels
     {
         #region Fields
 
-        private ValidatableObject<string> email;
+        private ValidatableObject<string> _email;
 
         #endregion
 
@@ -32,23 +32,23 @@ namespace NGS_Studio.ViewModels
         #region Property
 
         /// <summary>
-        /// Gets or sets the property that bounds with an entry that gets the email ID from user in the login page.
+        /// Gets or sets the property that bounds with an entry that gets the _email ID from user in the login page.
         /// </summary>
         public ValidatableObject<string> Email
         {
             get
             {
-                return this.email;
+                return this._email;
             }
 
             set
             {
-                if (this.email == value)
+                if (this._email == value)
                 {
                     return;
                 }
 
-                this.SetProperty(ref this.email, value);
+                this.SetProperty(ref this._email, value);
             }
         }
         #endregion
@@ -56,7 +56,7 @@ namespace NGS_Studio.ViewModels
         #region Methods
 
         /// <summary>
-        /// This method to validate the email
+        /// This method to validate the _email
         /// </summary>
         /// <returns>returns bool value</returns>
         public bool IsEmailFieldValid()

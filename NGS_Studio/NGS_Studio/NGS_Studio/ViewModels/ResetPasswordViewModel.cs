@@ -6,9 +6,7 @@ using Xamarin.Forms.Internals;
 
 namespace NGS_Studio.ViewModels
 {
-    /// <summary>
-    /// ViewModel for reset password page.
-    /// </summary>
+
     [Preserve(AllMembers = true)]
     public class ResetPasswordViewModel : BaseViewModel
     {
