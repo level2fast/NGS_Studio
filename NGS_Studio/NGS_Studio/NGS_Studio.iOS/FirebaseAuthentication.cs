@@ -18,13 +18,13 @@ namespace NGS_Studio.iOS
             Firebase.Auth.Auth.DefaultInstance.CreateUser(email, password, CreateUserOnCompletion);
 
             //var authResult = await Firebase.Auth.Auth.DefaultInstance.CreateUser(email, password);
-              //      .CreateUserWithEmailAndPasswordAsync(email, password);
+            //      .CreateUserWithEmailAndPasswordAsync(email, password);
 
-            var userProfileChangeRequestBuilder = new UserProfileChangeRequest.Builder();
-            userProfileChangeRequestBuilder.SetDisplayName(username);
+            //var userProfileChangeRequestBuilder = new UserProfileChangeRequest();
+            //userProfileChangeRequestBuilder.SetDisplayName(username);
 
-            var userProfileChangeRequest = userProfileChangeRequestBuilder.Build();
-            await authResult.User.UpdateProfileAsync(userProfileChangeRequest);
+            //var userProfileChangeRequest = userProfileChangeRequestBuilder.Build();
+            //await authResult.User.UpdateProfileAsync(userProfileChangeRequest);
             return await Task.FromResult(true);
         }
         void CreateUserOnCompletion(AuthDataResult authResult, NSError error)
@@ -64,16 +64,21 @@ namespace NGS_Studio.iOS
         public async Task<string> SignIn(string email, string password)
         {
             var authResult = await Firebase.Auth.Auth.DefaultInstance.SignInWithPasswordAsync(email, password);
-            var token = await Firebase.Auth.Auth.DefaultInstance.CurrentUser.GetIdToken(false).AsAsync<GetTokenResult>();
+            var token = await Firebase.Auth.Auth.DefaultInstance.CurrentUser.GetIdTokenResultAsync(false);
             return token.Token;
         }
 
         public void SignOut()
-            => Firebase.Auth.Auth.DefaultInstance.SignOut();
-
+        {
+            //NSString s("SignOut");
+            //nint code = 0;
+            //string signout = "signout";
+            NSError e;
+            Firebase.Auth.Auth.DefaultInstance.SignOut(out e);
+        }
         public async Task<string> GetToken()
         {
-            var token = await Firebase.Auth.Auth.DefaultInstance.CurrentUser.GetIdToken(false).AsAsync<GetTokenResult>();
+            var token = await Firebase.Auth.Auth.DefaultInstance.CurrentUser.GetIdTokenResultAsync(false);
             return token.Token;
         }
     }
