@@ -1,0 +1,202 @@
+Function=SystemNative_ConvertErrorPlatformToPal
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_ConvertErrorPalToPlatform
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_StrErrorR
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_GetNonCryptographicallySecureRandomBytes
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_GetReadDirRBufferSize
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_ReadLink
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_Stat2
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_LStat2
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_Symlink
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_CopyFile
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_GetEGid
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_GetEUid
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_Link
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_MkDir
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_Rename
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_Unlink
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_OpenDir
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_ReadDirR
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_CloseDir
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_timezone_get_local_name
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_timezone_get_data
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_GetFolderPath
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_log
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/mscorlib.dll
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=NetSecurityNative_ReleaseGssBuffer
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_DisplayMinorStatus
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_DisplayMajorStatus
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_ImportUserName
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_ImportPrincipalName
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_ReleaseName
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_InitiateCredSpNego
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_InitiateCredWithPassword
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_ReleaseCred
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_InitSecContext
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_DeleteSecContext
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/System.dll
+Function=xamarin_start_wwan
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/System.dll
+Function=xamarin_release_managed_ref
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_set_gchandle_with_flags_safe
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_UIApplicationMain
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_find_protocol_wrapper_type
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_release_block_on_main_thread
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_get_block_descriptor
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_IntPtr_objc_msgSend_IntPtr_exception
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_IntPtr_objc_msgSendSuper_IntPtr_exception
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Xamarin.iOS.dll
+Field=FIRAuthErrorDomain
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+Field=FIRAuthErrorUserInfoEmailKey
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+Field=FIRAuthErrorUserInfoMultiFactorResolverKey
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+Field=FIRAuthErrorUserInfoNameKey
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+Field=FIRAuthErrorUserInfoUpdatedCredentialKey
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+Field=FIRAuthStateDidChangeNotification
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRAuth
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRActionCodeInfo
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRActionCodeSettings
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRActionCodeURL
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRAdditionalUserInfo
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRAuthCredential
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRAuthDataResult
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRAuthSettings
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRAuthTokenResult
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+Field=FIREmailAuthProviderID
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+Field=FIREmailPasswordAuthSignInMethod
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIREmailAuthProvider
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+Field=FIRFacebookAuthProviderID
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+Field=FIRFacebookAuthSignInMethod
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRFacebookAuthProvider
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+Field=FIRGameCenterAuthProviderID
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+Field=FIRGameCenterAuthSignInMethod
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRGameCenterAuthProvider
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+Field=FIRGitHubAuthProviderID
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+Field=FIRGitHubAuthSignInMethod
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRGitHubAuthProvider
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+Field=FIRGoogleAuthProviderID
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+Field=FIRGoogleAuthSignInMethod
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRGoogleAuthProvider
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+Field=FIRPhoneMultiFactorID
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRMultiFactor
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRMultiFactorAssertion
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRMultiFactorInfo
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRMultiFactorResolver
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRMultiFactorSession
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIROAuthCredential
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIROAuthProvider
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRPhoneAuthCredential
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+Field=FIRPhoneAuthProviderID
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+Field=FIRPhoneAuthSignInMethod
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRPhoneAuthProvider
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRPhoneMultiFactorAssertion
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRPhoneMultiFactorGenerator
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRPhoneMultiFactorInfo
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+Field=FIRTwitterAuthProviderID
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+Field=FIRTwitterAuthSignInMethod
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRTwitterAuthProvider
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRUser
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRUserMetadata
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRUserProfileChangeRequest
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Auth.dll
+Function=FIRFirebaseVersion
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Core.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRApp
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Core.dll
+ObjectiveCClass=OBJC_CLASS_$_FIRConfiguration
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Core.dll
+ObjectiveCClass=OBJC_CLASS_$_FIROptions
+	/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio.iOS/obj/iPhoneSimulator/Debug/mtouch-cache/1-Link/Firebase.Core.dll
+Function=mono_pmip
+Function=xamarin_dyn_objc_msgSend
+Function=xamarin_dyn_objc_msgSendSuper
+Function=xamarin_dyn_objc_msgSend_stret
+Function=xamarin_dyn_objc_msgSendSuper_stret

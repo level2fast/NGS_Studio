@@ -1,0 +1,50 @@
+﻿<Properties StartupConfiguration="iOS" BuildWithMSBuildOnMono="True">
+  <MonoDevelop.Ide.ItemProperties.NGS__Studio.Android PreferredExecutionTarget="Android.SelectDevice" />
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="iOS" Name="iOS">
+      <Items>
+        <StartupItem ItemId="{5DC1AAF3-D3C6-4A1D-B942-EA53FC99270B}" ItemName="NGS_Studio.iOS" ConfigurationId="Default" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio/AppShell.xaml.cs" relfile="NGS_Studio/NGS_Studio/AppShell.xaml.cs" line="121" column="1" />
+      <Breakpoint file="/Users/xc315c9/Documents/Github/NGS_Studio/NGS_Studio/NGS_Studio/NGS_Studio/AppShell.xaml.cs" relfile="NGS_Studio/NGS_Studio/AppShell.xaml.cs" line="129" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <Debugger.DebugSourceFolders />
+  <MonoDevelop.Ide.Workbench ActiveDocument="NGS_Studio/NGS_Studio.iOS/AppDelegate.cs">
+    <Files>
+      <File FileName="NGS_Studio/NGS_Studio.iOS/Main.cs" Line="18" Column="23" />
+      <File FileName="NGS_Studio/NGS_Studio.iOS/Info.plist" />
+      <File FileName="NGS_Studio/NGS_Studio/AppShell.xaml.cs" Line="129" Column="1" />
+      <File FileName="NGS_Studio/NGS_Studio.iOS/FirebaseAuthentication.cs" Line="74" Column="15" />
+      <File FileName="NGS_Studio/NGS_Studio.iOS/AppDelegate.cs" Line="3" Column="38" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="NGS_Studio" expanded="True">
+            <Node name="NGS_Studio" expanded="True">
+              <Node name="AppShell.xaml" expanded="True" />
+            </Node>
+            <Node name="NGS_Studio.Android" expanded="True" />
+            <Node name="NGS_Studio.iOS" expanded="True">
+              <Node name="Packages" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>DependencyService</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.ItemProperties.NGS__Studio.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6736F6A1-2C4E-4495-963F-A08B49A1F99B" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
