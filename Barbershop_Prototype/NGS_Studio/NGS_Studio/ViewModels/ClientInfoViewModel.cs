@@ -32,10 +32,7 @@ namespace NGS_Studio.ViewModels
             // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
             await Shell.Current.GoToAsync($"{nameof(ClientInfoAddClientPage)}");
         }
-        //private async void OnRemoveClientClicked()
-        //{
-          //  await Shell.Current.GoToAsync($"{nameof(ClientInfoRemoveClientPage)}");
-        //}
+
         private async void OnViewClientsClicked()
         {
             await Shell.Current.GoToAsync($"{nameof(ClientInfoDetailsPage)}");
