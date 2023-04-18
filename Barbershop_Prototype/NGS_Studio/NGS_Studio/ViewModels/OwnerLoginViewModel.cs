@@ -46,27 +46,7 @@ namespace NGS_Studio.ViewModels
 
             if (string.IsNullOrEmpty(EmailEntry) || string.IsNullOrEmpty(PasswordEntry))
                 await App.Current.MainPage.DisplayAlert("Empty Values", "Please enter Email and Password", "OK");
-            else
-            {
-                //call GetUser function which we define in Firebase helper class    
-                //var user = null;//await FirebaseHelper.GetUser(EmailEntry);
-                ////firebase return null valuse if user data not found in database    
-                //if (user != null)
-                //    if (EmailEntry == user.Email && PasswordEntry == user.Password)
-                //    {
-                //        await App.Current.MainPage.DisplayAlert("Login Success", "", "Ok");
-                //        //Navigate to Wellcom page after successfuly login    
-                //        //pass user email to welcom page    
-
-                //        // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
-                //        await Shell.Current.GoToAsync($"/{nameof(OwnerDetailsPage)}");
-                //    }
-                //    else
-                //        await App.Current.MainPage.DisplayAlert("Login Fail", "Please enter correct Email and Password", "OK");
-                //else
-                //    await App.Current.MainPage.DisplayAlert("Login Fail", "User not found", "OK");
-            }
-
+                
             // Prefixing with `//` switches to a different navigation stack instead of pushing to the active one
             await Shell.Current.GoToAsync($"/{nameof(OwnerDetailsPage)}");
 
@@ -74,20 +54,6 @@ namespace NGS_Studio.ViewModels
         }
         bool AreCredentialsCorrect(User user)
         {
-            //var user = new User {
-            //	Username = usernameEntry.Text,
-            //	Password = passwordEntry.Text
-            //};
-
-            //var isValid = AreCredentialsCorrect (user);
-            //if (isValid) {
-            //	App.IsUserLoggedIn = true;
-            //	Navigation.InsertPageBefore (new MainPage (), this);
-            //	await Navigation.PopAsync ();
-            //} else {
-            //	messageLabel.Text = "Login failed";
-            //	passwordEntry.Text = string.Empty;
-            //}
             return user.Username == Constants.Username && user.Password == Constants.Password;
         }
 
