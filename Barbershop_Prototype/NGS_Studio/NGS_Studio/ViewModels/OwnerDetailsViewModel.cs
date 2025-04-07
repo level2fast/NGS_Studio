@@ -42,17 +42,6 @@ namespace NGS_Studio.ViewModels
             await Shell.Current.GoToAsync($"/{nameof(ClientInfoPage)}");
 
         }
-
-        //ToDo SD: Function below should be moved to page that handles displaying collections. It should bring
-        //navigate to a page that displays details of what is selected from the collection
-       //private async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
-       // {
-       //     string userName = (e.CurrentSelection.FirstOrDefault() as User).Name;
-       //     // The following route works because route names are unique in this application.
-       //     //await Shell.Current.GoToAsync($"monkeydetails?name={userName}");
-       //     // The full route is shown below.
-       //     // await Shell.Current.GoToAsync($"//animals/monkeys/monkeydetails?name={monkeyName}");
-       // }
     }
 }
 
