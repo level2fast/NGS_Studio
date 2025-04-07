@@ -20,12 +20,6 @@ namespace NGS_Studio.Controls
             {
                 ItemsSource = null;
             }
-            else
-            {
-                //ItemsSource = User
-                //    .Where(User => User.Name.ToLower().Contains(newValue.ToLower()))
-                //    .ToList<User>();
-            }
         }
 
         protected override async void OnItemSelected(object item)
