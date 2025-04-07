@@ -60,8 +60,6 @@ namespace NGS_Studio.ViewModels
             if (!string.IsNullOrWhiteSpace(NameEntry) && !string.IsNullOrWhiteSpace(EmailEntry) &&
                 !string.IsNullOrWhiteSpace(PhoneNumberEntry))
             {
-                //ToDo SD: check to see if phone number is in database already
-                //if so display alert saying you are already registered with NGS
                 await App.Database.SaveUserAsync(new User
                 {
                     Name = NameEntry,
